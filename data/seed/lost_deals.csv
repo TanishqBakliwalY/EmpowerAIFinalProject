@@ -1,0 +1,7 @@
+client,country,project_type,quoted_usd_per_hour,reason
+HelixPay,US,mobile,34,Lost to a Vietnam vendor quoting $24/h; client prioritised price over PCI experience
+Brennan Dental Group,US,web,31,Client chose a local US agency for in-person workshops
+Rhein Logistik,DE,iot,37,We could not commit a German-speaking PM; requirement was buried in the RFP
+EduSpark,UK,ai,48,Quoted 9 months; competitor promised 5. Our estimate turned out realistic
+TableTurn,US,web,26,Won on price but walked away: client wanted unlimited change requests on fixed price
+Mercato Uno,BE,ecommerce,33,Client paused the project (budget freeze)

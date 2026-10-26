@@ -1,0 +1,164 @@
+[
+  {
+    "id": "C01",
+    "skill": "React Native",
+    "title": "React Native: production apps for iOS and Android",
+    "provider": "Udemy",
+    "hours": 32,
+    "cost_inr": 3500,
+    "format": "self-paced"
+  },
+  {
+    "id": "C02",
+    "skill": "Flutter",
+    "title": "Flutter and Dart: the complete guide",
+    "provider": "Udemy",
+    "hours": 40,
+    "cost_inr": 3500,
+    "format": "self-paced"
+  },
+  {
+    "id": "C03",
+    "skill": "LLM / RAG",
+    "title": "Building RAG applications with LLMs",
+    "provider": "DeepLearning.AI / Coursera",
+    "hours": 24,
+    "cost_inr": 4100,
+    "format": "self-paced"
+  },
+  {
+    "id": "C04",
+    "skill": "OpenAI API",
+    "title": "OpenAI API and function calling for developers",
+    "provider": "Empower Academy",
+    "hours": 12,
+    "cost_inr": 0,
+    "format": "internal workshop"
+  },
+  {
+    "id": "C05",
+    "skill": "Vector databases",
+    "title": "Vector search with pgvector and managed vector DBs",
+    "provider": "Empower Academy",
+    "hours": 10,
+    "cost_inr": 0,
+    "format": "internal workshop"
+  },
+  {
+    "id": "C06",
+    "skill": "Azure",
+    "title": "AZ-204: Developing solutions for Microsoft Azure",
+    "provider": "Microsoft Learn",
+    "hours": 40,
+    "cost_inr": 12500,
+    "format": "self-paced + exam"
+  },
+  {
+    "id": "C07",
+    "skill": "AWS",
+    "title": "AWS Certified Developer - Associate",
+    "provider": "AWS Skill Builder",
+    "hours": 40,
+    "cost_inr": 12500,
+    "format": "self-paced + exam"
+  },
+  {
+    "id": "C08",
+    "skill": "Terraform",
+    "title": "HashiCorp Terraform Associate",
+    "provider": "HashiCorp Learn",
+    "hours": 24,
+    "cost_inr": 6000,
+    "format": "self-paced + exam"
+  },
+  {
+    "id": "C09",
+    "skill": "Kubernetes",
+    "title": "Kubernetes for developers (CKAD prep)",
+    "provider": "Linux Foundation",
+    "hours": 36,
+    "cost_inr": 21000,
+    "format": "self-paced + exam"
+  },
+  {
+    "id": "C10",
+    "skill": "MQTT",
+    "title": "IoT messaging with MQTT and Azure IoT Hub",
+    "provider": "Microsoft Learn",
+    "hours": 16,
+    "cost_inr": 0,
+    "format": "self-paced"
+  },
+  {
+    "id": "C11",
+    "skill": "Stripe",
+    "title": "Stripe payments integration and PCI basics",
+    "provider": "Stripe Docs + Empower Academy",
+    "hours": 12,
+    "cost_inr": 0,
+    "format": "self-paced"
+  },
+  {
+    "id": "C12",
+    "skill": "Power BI",
+    "title": "PL-300: Microsoft Power BI Data Analyst",
+    "provider": "Microsoft Learn",
+    "hours": 32,
+    "cost_inr": 12500,
+    "format": "self-paced + exam"
+  },
+  {
+    "id": "C13",
+    "skill": "Playwright",
+    "title": "End-to-end testing with Playwright",
+    "provider": "LinkedIn Learning",
+    "hours": 10,
+    "cost_inr": 1500,
+    "format": "self-paced"
+  },
+  {
+    "id": "C14",
+    "skill": "Appium",
+    "title": "Mobile test automation with Appium",
+    "provider": "Udemy",
+    "hours": 16,
+    "cost_inr": 2500,
+    "format": "self-paced"
+  },
+  {
+    "id": "C15",
+    "skill": "HIPAA",
+    "title": "HIPAA for software engineers",
+    "provider": "Empower Academy",
+    "hours": 6,
+    "cost_inr": 0,
+    "format": "internal workshop"
+  },
+  {
+    "id": "C16",
+    "skill": "GDPR",
+    "title": "GDPR and EU data residency for developers",
+    "provider": "Empower Academy",
+    "hours": 6,
+    "cost_inr": 0,
+    "format": "internal workshop"
+  },
+  {
+    "id": "C17",
+    "skill": "Next.js",
+    "title": "Next.js App Router in production",
+    "provider": "Vercel / Udemy",
+    "hours": 18,
+    "cost_inr": 3000,
+    "format": "self-paced"
+  },
+  {
+    "id": "C18",
+    "skill": "SAP",
+    "title": "SAP integration basics for developers (OData, BAPI)",
+    "provider": "openSAP",
+    "hours": 20,
+    "cost_inr": 0,
+    "format": "self-paced"
+  }
+]

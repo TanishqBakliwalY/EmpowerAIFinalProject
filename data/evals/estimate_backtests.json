@@ -1,0 +1,289 @@
+{
+ "_note": "Estimator backtests on 6 past projects (scripts/backtest.py): each project is removed from the history and re-estimated from its original brief. Synthetic history. v1 -> v3 are successive versions of the estimator prompt/tools.",
+ "history": [
+  {
+   "estimator_version": "v1",
+   "effort": "medium",
+   "projects": 6,
+   "app_mape_pct": 93.1,
+   "original_mape_pct": 16.8,
+   "app_mean_bias_pct": 93.1,
+   "original_mean_bias_pct": -16.8,
+   "actual_within_app_range": 0,
+   "avg_seconds": 45.3,
+   "avg_input_tokens": 33412,
+   "avg_cached_tokens": 21564,
+   "avg_output_tokens": 5207
+  },
+  {
+   "estimator_version": "v2",
+   "effort": "medium",
+   "projects": 6,
+   "app_mape_pct": 29.9,
+   "original_mape_pct": 16.8,
+   "app_mean_bias_pct": 29.9,
+   "original_mean_bias_pct": -16.8,
+   "actual_within_app_range": 1,
+   "avg_seconds": 43.2,
+   "avg_input_tokens": 32726,
+   "avg_cached_tokens": 21000,
+   "avg_output_tokens": 5169
+  },
+  {
+   "estimator_version": "v2",
+   "effort": "low",
+   "projects": 6,
+   "app_mape_pct": 25.5,
+   "original_mape_pct": 16.8,
+   "app_mean_bias_pct": 25.5,
+   "original_mean_bias_pct": -16.8,
+   "actual_within_app_range": 2,
+   "avg_seconds": 27.3,
+   "avg_input_tokens": 27036,
+   "avg_cached_tokens": 15990,
+   "avg_output_tokens": 3122
+  },
+  {
+   "estimator_version": "v3",
+   "effort": "medium",
+   "projects": 6,
+   "app_mape_pct": 19.8,
+   "original_mape_pct": 16.8,
+   "app_mean_bias_pct": 17.6,
+   "original_mean_bias_pct": -16.8,
+   "actual_within_app_range": 2,
+   "avg_seconds": 33.6,
+   "avg_input_tokens": 32378,
+   "avg_cached_tokens": 21044,
+   "avg_output_tokens": 5090
+  },
+  {
+   "estimator_version": "v3",
+   "effort": "low",
+   "projects": 6,
+   "app_mape_pct": 19.6,
+   "original_mape_pct": 16.8,
+   "app_mean_bias_pct": 13.2,
+   "original_mean_bias_pct": -16.8,
+   "actual_within_app_range": 3,
+   "avg_seconds": 21.2,
+   "avg_input_tokens": 30629,
+   "avg_cached_tokens": 19778,
+   "avg_output_tokens": 2886
+  }
+ ],
+ "latest_rows": [
+  {
+   "project_id": "P102",
+   "name": "Telehealth mobile app",
+   "type": "mobile",
+   "actual_hours": 2092,
+   "original_estimate": 1778,
+   "app_estimate": 1948,
+   "app_quoted_hours_incl_contingency": 2435,
+   "risk_level": "high",
+   "packages": [
+    "mobile_app/medium:612",
+    "auth/high:266",
+    "booking/medium:340",
+    "notifications/medium:80",
+    "integration/medium:136",
+    "compliance/high:246"
+   ],
+   "app_range": [
+    1792,
+    2630
+   ],
+   "actual_in_app_range": true,
+   "original_error_pct": -15.0,
+   "app_error_pct": -6.9,
+   "seconds": 19.4,
+   "usage": {
+    "input_tokens": 34369,
+    "cached_tokens": 18611,
+    "output_tokens": 3032,
+    "reasoning_tokens": 0,
+    "requests": 8,
+    "tool_calls": 13,
+    "cost_usd": 0.010469,
+    "cache_hit_pct": 54.2
+   }
+  },
+  {
+   "project_id": "P107",
+   "name": "Machine monitoring dashboard",
+   "type": "iot",
+   "actual_hours": 1101,
+   "original_estimate": 977,
+   "app_estimate": 1738,
+   "app_quoted_hours_incl_contingency": 2173,
+   "risk_level": "high",
+   "packages": [
+    "iot/high:445",
+    "etl/medium:206",
+    "reporting/medium:194",
+    "realtime/medium:187",
+    "auth/medium:166",
+    "cloud_infra/medium:121",
+    "compliance/medium:155"
+   ],
+   "app_range": [
+    1599,
+    2347
+   ],
+   "actual_in_app_range": false,
+   "original_error_pct": -11.3,
+   "app_error_pct": 57.9,
+   "seconds": 26.0,
+   "usage": {
+    "input_tokens": 33570,
+    "cached_tokens": 23443,
+    "output_tokens": 3162,
+    "reasoning_tokens": 0,
+    "requests": 8,
+    "tool_calls": 13,
+    "cost_usd": 0.009442,
+    "cache_hit_pct": 69.8
+   }
+  },
+  {
+   "project_id": "P112",
+   "name": "AI homework tutor (LLM)",
+   "type": "ai",
+   "actual_hours": 1284,
+   "original_estimate": 968,
+   "app_estimate": 1423,
+   "app_quoted_hours_incl_contingency": 1779,
+   "risk_level": "high",
+   "packages": [
+    "llm_assistant/high:496",
+    "web_portal/medium:318",
+    "auth/medium:167",
+    "compliance/high:246"
+   ],
+   "app_range": [
+    1309,
+    1921
+   ],
+   "actual_in_app_range": false,
+   "original_error_pct": -24.6,
+   "app_error_pct": 10.8,
+   "seconds": 24.5,
+   "usage": {
+    "input_tokens": 32837,
+    "cached_tokens": 23116,
+    "output_tokens": 2854,
+    "reasoning_tokens": 0,
+    "requests": 8,
+    "tool_calls": 13,
+    "cost_usd": 0.008716,
+    "cache_hit_pct": 70.4
+   }
+  },
+  {
+   "project_id": "P116",
+   "name": "Registry data-sync modernization",
+   "type": "migration",
+   "actual_hours": 930,
+   "original_estimate": 730,
+   "app_estimate": 1207,
+   "app_quoted_hours_incl_contingency": 1509,
+   "risk_level": "high",
+   "packages": [
+    "migration/high:250",
+    "etl/high:307",
+    "integration/high:209",
+    "cloud_infra/medium:120",
+    "compliance/medium:155"
+   ],
+   "app_range": [
+    1111,
+    1630
+   ],
+   "actual_in_app_range": false,
+   "original_error_pct": -21.5,
+   "app_error_pct": 29.8,
+   "seconds": 19.6,
+   "usage": {
+    "input_tokens": 26437,
+    "cached_tokens": 17601,
+    "output_tokens": 2737,
+    "reasoning_tokens": 0,
+    "requests": 7,
+    "tool_calls": 12,
+    "cost_usd": 0.008123,
+    "cache_hit_pct": 66.6
+   }
+  },
+  {
+   "project_id": "P121",
+   "name": "Claims processing portal",
+   "type": "web",
+   "actual_hours": 1560,
+   "original_estimate": 1380,
+   "app_estimate": 1526,
+   "app_quoted_hours_incl_contingency": 1908,
+   "risk_level": "high",
+   "packages": [
+    "web_portal/medium:330",
+    "bpm/medium:232",
+    "auth/medium:168",
+    "migration/high:332",
+    "compliance/high:253"
+   ],
+   "app_range": [
+    1404,
+    2061
+   ],
+   "actual_in_app_range": true,
+   "original_error_pct": -11.5,
+   "app_error_pct": -2.2,
+   "seconds": 18.1,
+   "usage": {
+    "input_tokens": 23610,
+    "cached_tokens": 12780,
+    "output_tokens": 2757,
+    "reasoning_tokens": 0,
+    "requests": 6,
+    "tool_calls": 15,
+    "cost_usd": 0.008541,
+    "cache_hit_pct": 54.1
+   }
+  },
+  {
+   "project_id": "P127",
+   "name": "Language-learning app",
+   "type": "mobile",
+   "actual_hours": 1946,
+   "original_estimate": 1616,
+   "app_estimate": 1752,
+   "app_quoted_hours_incl_contingency": 2190,
+   "risk_level": "high",
+   "packages": [
+    "mobile_app/medium:605",
+    "auth/medium:166",
+    "cms/medium:163",
+    "llm_assistant/medium:351",
+    "payments/medium:225"
+   ],
+   "app_range": [
+    1612,
+    2365
+   ],
+   "actual_in_app_range": true,
+   "original_error_pct": -17.0,
+   "app_error_pct": -10.0,
+   "seconds": 19.6,
+   "usage": {
+    "input_tokens": 32953,
+    "cached_tokens": 23117,
+    "output_tokens": 2774,
+    "reasoning_tokens": 0,
+    "requests": 8,
+    "tool_calls": 13,
+    "cost_usd": 0.008585,
+    "cache_hit_pct": 70.2
+   }
+  }
+ ]
+}

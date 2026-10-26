@@ -1,0 +1,104 @@
+{
+  "_comment": "Demo pricing policy. Empower edits this file; the agents never invent rates. Billing rates are per hour.",
+  "as_of": "2026-10-01",
+  "roles": {
+    "pm": "Project Manager",
+    "ba": "Business Analyst",
+    "uiux": "UI/UX Designer",
+    "fe": "Frontend Developer",
+    "be": "Backend Developer",
+    "mobile": "Mobile Developer",
+    "qa": "QA Engineer",
+    "devops": "DevOps / Cloud Engineer",
+    "data": "Data / BI Engineer",
+    "ml": "AI / ML Engineer",
+    "lead": "Tech Lead / Architect"
+  },
+  "billing_rates": {
+    "USD": {
+      "pm": 38,
+      "ba": 32,
+      "uiux": 30,
+      "fe": 28,
+      "be": 30,
+      "mobile": 32,
+      "qa": 22,
+      "devops": 36,
+      "data": 36,
+      "ml": 45,
+      "lead": 45
+    },
+    "EUR": {
+      "pm": 36,
+      "ba": 30,
+      "uiux": 28,
+      "fe": 27,
+      "be": 29,
+      "mobile": 30,
+      "qa": 21,
+      "devops": 34,
+      "data": 34,
+      "ml": 42,
+      "lead": 42
+    },
+    "GBP": {
+      "pm": 31,
+      "ba": 26,
+      "uiux": 25,
+      "fe": 23,
+      "be": 25,
+      "mobile": 26,
+      "qa": 18,
+      "devops": 29,
+      "data": 29,
+      "ml": 37,
+      "lead": 37
+    }
+  },
+  "inr_per_unit": {
+    "USD": 88.0,
+    "EUR": 102.0,
+    "GBP": 117.0
+  },
+  "policy": {
+    "hours_per_week": 40,
+    "productive_utilization": 0.85,
+    "cost_overhead_multiplier": 1.45,
+    "monthly_working_hours": 160,
+    "pm_overhead_pct": 10,
+    "lead_overhead_pct": 6,
+    "min_qa_ratio_pct": 20,
+    "contingency_pct": {
+      "low": 10,
+      "medium": 15,
+      "high": 25
+    },
+    "fixed_price_risk_premium_pct": 12,
+    "margin_floor_pct": 35,
+    "target_margin_pct": 50,
+    "max_discount_pct": 10,
+    "discovery_weeks": 2,
+    "stabilization_weeks": 2,
+    "warranty_days": 60,
+    "payment_milestones_fixed": [
+      {
+        "milestone": "Contract signature (mobilisation)",
+        "pct": 20
+      },
+      {
+        "milestone": "Design + architecture sign-off",
+        "pct": 20
+      },
+      {
+        "milestone": "Beta / UAT release",
+        "pct": 40
+      },
+      {
+        "milestone": "Go-live",
+        "pct": 20
+      }
+    ],
+    "tm_billing": "Monthly in arrears against approved timesheets",
+    "regulated_qa_uplift_pct": 10
+  }
+}

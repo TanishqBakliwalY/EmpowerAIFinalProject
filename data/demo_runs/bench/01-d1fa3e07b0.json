@@ -1,0 +1,4476 @@
+{
+ "id": "d1fa3e07b0",
+ "module": "bench",
+ "status": "ready",
+ "created_at": "2026-10-25T07:56:16+00:00",
+ "title": "Bench plan · next 12 weeks",
+ "model": "gpt-6-luna",
+ "input": {
+  "horizon_weeks": 12,
+  "min_free_pct": 50
+ },
+ "created_by": "Anita Rao",
+ "steps": {
+  "forecast": {
+   "key": "forecast",
+   "label": "Bench forecast",
+   "kind": "code",
+   "job": "Who comes free when, bench FTE and cost, demand from deals and internal work.",
+   "status": "done",
+   "started_at": 0.01,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 0.04,
+   "seconds": 0.0,
+   "summary": "44 people coming free, 4 deals and 8 internal initiatives with demand"
+  },
+  "matcher": {
+   "key": "matcher",
+   "label": "Matcher",
+   "kind": "agent",
+   "job": "Matches people coming free to deals that need their role and skills, or to internal work.",
+   "status": "done",
+   "started_at": 0.05,
+   "detail": "",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 19914,
+    "cached_tokens": 9944,
+    "output_tokens": 1175,
+    "reasoning_tokens": 222,
+    "requests": 3,
+    "tool_calls": 9,
+    "cost_usd": 0.001684,
+    "cache_hit_pct": 49.9
+   },
+   "ended_at": 10.06,
+   "seconds": 10.0,
+   "summary": "6 matches proposed; 38 left unmatched"
+  },
+  "checks": {
+   "key": "checks",
+   "label": "Match checks",
+   "kind": "code",
+   "job": "Checks every match: person, role, free time, skills, capacity; counts hours and cost.",
+   "status": "done",
+   "started_at": 10.06,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 10.07,
+   "seconds": 0.0,
+   "summary": "6 agent matches kept (1 flagged), 0 rejected, 19 added by the calculator"
+  },
+  "upskill": {
+   "key": "upskill",
+   "label": "Upskilling Planner",
+   "kind": "agent",
+   "job": "Plans short courses for people still free, toward skills the pipeline asks for.",
+   "status": "done",
+   "started_at": 10.07,
+   "detail": "",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 13977,
+    "cached_tokens": 7151,
+    "output_tokens": 754,
+    "reasoning_tokens": 436,
+    "requests": 4,
+    "tool_calls": 12,
+    "cost_usd": 0.001131,
+    "cache_hit_pct": 51.2
+   },
+   "ended_at": 19.48,
+   "seconds": 9.4,
+   "summary": "1 courses planned (0 rejected)"
+  },
+  "brief": {
+   "key": "brief",
+   "label": "Bench Brief",
+   "kind": "agent",
+   "job": "Writes the director's summary from the computed plan figures.",
+   "status": "done",
+   "started_at": 19.48,
+   "detail": "",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 2648,
+    "cached_tokens": 0,
+    "output_tokens": 312,
+    "reasoning_tokens": 0,
+    "requests": 1,
+    "tool_calls": 1,
+    "cost_usd": 0.000421,
+    "cache_hit_pct": 0.0
+   },
+   "ended_at": 21.88,
+   "seconds": 2.4,
+   "summary": "The 12-week plan converts some bench time to work, but leaves 18 people without a match or course."
+  }
+ },
+ "trace": [
+  {
+   "t": 0.01,
+   "agent": "forecast",
+   "kind": "agent_start",
+   "text": "Bench forecast started",
+   "data": null
+  },
+  {
+   "t": 0.04,
+   "agent": "forecast",
+   "kind": "calculator",
+   "text": "44 people free (>= 50%) within 12 weeks; bench cost if nothing is done: INR 1,47,09,888",
+   "data": {
+    "people_rolling_off": 44,
+    "on_bench_now": 33,
+    "rolling_off_later": 11,
+    "bench_fte_avg_8w": 22.2,
+    "bench_cost_if_nothing_inr": 14709888,
+    "bench_cost_8w_inr": 8797204
+   }
+  },
+  {
+   "t": 0.04,
+   "agent": "forecast",
+   "kind": "agent_end",
+   "text": "44 people coming free, 4 deals and 8 internal initiatives with demand",
+   "data": null
+  },
+  {
+   "t": 0.05,
+   "agent": "matcher",
+   "kind": "agent_start",
+   "text": "Matcher started",
+   "data": null
+  },
+  {
+   "t": 0.35,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "list_rolloffs",
+   "data": {}
+  },
+  {
+   "t": 0.35,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "list_demand",
+   "data": {}
+  },
+  {
+   "t": 0.35,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "list_rolloffs",
+   "data": "[{\"emp_id\": \"E009\", \"name\": \"Chirag Deshmukh\", \"role\": \"uiux\", \"title\": \"Junior UI/UX Designer\", \"level\": \"Junior\", \"office\": \"Bhopal\", \"skills\": [\"Accessibility (WCAG)\", \"User research\", \"Figma\"], \"free_from\": \"2026-10-26\", \"free_pct\": 100, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 480.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"office\": \"Pune\", \"skills\": [\"Angular\", \"Next.js\", \"Redux\", \"WordPress\"], \"free_from\": \"2026-10-26\", \"free_pct\": 100, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 480.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E014\", \"name\": \"Mohit Shukla\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"office\": \"Bhopal\", \"skills\": [\"Vue\", \"Tailwind\", \"WordPress\", \"Next.js\"], \"free_from\": \"2026-10-26\", \"free_pct\": 100, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 480.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E029\", \"name\": \"Ritika Tiwari\", \"role\": \"mobile\", \"title\": \"Mid Mobile Developer\", \"level\": \"Mid\", \"office\": \"Pune\", \"skills\": [\"Kotlin\", \"Offline sync\", \"React Native\", \"Google Maps SDK\"], \"free_from\": \"2026-10-26\", \"free_pct\": 100, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 480.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E007\", \"name\": \"Swati Solanki\", \"role\": \"ba\", \"title\": \"Mid Business Analyst\", \"level\": \"Mid\", \"office\": \"Bhopal\", \"skills\": [\"Requirements\", \"Fintech domain\", \"Process mapping\", \"Power BI\"], \"free_from\": \"2026-10-26\", \"free_pct\": 50, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 400.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E052\", \"name\": \"Manish Goyal\", \"role\": \"lead\", \"title\": \"Tech Lead / Architect\", \"level\": \"Lead\", \"office\": \"Indore\", \"skills\": [\"Python\", \"Node.js\", \"Azure\", \"React\", \".NET Core\", \"System design\"], \"free_from\": \"2026-10-26\", \"free_pct\": 50, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 400.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E044\", \"name\": \"Naveen Rajput\", \"role\": \"devops\", \"title\": \"Senior DevOps / Cloud Engineer\", \"level\": \"Senior\", \"office\": \"Indore\", \"skills\": [\"Serverless\", \"Terraform\", \"Monitoring\", \"Kubernetes\", \"Azure\"], \"free_from\": \"2026-10-26\", \"free_pct\": 75, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 360.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E051\", \"name\": \"Vikram Gupta\", \"role\": \"lead\", \"title\": \"Tech Lead / Architect\", \"level\": \"Lead\", \"office\": \"Pune\", \"skills\": [\".NET Core\", \"Node.js\", \"Security\", \"Python\", \"Microservices\", \"Azure\"], \"free_from\": \"2026-10-26\", \"free_pct\": 75, \"status\": \"on_bench_now\", \"leave_weeks\": 0, \"bench_hours\": 360.0, \"ending_project\": null, \"next_project\": null}, {\"emp_id\": \"E002\", \"name\": \"Rajat Dubey\", \"role\": \"pm\", \"title\": \"Lead Project Manager\", \"level\": \"Lead\", \"office\": \"Indore\", \"skills\" …[+13046 chars]"
+  },
+  {
+   "t": 0.35,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "list_demand",
+   "data": "{\"deals\": [{\"deal_id\": \"5678fef5aa\", \"title\": \"Patient booking app \\u00b7 BrightSmile Dental Group\", \"client\": \"BrightSmile Dental Group\", \"status\": \"ready\", \"win_probability\": 0.5, \"start\": \"2026-10-26\", \"end\": \"2027-04-23\", \"weeks\": 25.5, \"roles\": [{\"role\": \"be\", \"hours\": 1383.1, \"fte_needed\": 2.0, \"planned\": [{\"emp_id\": \"E024\", \"name\": \"Pooja Sharma\", \"allocation_pct\": 50}, {\"emp_id\": \"E028\", \"name\": \"Karan Rao\", \"allocation_pct\": 50}, {\"emp_id\": \"E022\", \"name\": \"Tanvi Solanki\", \"allocation_pct\": 50}, {\"emp_id\": \"E027\", \"name\": \"Aditya Patil\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"qa\", \"hours\": 922.0, \"fte_needed\": 1.25, \"planned\": [{\"emp_id\": \"E038\", \"name\": \"Ritika Solanki\", \"allocation_pct\": 50}, {\"emp_id\": \"E035\", \"name\": \"Bhavna Verma\", \"allocation_pct\": 50}, {\"emp_id\": \"E037\", \"name\": \"Bhavna Goyal\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"fe\", \"hours\": 792.0, \"fte_needed\": 1.0, \"planned\": [{\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"allocation_pct\": 100}, {\"emp_id\": \"E014\", \"name\": \"Mohit Shukla\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"mobile\", \"hours\": 729.4, \"fte_needed\": 1.0, \"planned\": [{\"emp_id\": \"E029\", \"name\": \"Ritika Tiwari\", \"allocation_pct\": 100}], \"uncovered\": false}, {\"role\": \"pm\", \"hours\": 449.1, \"fte_needed\": 0.5, \"planned\": [{\"emp_id\": \"E002\", \"name\": \"Rajat Dubey\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"uiux\", \"hours\": 319.1, \"fte_needed\": 0.5, \"planned\": [{\"emp_id\": \"E009\", \"name\": \"Chirag Deshmukh\", \"allocation_pct\": 75}], \"uncovered\": false}, {\"role\": \"ba\", \"hours\": 285.6, \"fte_needed\": 0.5, \"planned\": [{\"emp_id\": \"E006\", \"name\": \"Yash Bhatt\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"lead\", \"hours\": 269.5, \"fte_needed\": 0.25, \"planned\": [{\"emp_id\": \"E051\", \"name\": \"Vikram Gupta\", \"allocation_pct\": 50}, {\"emp_id\": \"E052\", \"name\": \"Manish Goyal\", \"allocation_pct\": 25}], \"uncovered\": false}, {\"role\": \"devops\", \"hours\": 60.0, \"fte_needed\": 0.25, \"planned\": [{\"emp_id\": \"E044\", \"name\": \"Naveen Rajput\", \"allocation_pct\": 25}], \"uncovered\": false}], \"stack\": [\"React Native\", \"Next.js\", \"Node.js\", \"SQL Server\", \"Azure\", \"Twilio\", \"Stripe hosted/tokenized payment flow\"]}, {\"deal_id\": \"1e8168cc4b\", \"title\": \"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"client\": \"Maison Verlaine SA\", \"status\": \"ready\", \"win_probability\": 0.5, \"start\": \"2026-10-26\", \"end\": \"2027-03-11\", \"weeks\": 19.4, \"roles\": [{\"role\": \"be\", \"hours\": 1026.6, \"fte_needed\": 2.0, \"planned\": [{\"emp_id\": \"E024\", \"name\": \"Pooja Sharma\", \"allocation_pct\": 50}, {\"emp_id\": \"E028\", \"name\": \"Karan Rao\", \"allocation_pct\": 50}, {\"emp_id\": \"E022\", \"name\": \"Tanvi Solanki\", \"allocation_pct\": 50}, {\"emp_id\": \"E027\", \"name\": \"Aditya Patil\", \"allocation_pct\": 50}], \"uncovered\": false}, {\"role\": \"qa\", \"hours\": 493.0, \"fte_needed\": 1.0, \"planned\": [{\"emp_id\": \"E038\", \"name\": \"Ritika Solanki\", \"allocation_pct\": 50}, {\"emp_id\": \"E035\", \"name\": \"Bhavna Verma\", \"allocation_pct\": 50}, {\"emp …[+8244 chars]"
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E029",
+    "target_type": "deal",
+    "target_id": "5678fef5aa",
+    "allocation_pct": 100,
+    "start_date": "2026-10-26",
+    "weeks": 12
+   }
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E011",
+    "target_type": "deal",
+    "target_id": "1e8168cc4b",
+    "allocation_pct": 75,
+    "start_date": "2026-10-26",
+    "weeks": 12
+   }
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E024",
+    "target_type": "deal",
+    "target_id": "5678fef5aa",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12
+   }
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E050",
+    "target_type": "internal",
+    "target_id": "IW1",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12
+   }
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E017",
+    "target_type": "internal",
+    "target_id": "IW3",
+    "allocation_pct": 100,
+    "start_date": "2026-11-23",
+    "weeks": 8
+   }
+  },
+  {
+   "t": 5.61,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "check_match",
+   "data": {
+    "emp_id": "E044",
+    "target_type": "internal",
+    "target_id": "IW5",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12
+   }
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"partial\", \"matched_skills\": [\"React Native\"], \"allocation_pct\": 100, \"start_date\": \"2026-10-26\", \"hours_in_horizon\": 480.0, \"win_probability\": 0.5}"
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"partial\", \"matched_skills\": [\"Next.js\"], \"allocation_pct\": 75, \"start_date\": \"2026-10-26\", \"hours_in_horizon\": 360.0, \"win_probability\": 0.5}"
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"strong\", \"matched_skills\": [\"SQL Server\", \"Twilio\"], \"allocation_pct\": 50, \"start_date\": \"2026-10-26\", \"hours_in_horizon\": 240.0, \"win_probability\": 0.5}"
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"strong\", \"matched_skills\": [\"OpenAI API\", \"Python\"], \"allocation_pct\": 50, \"start_date\": \"2026-10-26\", \"hours_in_horizon\": 240.0, \"win_probability\": 1.0}"
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"strong\", \"matched_skills\": [\"Accessibility (WCAG)\", \"React\"], \"allocation_pct\": 100, \"start_date\": \"2026-11-23\", \"hours_in_horizon\": 320.0, \"win_probability\": 1.0}"
+  },
+  {
+   "t": 5.62,
+   "agent": "matcher",
+   "kind": "tool_result",
+   "text": "check_match",
+   "data": "{\"status\": \"ok\", \"issues\": [], \"fit\": \"strong\", \"matched_skills\": [\"Azure\", \"Kubernetes\", \"Monitoring\", \"Terraform\"], \"allocation_pct\": 50, \"start_date\": \"2026-10-26\", \"hours_in_horizon\": 240.0, \"win_probability\": 1.0}"
+  },
+  {
+   "t": 10.04,
+   "agent": "matcher",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "matches": [
+     {
+      "emp_id": "E029",
+      "target_type": "deal",
+      "target_id": "5678fef5aa",
+      "allocation_pct": 100,
+      "start_date": "2026-10-26",
+      "weeks": 12,
+      "rationale": "Mobile developer with React Native experience fits the app role; this is a soft booking pending the 50% win-probability decision.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E011",
+      "target_type": "deal",
+      "target_id": "1e8168cc4b",
+      "allocation_pct": 75,
+      "start_date": "2026-10-26",
+      "weeks": 12,
+      "rationale": "Frontend developer with Next.js experience fits the e-commerce build; soft booking while the deal decision is pending at 50%.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E024",
+      "target_type": "deal",
+      "target_id": "5678fef5aa",
+      "allocation_pct": 50,
+      "start_date": "2026-10-26",
+      "weeks": 12,
+      "rationale": "Senior backend developer with SQL Server and Twilio skills matches the patient-booking stack; soft booking pending the 50% decision.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E050",
+      "target_type": "internal",
+      "target_id": "IW1",
+      "allocation_pct": 50,
+      "start_date": "2026-10-26",
+      "weeks": 12,
+      "rationale": "ML engineer with OpenAI API and Python skills strongly fits the reusable RAG accelerator.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E017",
+      "target_type": "internal",
+      "target_id": "IW3",
+      "allocation_pct": 100,
+      "start_date": "2026-11-23",
+      "weeks": 8,
+      "rationale": "Senior frontend developer with Accessibility (WCAG) and React skills fits the UI component library after rolling off.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E044",
+      "target_type": "internal",
+      "target_id": "IW5",
+      "allocation_pct": 50,
+      "start_date": "2026-10-26",
+      "weeks": 12,
+      "rationale": "Senior DevOps engineer with Azure, Kubernetes, Monitoring and Terraform skills fits cloud and CI/CD hardening.",
+      "confidence": "high"
+     }
+    ],
+    "left_unmatched": [
+     "E009",
+     "E014",
+     "E007",
+     "E052",
+     "E051",
+     "E002",
+     "E037",
+     "E043",
+     "E046",
+     "E045",
+     "E016",
+     "E027",
+     "E042",
+     "E003",
+     "E008",
+     "E001",
+     "E004",
+     "E006",
+     "E010",
+     "E015",
+     "E018",
+     "E028",
+     "E038",
+     "E035",
+     "E022",
+     "E053",
+     "E054",
+     "E005",
+     "E019",
+     "E021",
+     "E040",
+     "E025",
+     "E047",
+     "E049",
+     "E039",
+     "E020",
+     "E032",
+     "E048"
+    ],
+    "notes": [
+     "Deals shown are soft bookings because each has a 50% win probability. No suitable demand match was made for most rolloffs; they are passed to the Upskilling Planner.",
+     "Deal allocations are limited to the 12-week planning horizon."
+    ]
+   }
+  },
+  {
+   "t": 10.06,
+   "agent": "matcher",
+   "kind": "agent_end",
+   "text": "6 matches proposed; 38 left unmatched",
+   "data": null
+  },
+  {
+   "t": 10.06,
+   "agent": "checks",
+   "kind": "agent_start",
+   "text": "Match checks started",
+   "data": null
+  },
+  {
+   "t": 10.07,
+   "agent": "checks",
+   "kind": "calculator",
+   "text": "Calculator added 19 internal-work matches for people still free",
+   "data": [
+    "Manish Choudhary -> Empower AI accelerator: reusable RAG starter kit 100%",
+    "Swati Malviya -> Empower AI accelerator: reusable RAG starter kit 50%",
+    "Pooja Patidar -> Sales demo builds for open proposals 50%",
+    "Zoya Shukla -> Sales demo builds for open proposals 50%",
+    "Chirag Deshmukh -> Sales demo builds for open proposals 50%",
+    "Mohit Kaur -> Reusable UI component library (React + Angular kits) 50%",
+    "Varsha Patidar -> Pre-sales proofs of concept: IoT telemetry and BI dashboards 50%",
+    "Tanvi Solanki -> Pre-sales proofs of concept: IoT telemetry and BI dashboards 50%",
+    "Aditya Patil -> Pre-sales proofs of concept: IoT telemetry and BI dashboards 50%",
+    "Aarav Soni -> Cloud cost and CI/CD hardening for retainer clients 50%",
+    "Tarun Khandelwal -> QA automation regression packs for retainers 100%",
+    "Bhavna Goyal -> QA automation regression packs for retainers 50%",
+    "Komal Gupta -> Cloud certification sprint (AWS / Azure) 50%",
+    "Nikhil Parmar -> Cloud certification sprint (AWS / Azure) 75%",
+    "Vikram Gupta -> Cloud certification sprint (AWS / Azure) 75%",
+    "Manish Goyal -> Cloud certification sprint (AWS / Azure) 50%",
+    "Nidhi Raghuwanshi -> Cloud certification sprint (AWS / Azure) 50%",
+    "Pooja Kothari -> Internal data pipelines for the Deal Desk and Staffing data 50%",
+    "Yash Bhatt -> Internal data pipelines for the Deal Desk and Staffing data 50%"
+   ]
+  },
+  {
+   "t": 10.07,
+   "agent": "checks",
+   "kind": "agent_end",
+   "text": "6 agent matches kept (1 flagged), 0 rejected, 19 added by the calculator",
+   "data": null
+  },
+  {
+   "t": 10.07,
+   "agent": "upskill",
+   "kind": "agent_start",
+   "text": "Upskilling Planner started",
+   "data": null
+  },
+  {
+   "t": 10.28,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "people_without_match",
+   "data": {}
+  },
+  {
+   "t": 10.28,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "skills_gap",
+   "data": {}
+  },
+  {
+   "t": 10.28,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "people_without_match",
+   "data": "[{\"emp_id\": \"E009\", \"name\": \"Chirag Deshmukh\", \"role\": \"uiux\", \"title\": \"Junior UI/UX Designer\", \"level\": \"Junior\", \"skills\": [\"Accessibility (WCAG)\", \"User research\", \"Figma\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"skills\": [\"Angular\", \"Next.js\", \"Redux\", \"WordPress\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 25}, {\"emp_id\": \"E014\", \"name\": \"Mohit Shukla\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"skills\": [\"Vue\", \"Tailwind\", \"WordPress\", \"Next.js\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 100}, {\"emp_id\": \"E007\", \"name\": \"Swati Solanki\", \"role\": \"ba\", \"title\": \"Mid Business Analyst\", \"level\": \"Mid\", \"skills\": [\"Requirements\", \"Fintech domain\", \"Process mapping\", \"Power BI\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E044\", \"name\": \"Naveen Rajput\", \"role\": \"devops\", \"title\": \"Senior DevOps / Cloud Engineer\", \"level\": \"Senior\", \"skills\": [\"Serverless\", \"Terraform\", \"Monitoring\", \"Kubernetes\", \"Azure\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 25}, {\"emp_id\": \"E002\", \"name\": \"Rajat Dubey\", \"role\": \"pm\", \"title\": \"Lead Project Manager\", \"level\": \"Lead\", \"skills\": [\"Risk management\", \"Scrum\", \"Jira\", \"HIPAA\", \"Client communication\", \"Agile\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E045\", \"name\": \"Varsha Patidar\", \"role\": \"data\", \"title\": \"Mid Data / BI Engineer\", \"level\": \"Mid\", \"skills\": [\"SQL\", \"Power BI\", \"Snowflake\", \"Spark\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E016\", \"name\": \"Nidhi Parmar\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"skills\": [\"TypeScript\", \"Vue\", \"Redux\", \"Tailwind\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E003\", \"name\": \"Kriti Bhargava\", \"role\": \"pm\", \"title\": \"Senior Project Manager\", \"level\": \"Senior\", \"skills\": [\"HIPAA\", \"Agile\", \"Client communication\", \"Jira\", \"Risk management\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E001\", \"name\": \"Saurabh Bhargava\", \"role\": \"pm\", \"title\": \"Senior Project Manager\", \"level\": \"Senior\", \"skills\": [\"HIPAA\", \"Agile\", \"Risk management\", \"GDPR\", \"Scrum\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E004\", \"name\": \"Rohan Raghuwanshi\", \"role\": \"pm\", \"title\": \"Senior Project Manager\", \"level\": \"Senior\", \"skills\": [\"Scrum\", \"Jira\", \"HIPAA\", \"Agile\", \"Risk management\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E018\", \"name\": \"Pooja Dubey\", \"role\": \"fe\", \"title\": \"Junior Frontend Developer\", \"level\": \"Junior\", \"skills\": [\"Next.js\", \"Redux\", \"Tailwind\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E028\", \"name\": \"Karan Rao\", \"role\": \"be\", \"title\": \"Senior Backend Developer\", \"level\": \"Senior\", \"skills\": [\"SQL Server\", \"Salesforce API\", \"Python\", \"Redis\", \"GraphQL\"], \"free_from\": \"2026-10-26\", \"free_pct_left\": 50}, {\"emp_id\": \"E038\", \"name\": \"Ritika Solanki\", \"role …[+2463 chars]"
+  },
+  {
+   "t": 10.28,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "skills_gap",
+   "data": "[{\"skill\": \"Firebase\", \"demand_score\": 0.5, \"deals\": [\"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\"], \"people_with_skill\": 4, \"coming_free_with_skill\": 0, \"gap\": true, \"courses\": []}, {\"skill\": \"Next.js\", \"demand_score\": 2.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 6, \"coming_free_with_skill\": 5, \"gap\": false, \"courses\": [\"C17\"]}, {\"skill\": \"Node.js\", \"demand_score\": 2.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 3, \"coming_free_with_skill\": 3, \"gap\": false, \"courses\": []}, {\"skill\": \"React Native\", \"demand_score\": 1.5, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 5, \"coming_free_with_skill\": 1, \"gap\": false, \"courses\": [\"C01\"]}, {\"skill\": \"Stripe\", \"demand_score\": 1.5, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 2, \"coming_free_with_skill\": 2, \"gap\": false, \"courses\": [\"C11\"]}, {\"skill\": \"AWS\", \"demand_score\": 1.0, \"deals\": [\"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\"], \"people_with_skill\": 4, \"coming_free_with_skill\": 4, \"gap\": false, \"courses\": [\"C07\"]}, {\"skill\": \"Azure\", \"demand_score\": 1.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 4, \"coming_free_with_skill\": 4, \"gap\": false, \"courses\": [\"C06\"]}, {\"skill\": \"GDPR\", \"demand_score\": 1.0, \"deals\": [\"Maison Verlaine headless e-commerce \\u00b7 Maison Verlaine SA\", \"Pocketful round-up savings MVP \\u00b7 Pocketful Ltd\"], \"people_with_skill\": 1, \"coming_free_with_skill\": 1, \"gap\": false, \"courses\": [\"C16\"]}, {\"skill\": \"SQL\", \"demand_score\": 1.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 7, \"coming_free_with_skill\": 7, \"gap\": false, \"courses\": []}, {\"skill\": \"SQL Server\", \"demand_score\": 1.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\", \"BrightSmile Patient Booking App \\u00b7 BrightSmile Dental Group\"], \"people_with_skill\": 3, \"coming_free_with_skill\": 3, \"gap\": false, \"courses\": []}, {\"skill\": \"Twilio\", \"demand_score\": 1.0, \"deals\": [\"Patient booking app \\u00b7 BrightSmile Dental Group\",  …[+1016 chars]"
+  },
+  {
+   "t": 11.83,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "course_catalog",
+   "data": {
+    "skill": null
+   }
+  },
+  {
+   "t": 11.84,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "course_catalog",
+   "data": "[{\"id\": \"C01\", \"skill\": \"React Native\", \"title\": \"React Native: production apps for iOS and Android\", \"provider\": \"Udemy\", \"hours\": 32, \"cost_inr\": 3500, \"format\": \"self-paced\"}, {\"id\": \"C02\", \"skill\": \"Flutter\", \"title\": \"Flutter and Dart: the complete guide\", \"provider\": \"Udemy\", \"hours\": 40, \"cost_inr\": 3500, \"format\": \"self-paced\"}, {\"id\": \"C03\", \"skill\": \"LLM / RAG\", \"title\": \"Building RAG applications with LLMs\", \"provider\": \"DeepLearning.AI / Coursera\", \"hours\": 24, \"cost_inr\": 4100, \"format\": \"self-paced\"}, {\"id\": \"C04\", \"skill\": \"OpenAI API\", \"title\": \"OpenAI API and function calling for developers\", \"provider\": \"Empower Academy\", \"hours\": 12, \"cost_inr\": 0, \"format\": \"internal workshop\"}, {\"id\": \"C05\", \"skill\": \"Vector databases\", \"title\": \"Vector search with pgvector and managed vector DBs\", \"provider\": \"Empower Academy\", \"hours\": 10, \"cost_inr\": 0, \"format\": \"internal workshop\"}, {\"id\": \"C06\", \"skill\": \"Azure\", \"title\": \"AZ-204: Developing solutions for Microsoft Azure\", \"provider\": \"Microsoft Learn\", \"hours\": 40, \"cost_inr\": 12500, \"format\": \"self-paced + exam\"}, {\"id\": \"C07\", \"skill\": \"AWS\", \"title\": \"AWS Certified Developer - Associate\", \"provider\": \"AWS Skill Builder\", \"hours\": 40, \"cost_inr\": 12500, \"format\": \"self-paced + exam\"}, {\"id\": \"C08\", \"skill\": \"Terraform\", \"title\": \"HashiCorp Terraform Associate\", \"provider\": \"HashiCorp Learn\", \"hours\": 24, \"cost_inr\": 6000, \"format\": \"self-paced + exam\"}, {\"id\": \"C09\", \"skill\": \"Kubernetes\", \"title\": \"Kubernetes for developers (CKAD prep)\", \"provider\": \"Linux Foundation\", \"hours\": 36, \"cost_inr\": 21000, \"format\": \"self-paced + exam\"}, {\"id\": \"C10\", \"skill\": \"MQTT\", \"title\": \"IoT messaging with MQTT and Azure IoT Hub\", \"provider\": \"Microsoft Learn\", \"hours\": 16, \"cost_inr\": 0, \"format\": \"self-paced\"}, {\"id\": \"C11\", \"skill\": \"Stripe\", \"title\": \"Stripe payments integration and PCI basics\", \"provider\": \"Stripe Docs + Empower Academy\", \"hours\": 12, \"cost_inr\": 0, \"format\": \"self-paced\"}, {\"id\": \"C12\", \"skill\": \"Power BI\", \"title\": \"PL-300: Microsoft Power BI Data Analyst\", \"provider\": \"Microsoft Learn\", \"hours\": 32, \"cost_inr\": 12500, \"format\": \"self-paced + exam\"}, {\"id\": \"C13\", \"skill\": \"Playwright\", \"title\": \"End-to-end testing with Playwright\", \"provider\": \"LinkedIn Learning\", \"hours\": 10, \"cost_inr\": 1500, \"format\": \"self-paced\"}, {\"id\": \"C14\", \"skill\": \"Appium\", \"title\": \"Mobile test automation with Appium\", \"provider\": \"Udemy\", \"hours\": 16, \"cost_inr\": 2500, \"format\": \"self-paced\"}, {\"id\": \"C15\", \"skill\": \"HIPAA\", \"title\": \"HIPAA for software engineers\", \"provider\": \"Empower Academy\", \"hours\": 6, \"cost_inr\": 0, \"format\": \"internal workshop\"}, {\"id\": \"C16\", \"skill\": \"GDPR\", \"title\": \"GDPR and EU data residency for developers\", \"provider\": \"Empower Academy\", \"hours\": 6, \"cost_inr\": 0, \"format\": \"internal workshop\"}, {\"id\": \"C17\", \"skill\": \"Next.js\", \"title\": \"Next.js App Router in production\", \"provider\": \"Vercel / Udemy\", \"hours\": 18, \"cost_inr\": 3000, \"format\": \"self-paced\"}, {\"id\":  …[+162 chars]"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E014"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E018"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E019"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E025"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E032"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E048"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E035"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "person_schedule",
+   "data": {
+    "emp_id": "E001"
+   }
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E014\", \"name\": \"Mohit Shukla\", \"role\": \"fe\", \"title\": \"Mid Frontend Developer\", \"level\": \"Mid\", \"office\": \"Bhopal\", \"years_exp\": 4, \"skills\": [\"Vue\", \"Tailwind\", \"WordPress\", \"Next.js\"], \"free_pct_in_window\": 100, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"assignments\": []}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E018\", \"name\": \"Pooja Dubey\", \"role\": \"fe\", \"title\": \"Junior Frontend Developer\", \"level\": \"Junior\", \"office\": \"Indore\", \"years_exp\": 3, \"skills\": [\"Next.js\", \"Redux\", \"Tailwind\"], \"free_pct_in_window\": 50, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50], \"assignments\": [{\"project\": \"Headless storefront - retainer\", \"code\": \"A205\", \"client\": \"Vandenberg Retail NV\", \"allocation_pct\": 50, \"from\": \"2026-08-10\", \"to\": \"2027-03-29\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E019\", \"name\": \"Vivek Porwal\", \"role\": \"be\", \"title\": \"Senior Backend Developer\", \"level\": \"Senior\", \"office\": \"Indore\", \"years_exp\": 9, \"skills\": [\"Salesforce API\", \"Redis\", \"Django\", \"FastAPI\", \"Node.js\"], \"free_pct_in_window\": 0, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [100, 100, 100, 100, 0, 0, 0, 0, 0, 0, 0, 0], \"assignments\": [{\"project\": \"Claims portal - stabilisation\", \"code\": \"A206\", \"client\": \"Kiwi Insure\", \"allocation_pct\": 100, \"from\": \"2026-02-23\", \"to\": \"2026-11-16\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E025\", \"name\": \"Pooja Tiwari\", \"role\": \"be\", \"title\": \"Mid Backend Developer\", \"level\": \"Mid\", \"office\": \"Bhopal\", \"years_exp\": 5, \"skills\": [\"Python\", \"Stripe\", \"ASP.NET MVC\", \"Twilio\"], \"free_pct_in_window\": 0, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [100, 100, 100, 100, 100, 100, 100, 0, 0, 0, 0, 0], \"assignments\": [{\"project\": \"Smart-meter analytics - phase 2\", \"code\": \"A203\", \"client\": \"Nordlicht Energie AG\", \"allocation_pct\": 100, \"from\": \"2026-09-07\", \"to\": \"2026-12-07\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E032\", \"name\": \"Ritika Rao\", \"role\": \"mobile\", \"title\": \"Junior Mobile Developer\", \"level\": \"Junior\", \"office\": \"Indore\", \"years_exp\": 2, \"skills\": [\"Swift\", \"Kotlin\", \"Google Maps SDK\"], \"free_pct_in_window\": 0, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 0], \"assignments\": [{\"project\": \"Language-learning app - growth features\", \"code\": \"A204\", \"client\": \"Sakura Learning KK\", \"allocation_pct\": 100, \"from\": \"2026-07-06\", \"to\": \"2027-01-04\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E048\", \"name\": \"Swati Malviya\", \"role\": \"ml\", \"title\": \"Mid AI / ML Engineer\", \"level\": \"Mid\", \"office\": \"Indore\", \"years_exp\": 5, \"skills\": [\"MLOps\", \"Python\", \"Vector databases\", \"LLM / RAG\"], \"free_pct_in_window\": 0, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 0], \"assignments\": [{\"project\": \"Language-learning app - growth features\", \"code\": \"A204\", \"client\": \"Sakura Learning KK\", \"allocation_pct\": 100, \"from\": \"2026-07-06\", \"to\": \"2027-01-04\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E035\", \"name\": \"Bhavna Verma\", \"role\": \"qa\", \"title\": \"Mid QA Engineer\", \"level\": \"Mid\", \"office\": \"Indore\", \"years_exp\": 4, \"skills\": [\"Security testing\", \"API testing\", \"Manual testing\", \"Playwright\"], \"free_pct_in_window\": 50, \"leave_weeks_in_window\": 2, \"weekly_allocation_pct_incl_leave\": [50, 50, 50, 50, 50, 150, 150, 50, 50, 50, 50, 0], \"assignments\": [{\"project\": \"Language-learning app - growth features\", \"code\": \"A204\", \"client\": \"Sakura Learning KK\", \"allocation_pct\": 50, \"from\": \"2026-07-06\", \"to\": \"2027-01-04\", \"kind\": \"project\"}, {\"project\": \"Planned leave\", \"code\": \"LEAVE\", \"client\": \"\", \"allocation_pct\": 100, \"from\": \"2026-12-03\", \"to\": \"2026-12-10\", \"kind\": \"leave\"}]}"
+  },
+  {
+   "t": 15.39,
+   "agent": "upskill",
+   "kind": "tool_result",
+   "text": "person_schedule",
+   "data": "{\"emp_id\": \"E001\", \"name\": \"Saurabh Bhargava\", \"role\": \"pm\", \"title\": \"Senior Project Manager\", \"level\": \"Senior\", \"office\": \"Pune\", \"years_exp\": 6, \"skills\": [\"HIPAA\", \"Agile\", \"Risk management\", \"GDPR\", \"Scrum\"], \"free_pct_in_window\": 50, \"leave_weeks_in_window\": 0, \"weekly_allocation_pct_incl_leave\": [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50], \"assignments\": [{\"project\": \"Fleet tracking - Arabic + iPad\", \"code\": \"A209\", \"client\": \"Gulf Freight Lines\", \"allocation_pct\": 50, \"from\": \"2026-08-17\", \"to\": \"2027-01-18\", \"kind\": \"project\"}]}"
+  },
+  {
+   "t": 19.46,
+   "agent": "upskill",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "items": [
+     {
+      "emp_id": "E014",
+      "course_id": "C17",
+      "start_date": "2026-10-26",
+      "hours_per_week": 18,
+      "reason": "Deepen Next.js for the Maison Verlaine headless e-commerce, BrightSmile patient booking, and Pocketful MVP pipeline demand."
+     }
+    ],
+    "notes": [
+     "Firebase is the only listed skill gap with no free employee having the skill, but the course catalog offers no Firebase course."
+    ]
+   }
+  },
+  {
+   "t": 19.48,
+   "agent": "upskill",
+   "kind": "agent_end",
+   "text": "1 courses planned (0 rejected)",
+   "data": null
+  },
+  {
+   "t": 19.48,
+   "agent": "brief",
+   "kind": "agent_start",
+   "text": "Bench Brief started",
+   "data": null
+  },
+  {
+   "t": 21.86,
+   "agent": "brief",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "The 12-week plan converts some bench time to work, but leaves 18 people without a match or course.",
+    "summary": "Over 12 weeks, the plan starts from 11,960.0 idle hours and INR 1,47,09,888 idle cost if no plan. It assigns 540.0 billable hours expected weighted by win chance (1,080.0 if all deals are won), turning INR 5,19,102 of idle cost billable. It also assigns 3,780.0 internal hours (INR 42,65,500) and 18 training hours (INR 17,393, plus INR 3,000 in course fees). INR 99,07,893 idle cost remains. Eighteen people have no match or course; examples include Swati Solanki, Rajat Dubey and Nidhi Parmar. The listed deals are pending, so those bookings are soft and could be lost. Firebase is a skill gap.",
+    "decisions_needed": [
+     "Confirm whether to proceed with the pending Patient booking app and Maison Verlaine bookings as soft allocations.",
+     "Approve the INR 3,000 course fee for Mohit Shukla.",
+     "Decide how to address the 18 people still without a plan and the Firebase skill gap."
+    ],
+    "risks": [
+     "Pending deals may be lost, reducing expected billable work.",
+     "Firebase remains a skill gap.",
+     "Eighteen people remain without a match or course."
+    ]
+   }
+  },
+  {
+   "t": 21.88,
+   "agent": "brief",
+   "kind": "agent_end",
+   "text": "The 12-week plan converts some bench time to work, but leaves 18 people without a match or course.",
+   "data": null
+  }
+ ],
+ "results": {
+  "rolloffs": [
+   {
+    "emp_id": "E009",
+    "name": "Chirag Deshmukh",
+    "role": "uiux",
+    "title": "Junior UI/UX Designer",
+    "level": "Junior",
+    "office": "Bhopal",
+    "skills": [
+     "Accessibility (WCAG)",
+     "User research",
+     "Figma"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 100,
+    "status": "on_bench_now",
+    "fully_free": true,
+    "weekly_free_pct": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 480.0,
+    "bench_cost_inr": 516192,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E011",
+    "name": "Jayesh Chouhan",
+    "role": "fe",
+    "title": "Mid Frontend Developer",
+    "level": "Mid",
+    "office": "Pune",
+    "skills": [
+     "Angular",
+     "Next.js",
+     "Redux",
+     "WordPress"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 100,
+    "status": "on_bench_now",
+    "fully_free": true,
+    "weekly_free_pct": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 480.0,
+    "bench_cost_inr": 463824,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E014",
+    "name": "Mohit Shukla",
+    "role": "fe",
+    "title": "Mid Frontend Developer",
+    "level": "Mid",
+    "office": "Bhopal",
+    "skills": [
+     "Vue",
+     "Tailwind",
+     "WordPress",
+     "Next.js"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 100,
+    "status": "on_bench_now",
+    "fully_free": true,
+    "weekly_free_pct": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 480.0,
+    "bench_cost_inr": 463824,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E029",
+    "name": "Ritika Tiwari",
+    "role": "mobile",
+    "title": "Mid Mobile Developer",
+    "level": "Mid",
+    "office": "Pune",
+    "skills": [
+     "Kotlin",
+     "Offline sync",
+     "React Native",
+     "Google Maps SDK"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 100,
+    "status": "on_bench_now",
+    "fully_free": true,
+    "weekly_free_pct": [
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 480.0,
+    "bench_cost_inr": 384960,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E007",
+    "name": "Swati Solanki",
+    "role": "ba",
+    "title": "Mid Business Analyst",
+    "level": "Mid",
+    "office": "Bhopal",
+    "skills": [
+     "Requirements",
+     "Fintech domain",
+     "Process mapping",
+     "Power BI"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 400.0,
+    "bench_cost_inr": 424120,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E052",
+    "name": "Manish Goyal",
+    "role": "lead",
+    "title": "Tech Lead / Architect",
+    "level": "Lead",
+    "office": "Indore",
+    "skills": [
+     "Python",
+     "Node.js",
+     "Azure",
+     "React",
+     ".NET Core",
+     "System design"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 400.0,
+    "bench_cost_inr": 874520,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E044",
+    "name": "Naveen Rajput",
+    "role": "devops",
+    "title": "Senior DevOps / Cloud Engineer",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     "Serverless",
+     "Terraform",
+     "Monitoring",
+     "Kubernetes",
+     "Azure"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 75,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 360.0,
+    "bench_cost_inr": 318636,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E051",
+    "name": "Vikram Gupta",
+    "role": "lead",
+    "title": "Tech Lead / Architect",
+    "level": "Lead",
+    "office": "Pune",
+    "skills": [
+     ".NET Core",
+     "Node.js",
+     "Security",
+     "Python",
+     "Microservices",
+     "Azure"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 75,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 360.0,
+    "bench_cost_inr": 787068,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E002",
+    "name": "Rajat Dubey",
+    "role": "pm",
+    "title": "Lead Project Manager",
+    "level": "Lead",
+    "office": "Indore",
+    "skills": [
+     "Risk management",
+     "Scrum",
+     "Jira",
+     "HIPAA",
+     "Client communication",
+     "Agile"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 340.0,
+    "bench_cost_inr": 586976,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E037",
+    "name": "Bhavna Goyal",
+    "role": "qa",
+    "title": "Mid QA Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "Selenium",
+     "Cypress",
+     "Appium",
+     "Playwright"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 340.0,
+    "bench_cost_inr": 404532,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E043",
+    "name": "Aarav Soni",
+    "role": "devops",
+    "title": "Junior DevOps / Cloud Engineer",
+    "level": "Junior",
+    "office": "Indore",
+    "skills": [
+     "AWS",
+     "Monitoring",
+     "Kubernetes"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 340.0,
+    "bench_cost_inr": 300934,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E046",
+    "name": "Pooja Kothari",
+    "role": "data",
+    "title": "Mid Data / BI Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "Airflow",
+     "Spark",
+     "ETL",
+     "SQL"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 340.0,
+    "bench_cost_inr": 357408,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E045",
+    "name": "Varsha Patidar",
+    "role": "data",
+    "title": "Mid Data / BI Engineer",
+    "level": "Mid",
+    "office": "Pune",
+    "skills": [
+     "SQL",
+     "Power BI",
+     "Snowflake",
+     "Spark"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 100,
+    "status": "on_bench_now",
+    "fully_free": true,
+    "weekly_free_pct": [
+     100,
+     100,
+     100,
+     100,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 320.0,
+    "bench_cost_inr": 336384,
+    "ending_project": null,
+    "next_project": {
+     "project": "Coachline - peak-season upgrades (signed)",
+     "starts": "2026-11-23",
+     "allocation_pct": 50
+    }
+   },
+   {
+    "emp_id": "E016",
+    "name": "Nidhi Parmar",
+    "role": "fe",
+    "title": "Mid Frontend Developer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "TypeScript",
+     "Vue",
+     "Redux",
+     "Tailwind"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 300.0,
+    "bench_cost_inr": 289890,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E027",
+    "name": "Aditya Patil",
+    "role": "be",
+    "title": "Mid Backend Developer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "ASP.NET MVC",
+     "REST APIs",
+     "Python",
+     "Twilio"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 300.0,
+    "bench_cost_inr": 381720,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E042",
+    "name": "Nikhil Parmar",
+    "role": "devops",
+    "title": "Junior DevOps / Cloud Engineer",
+    "level": "Junior",
+    "office": "Pune",
+    "skills": [
+     "CI/CD",
+     "Docker",
+     "Serverless"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 75,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75,
+     75
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 300.0,
+    "bench_cost_inr": 265530,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E003",
+    "name": "Kriti Bhargava",
+    "role": "pm",
+    "title": "Senior Project Manager",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     "HIPAA",
+     "Agile",
+     "Client communication",
+     "Jira",
+     "Risk management"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 260.0,
+    "bench_cost_inr": 448864,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E008",
+    "name": "Zoya Shukla",
+    "role": "uiux",
+    "title": "Senior UI/UX Designer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "User research",
+     "Accessibility (WCAG)",
+     "Design systems",
+     "Mobile UI",
+     "Prototyping"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 260.0,
+    "bench_cost_inr": 279604,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E001",
+    "name": "Saurabh Bhargava",
+    "role": "pm",
+    "title": "Senior Project Manager",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "HIPAA",
+     "Agile",
+     "Risk management",
+     "GDPR",
+     "Scrum"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 414336,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E004",
+    "name": "Rohan Raghuwanshi",
+    "role": "pm",
+    "title": "Senior Project Manager",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "Scrum",
+     "Jira",
+     "HIPAA",
+     "Agile",
+     "Risk management"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 414336,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E006",
+    "name": "Yash Bhatt",
+    "role": "ba",
+    "title": "Senior Business Analyst",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "Figma",
+     "SQL",
+     "Healthcare domain",
+     "User stories",
+     "Power BI"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 254472,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E010",
+    "name": "Pooja Patidar",
+    "role": "uiux",
+    "title": "Senior UI/UX Designer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "Figma",
+     "Mobile UI",
+     "Accessibility (WCAG)",
+     "Design systems",
+     "Prototyping"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 258096,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E015",
+    "name": "Mohit Kaur",
+    "role": "fe",
+    "title": "Senior Frontend Developer",
+    "level": "Senior",
+    "office": "Bhopal",
+    "skills": [
+     "React",
+     "Next.js",
+     "Vue",
+     "TypeScript",
+     "Angular"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 231912,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E018",
+    "name": "Pooja Dubey",
+    "role": "fe",
+    "title": "Junior Frontend Developer",
+    "level": "Junior",
+    "office": "Indore",
+    "skills": [
+     "Next.js",
+     "Redux",
+     "Tailwind"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 231912,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E024",
+    "name": "Pooja Sharma",
+    "role": "be",
+    "title": "Senior Backend Developer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "PostgreSQL",
+     "Python",
+     "ASP.NET MVC",
+     "Twilio",
+     "SQL Server"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 305376,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E028",
+    "name": "Karan Rao",
+    "role": "be",
+    "title": "Senior Backend Developer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "SQL Server",
+     "Salesforce API",
+     "Python",
+     "Redis",
+     "GraphQL"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 305376,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E038",
+    "name": "Ritika Solanki",
+    "role": "qa",
+    "title": "Senior QA Engineer",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     "Cypress",
+     "Security testing",
+     "Selenium",
+     "Manual testing",
+     "API testing"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 285552,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E050",
+    "name": "Abhishek Kulkarni",
+    "role": "ml",
+    "title": "Mid AI / ML Engineer",
+    "level": "Mid",
+    "office": "Pune",
+    "skills": [
+     "scikit-learn",
+     "OpenAI API",
+     "Python",
+     "LangChain"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 222576,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E035",
+    "name": "Bhavna Verma",
+    "role": "qa",
+    "title": "Mid QA Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "Security testing",
+     "API testing",
+     "Manual testing",
+     "Playwright"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     100
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 220.0,
+    "bench_cost_inr": 261756,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E022",
+    "name": "Tanvi Solanki",
+    "role": "be",
+    "title": "Mid Backend Developer",
+    "level": "Mid",
+    "office": "Bhopal",
+    "skills": [
+     "Python",
+     ".NET Core",
+     "Redis",
+     "Django"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 200.0,
+    "bench_cost_inr": 254480,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E053",
+    "name": "Komal Gupta",
+    "role": "lead",
+    "title": "Tech Lead / Architect",
+    "level": "Lead",
+    "office": "Indore",
+    "skills": [
+     "Azure",
+     "Microservices",
+     "Security",
+     "AWS",
+     "React",
+     ".NET Core"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 200.0,
+    "bench_cost_inr": 437260,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E054",
+    "name": "Nidhi Raghuwanshi",
+    "role": "lead",
+    "title": "Tech Lead / Architect",
+    "level": "Lead",
+    "office": "Bhopal",
+    "skills": [
+     "Security",
+     ".NET Core",
+     "System design",
+     "Microservices",
+     "React",
+     "AWS"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 200.0,
+    "bench_cost_inr": 437260,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E005",
+    "name": "Aditya Deshmukh",
+    "role": "ba",
+    "title": "Mid Business Analyst",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "User stories",
+     "Power BI",
+     "Process mapping",
+     "Healthcare domain"
+    ],
+    "free_from": "2026-10-26",
+    "weeks_until_free": 0,
+    "free_pct": 50,
+    "status": "on_bench_now",
+    "fully_free": false,
+    "weekly_free_pct": [
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 3,
+    "bench_hours": 180.0,
+    "bench_cost_inr": 190854,
+    "ending_project": null,
+    "next_project": null
+   },
+   {
+    "emp_id": "E017",
+    "name": "Rakesh Gupta",
+    "role": "fe",
+    "title": "Senior Frontend Developer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "Accessibility (WCAG)",
+     "React",
+     "WordPress",
+     "Tailwind",
+     "Next.js"
+    ],
+    "free_from": "2026-11-23",
+    "weeks_until_free": 4,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 320.0,
+    "bench_cost_inr": 309216,
+    "ending_project": {
+     "project": "Claims portal - stabilisation",
+     "code": "A206",
+     "client": "Kiwi Insure",
+     "ends": "2026-11-16",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E019",
+    "name": "Vivek Porwal",
+    "role": "be",
+    "title": "Senior Backend Developer",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     "Salesforce API",
+     "Redis",
+     "Django",
+     "FastAPI",
+     "Node.js"
+    ],
+    "free_from": "2026-11-23",
+    "weeks_until_free": 4,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 320.0,
+    "bench_cost_inr": 407168,
+    "ending_project": {
+     "project": "Claims portal - stabilisation",
+     "code": "A206",
+     "client": "Kiwi Insure",
+     "ends": "2026-11-16",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E021",
+    "name": "Tushar Nair",
+    "role": "be",
+    "title": "Senior Backend Developer",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     ".NET Core",
+     "PostgreSQL",
+     "SQL Server",
+     "GraphQL",
+     "Elasticsearch"
+    ],
+    "free_from": "2026-11-23",
+    "weeks_until_free": 4,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 320.0,
+    "bench_cost_inr": 407168,
+    "ending_project": {
+     "project": "Claims portal - stabilisation",
+     "code": "A206",
+     "client": "Kiwi Insure",
+     "ends": "2026-11-16",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E040",
+    "name": "Tarun Khandelwal",
+    "role": "qa",
+    "title": "Senior QA Engineer",
+    "level": "Senior",
+    "office": "Pune",
+    "skills": [
+     "API testing",
+     "Playwright",
+     "Selenium",
+     "Appium",
+     "Cypress"
+    ],
+    "free_from": "2026-11-23",
+    "weeks_until_free": 4,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 2,
+    "bench_hours": 240.0,
+    "bench_cost_inr": 285552,
+    "ending_project": {
+     "project": "Claims portal - stabilisation",
+     "code": "A206",
+     "client": "Kiwi Insure",
+     "ends": "2026-11-16",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E025",
+    "name": "Pooja Tiwari",
+    "role": "be",
+    "title": "Mid Backend Developer",
+    "level": "Mid",
+    "office": "Bhopal",
+    "skills": [
+     "Python",
+     "Stripe",
+     "ASP.NET MVC",
+     "Twilio"
+    ],
+    "free_from": "2026-12-14",
+    "weeks_until_free": 7,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 200.0,
+    "bench_cost_inr": 254480,
+    "ending_project": {
+     "project": "Smart-meter analytics - phase 2",
+     "code": "A203",
+     "client": "Nordlicht Energie AG",
+     "ends": "2026-12-07",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E047",
+    "name": "Ankit Patidar",
+    "role": "data",
+    "title": "Mid Data / BI Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "Power BI",
+     "Tableau",
+     "AWS Glue",
+     "SQL"
+    ],
+    "free_from": "2026-12-14",
+    "weeks_until_free": 7,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 200.0,
+    "bench_cost_inr": 210240,
+    "ending_project": {
+     "project": "Smart-meter analytics - phase 2",
+     "code": "A203",
+     "client": "Nordlicht Energie AG",
+     "ends": "2026-12-07",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E049",
+    "name": "Manish Choudhary",
+    "role": "ml",
+    "title": "Mid AI / ML Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "OpenAI API",
+     "LangChain",
+     "Python",
+     "MLOps"
+    ],
+    "free_from": "2026-12-28",
+    "weeks_until_free": 9,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100,
+     100,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 120.0,
+    "bench_cost_inr": 111288,
+    "ending_project": {
+     "project": "Support RAG assistant - v2",
+     "code": "A207",
+     "client": "PayNest",
+     "ends": "2026-12-21",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E039",
+    "name": "Gaurav Shinde",
+    "role": "qa",
+    "title": "Mid QA Engineer",
+    "level": "Mid",
+    "office": "Pune",
+    "skills": [
+     "API testing",
+     "Selenium",
+     "Security testing",
+     "Cypress"
+    ],
+    "free_from": "2026-12-28",
+    "weeks_until_free": 9,
+    "free_pct": 50,
+    "status": "rolling_off",
+    "fully_free": false,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     50,
+     50,
+     50
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 60.0,
+    "bench_cost_inr": 71388,
+    "ending_project": {
+     "project": "Support RAG assistant - v2",
+     "code": "A207",
+     "client": "PayNest",
+     "ends": "2026-12-21",
+     "allocation_pct": 50
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E020",
+    "name": "Rahul Parmar",
+    "role": "be",
+    "title": "Senior Backend Developer",
+    "level": "Senior",
+    "office": "Indore",
+    "skills": [
+     "ASP.NET MVC",
+     "REST APIs",
+     "Stripe",
+     ".NET Core",
+     "WebSockets"
+    ],
+    "free_from": "2027-01-11",
+    "weeks_until_free": 11,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 40.0,
+    "bench_cost_inr": 50896,
+    "ending_project": {
+     "project": "Language-learning app - growth features",
+     "code": "A204",
+     "client": "Sakura Learning KK",
+     "ends": "2027-01-04",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E032",
+    "name": "Ritika Rao",
+    "role": "mobile",
+    "title": "Junior Mobile Developer",
+    "level": "Junior",
+    "office": "Indore",
+    "skills": [
+     "Swift",
+     "Kotlin",
+     "Google Maps SDK"
+    ],
+    "free_from": "2027-01-11",
+    "weeks_until_free": 11,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 40.0,
+    "bench_cost_inr": 32080,
+    "ending_project": {
+     "project": "Language-learning app - growth features",
+     "code": "A204",
+     "client": "Sakura Learning KK",
+     "ends": "2027-01-04",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   },
+   {
+    "emp_id": "E048",
+    "name": "Swati Malviya",
+    "role": "ml",
+    "title": "Mid AI / ML Engineer",
+    "level": "Mid",
+    "office": "Indore",
+    "skills": [
+     "MLOps",
+     "Python",
+     "Vector databases",
+     "LLM / RAG"
+    ],
+    "free_from": "2027-01-11",
+    "weeks_until_free": 11,
+    "free_pct": 100,
+    "status": "rolling_off",
+    "fully_free": true,
+    "weekly_free_pct": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     100
+    ],
+    "leave_weeks": 0,
+    "bench_hours": 40.0,
+    "bench_cost_inr": 37096,
+    "ending_project": {
+     "project": "Language-learning app - growth features",
+     "code": "A204",
+     "client": "Sakura Learning KK",
+     "ends": "2027-01-04",
+     "allocation_pct": 100
+    },
+    "next_project": null
+   }
+  ],
+  "weekly": [
+   {
+    "week": "2026-10-26",
+    "bench_fte": 20.0,
+    "bench_cost_inr": 989397,
+    "fully_free": 5,
+    "on_leave": 0
+   },
+   {
+    "week": "2026-11-02",
+    "bench_fte": 20.0,
+    "bench_cost_inr": 989397,
+    "fully_free": 5,
+    "on_leave": 0
+   },
+   {
+    "week": "2026-11-09",
+    "bench_fte": 20.0,
+    "bench_cost_inr": 989397,
+    "fully_free": 5,
+    "on_leave": 0
+   },
+   {
+    "week": "2026-11-16",
+    "bench_fte": 20.0,
+    "bench_cost_inr": 989397,
+    "fully_free": 5,
+    "on_leave": 0
+   },
+   {
+    "week": "2026-11-23",
+    "bench_fte": 23.8,
+    "bench_cost_inr": 1194788,
+    "fully_free": 10,
+    "on_leave": 1
+   },
+   {
+    "week": "2026-11-30",
+    "bench_fte": 23.2,
+    "bench_cost_inr": 1170992,
+    "fully_free": 10,
+    "on_leave": 2
+   },
+   {
+    "week": "2026-12-07",
+    "bench_fte": 23.5,
+    "bench_cost_inr": 1153819,
+    "fully_free": 10,
+    "on_leave": 2
+   },
+   {
+    "week": "2026-12-14",
+    "bench_fte": 27.0,
+    "bench_cost_inr": 1320017,
+    "fully_free": 15,
+    "on_leave": 2
+   },
+   {
+    "week": "2026-12-21",
+    "bench_fte": 26.5,
+    "bench_cost_inr": 1294569,
+    "fully_free": 15,
+    "on_leave": 3
+   },
+   {
+    "week": "2026-12-28",
+    "bench_fte": 29.5,
+    "bench_cost_inr": 1426621,
+    "fully_free": 19,
+    "on_leave": 3
+   },
+   {
+    "week": "2027-01-04",
+    "bench_fte": 30.5,
+    "bench_cost_inr": 1495795,
+    "fully_free": 19,
+    "on_leave": 1
+   },
+   {
+    "week": "2027-01-11",
+    "bench_fte": 35.0,
+    "bench_cost_inr": 1695699,
+    "fully_free": 25,
+    "on_leave": 1
+   }
+  ],
+  "deals": [
+   {
+    "deal_id": "5678fef5aa",
+    "title": "Patient booking app · BrightSmile Dental Group",
+    "client": "BrightSmile Dental Group",
+    "status": "ready",
+    "win_probability": 0.5,
+    "start": "2026-10-26",
+    "end": "2027-04-23",
+    "weeks": 25.5,
+    "roles": [
+     {
+      "role": "be",
+      "hours": 1383.1,
+      "fte_needed": 2.0,
+      "planned": [
+       {
+        "emp_id": "E024",
+        "name": "Pooja Sharma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E028",
+        "name": "Karan Rao",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E022",
+        "name": "Tanvi Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E027",
+        "name": "Aditya Patil",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "qa",
+      "hours": 922.0,
+      "fte_needed": 1.25,
+      "planned": [
+       {
+        "emp_id": "E038",
+        "name": "Ritika Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E035",
+        "name": "Bhavna Verma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E037",
+        "name": "Bhavna Goyal",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "fe",
+      "hours": 792.0,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E011",
+        "name": "Jayesh Chouhan",
+        "allocation_pct": 100
+       },
+       {
+        "emp_id": "E014",
+        "name": "Mohit Shukla",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "mobile",
+      "hours": 729.4,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E029",
+        "name": "Ritika Tiwari",
+        "allocation_pct": 100
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "pm",
+      "hours": 449.1,
+      "fte_needed": 0.5,
+      "planned": [
+       {
+        "emp_id": "E002",
+        "name": "Rajat Dubey",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "uiux",
+      "hours": 319.1,
+      "fte_needed": 0.5,
+      "planned": [
+       {
+        "emp_id": "E009",
+        "name": "Chirag Deshmukh",
+        "allocation_pct": 75
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "ba",
+      "hours": 285.6,
+      "fte_needed": 0.5,
+      "planned": [
+       {
+        "emp_id": "E006",
+        "name": "Yash Bhatt",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "lead",
+      "hours": 269.5,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E051",
+        "name": "Vikram Gupta",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E052",
+        "name": "Manish Goyal",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "devops",
+      "hours": 60.0,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E044",
+        "name": "Naveen Rajput",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     }
+    ],
+    "stack": [
+     "React Native",
+     "Next.js",
+     "Node.js",
+     "SQL Server",
+     "Azure",
+     "Twilio",
+     "Stripe hosted/tokenized payment flow"
+    ],
+    "capability_gaps": [
+     "Dentrix API: no in-house capability listed; client/vendor technical support, access and documentation are prerequisites, and specialist assistance may be required.",
+     "PCI-DSS: no named in-house skill; payment scope should be reviewed with the selected processor and qualified compliance support.",
+     "Stripe: thin coverage (two people, none free now at 50% or more); confirm staffing or consider an approved alternative before estimating payments.",
+     "Email provider: no specific provider skill listed; select provider and validate integration approach."
+    ],
+    "link": "#/deals/5678fef5aa"
+   },
+   {
+    "deal_id": "1e8168cc4b",
+    "title": "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+    "client": "Maison Verlaine SA",
+    "status": "ready",
+    "win_probability": 0.5,
+    "start": "2026-10-26",
+    "end": "2027-03-11",
+    "weeks": 19.4,
+    "roles": [
+     {
+      "role": "be",
+      "hours": 1026.6,
+      "fte_needed": 2.0,
+      "planned": [
+       {
+        "emp_id": "E024",
+        "name": "Pooja Sharma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E028",
+        "name": "Karan Rao",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E022",
+        "name": "Tanvi Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E027",
+        "name": "Aditya Patil",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "qa",
+      "hours": 493.0,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E038",
+        "name": "Ritika Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E035",
+        "name": "Bhavna Verma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E037",
+        "name": "Bhavna Goyal",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "fe",
+      "hours": 470.5,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E015",
+        "name": "Mohit Kaur",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E011",
+        "name": "Jayesh Chouhan",
+        "allocation_pct": 75
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "pm",
+      "hours": 240.4,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E002",
+        "name": "Rajat Dubey",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "lead",
+      "hours": 144.2,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E051",
+        "name": "Vikram Gupta",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "uiux",
+      "hours": 140.2,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E009",
+        "name": "Chirag Deshmukh",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "ba",
+      "hours": 113.4,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E006",
+        "name": "Yash Bhatt",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "data",
+      "hours": 100.2,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E045",
+        "name": "Varsha Patidar",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "devops",
+      "hours": 60.0,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E043",
+        "name": "Aarav Soni",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     }
+    ],
+    "stack": [
+     "Next.js with TypeScript",
+     "Node.js",
+     "AWS",
+     "Client-selected provider with Bancontact and card support",
+     "Odoo APIs"
+    ],
+    "capability_gaps": [
+     "Odoo (no in-house capability identified)",
+     "Bancontact (no in-house capability identified)",
+     "PCI-DSS (no in-house capability identified; use provider-hosted handling and client-owned attestation, with specialist validation as needed)",
+     "EAA (no in-house capability identified; obtain legal applicability advice)",
+     "Cookie consent (no exact in-house skill identified)",
+     "GDPR (thin capability: one person)",
+     "Stripe (thin capability; provider not yet selected)",
+     "REST APIs (thin capability: two people)",
+     "Magento (no in-house capability identified)"
+    ],
+    "link": "#/deals/1e8168cc4b"
+   },
+   {
+    "deal_id": "72020f439c",
+    "title": "Pocketful round-up savings MVP · Pocketful Ltd",
+    "client": "Pocketful Ltd",
+    "status": "ready",
+    "win_probability": 0.5,
+    "start": "2026-10-26",
+    "end": "2027-02-25",
+    "weeks": 17.4,
+    "roles": [
+     {
+      "role": "be",
+      "hours": 559.8,
+      "fte_needed": 1.25,
+      "planned": [
+       {
+        "emp_id": "E024",
+        "name": "Pooja Sharma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E028",
+        "name": "Karan Rao",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E022",
+        "name": "Tanvi Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E027",
+        "name": "Aditya Patil",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "mobile",
+      "hours": 455.2,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E029",
+        "name": "Ritika Tiwari",
+        "allocation_pct": 100
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "qa",
+      "hours": 388.1,
+      "fte_needed": 0.75,
+      "planned": [
+       {
+        "emp_id": "E038",
+        "name": "Ritika Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E035",
+        "name": "Bhavna Verma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E037",
+        "name": "Bhavna Goyal",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E036",
+        "name": "Priya Solanki",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "pm",
+      "hours": 174.1,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E002",
+        "name": "Rajat Dubey",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "fe",
+      "hours": 148.8,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E011",
+        "name": "Jayesh Chouhan",
+        "allocation_pct": 75
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "uiux",
+      "hours": 111.8,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E009",
+        "name": "Chirag Deshmukh",
+        "allocation_pct": 75
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "lead",
+      "hours": 104.5,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E051",
+        "name": "Vikram Gupta",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "ba",
+      "hours": 77.8,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E006",
+        "name": "Yash Bhatt",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     }
+    ],
+    "stack": [
+     "React Native",
+     "Node.js",
+     "PostgreSQL",
+     "AWS",
+     "Next.js",
+     "Firebase"
+    ],
+    "capability_gaps": [
+     "TrueLayer (no in-house skill match)",
+     "Onfido (no in-house skill match)",
+     "Open Banking (no in-house skill match)",
+     "GDPR (thin: one person)",
+     "Fintech domain (thin: one person)",
+     "PostgreSQL (thin: two people)"
+    ],
+    "link": "#/deals/72020f439c"
+   },
+   {
+    "deal_id": "88c869871f",
+    "title": "BrightSmile Patient Booking App · BrightSmile Dental Group",
+    "client": "BrightSmile Dental Group",
+    "status": "ready",
+    "win_probability": 0.5,
+    "start": "2026-10-26",
+    "end": "2027-04-23",
+    "weeks": 25.5,
+    "roles": [
+     {
+      "role": "be",
+      "hours": 1107.0,
+      "fte_needed": 1.5,
+      "planned": [
+       {
+        "emp_id": "E024",
+        "name": "Pooja Sharma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E028",
+        "name": "Karan Rao",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E027",
+        "name": "Aditya Patil",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E022",
+        "name": "Tanvi Solanki",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "qa",
+      "hours": 783.6,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E038",
+        "name": "Ritika Solanki",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E035",
+        "name": "Bhavna Verma",
+        "allocation_pct": 50
+       },
+       {
+        "emp_id": "E037",
+        "name": "Bhavna Goyal",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "mobile",
+      "hours": 729.4,
+      "fte_needed": 1.0,
+      "planned": [
+       {
+        "emp_id": "E029",
+        "name": "Ritika Tiwari",
+        "allocation_pct": 100
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "fe",
+      "hours": 579.9,
+      "fte_needed": 0.75,
+      "planned": [
+       {
+        "emp_id": "E011",
+        "name": "Jayesh Chouhan",
+        "allocation_pct": 100
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "pm",
+      "hours": 376.0,
+      "fte_needed": 0.5,
+      "planned": [
+       {
+        "emp_id": "E002",
+        "name": "Rajat Dubey",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "uiux",
+      "hours": 263.8,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E009",
+        "name": "Chirag Deshmukh",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "ba",
+      "hours": 236.8,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E006",
+        "name": "Yash Bhatt",
+        "allocation_pct": 50
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "lead",
+      "hours": 225.6,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E051",
+        "name": "Vikram Gupta",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     },
+     {
+      "role": "devops",
+      "hours": 60.0,
+      "fte_needed": 0.25,
+      "planned": [
+       {
+        "emp_id": "E044",
+        "name": "Naveen Rajput",
+        "allocation_pct": 25
+       }
+      ],
+      "uncovered": false
+     }
+    ],
+    "stack": [
+     "React Native",
+     "Next.js",
+     "Node.js with TypeScript",
+     "SQL Server",
+     "Azure",
+     "Twilio",
+     "Hosted/tokenized processor flow"
+    ],
+    "capability_gaps": [
+     "Dentrix API: no in-house practitioners; delivery depends on vendor-supported access and potentially vendor assistance.",
+     "PCI-DSS: no practitioners listed; client must own annual PCI attestation and confirm processor responsibilities. Empower should validate the application boundary with qualified client/provider advisors.",
+     "Stripe: thin capacity, with no practitioners free at 50% or more; confirm a processor and staffing before including payments."
+    ],
+    "link": "#/deals/88c869871f"
+   }
+  ],
+  "internal": [
+   {
+    "id": "IW1",
+    "name": "Empower AI accelerator: reusable RAG starter kit",
+    "roles": [
+     "ml",
+     "be",
+     "fe"
+    ],
+    "skills": [
+     "LLM / RAG",
+     "OpenAI API",
+     "Python",
+     "FastAPI",
+     "React"
+    ],
+    "capacity_fte": 2.0,
+    "min_weeks": 4,
+    "priority": "high",
+    "value": "Cuts 2-3 weeks from every AI deal; reusable demo for CES follow-ups and EdTech/healthcare pitches.",
+    "max_weeks": null,
+    "target_type": "internal"
+   },
+   {
+    "id": "IW2",
+    "name": "Sales demo builds for open proposals",
+    "roles": [
+     "fe",
+     "mobile",
+     "uiux"
+    ],
+    "skills": [
+     "React",
+     "React Native",
+     "Flutter",
+     "Figma",
+     "Prototyping"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 2,
+    "max_weeks": 6,
+    "priority": "high",
+    "value": "Clickable demos raise win rates on proposals that are waiting for a client decision.",
+    "target_type": "internal"
+   },
+   {
+    "id": "IW3",
+    "name": "Reusable UI component library (React + Angular kits)",
+    "roles": [
+     "fe",
+     "uiux"
+    ],
+    "skills": [
+     "React",
+     "Angular",
+     "TypeScript",
+     "Design systems",
+     "Accessibility (WCAG)"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 4,
+    "priority": "medium",
+    "value": "Saves 5-10% of frontend hours on new web portals; WCAG compliance built in.",
+    "max_weeks": null,
+    "target_type": "internal"
+   },
+   {
+    "id": "IW4",
+    "name": "Pre-sales proofs of concept: IoT telemetry and BI dashboards",
+    "roles": [
+     "be",
+     "data",
+     "devops"
+    ],
+    "skills": [
+     "Node.js",
+     "Python",
+     "Power BI",
+     "Azure",
+     "Docker",
+     "Spark"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Ready-made PoCs for manufacturing and energy prospects in Germany and Belgium.",
+    "max_weeks": null,
+    "target_type": "internal"
+   },
+   {
+    "id": "IW5",
+    "name": "Cloud cost and CI/CD hardening for retainer clients",
+    "roles": [
+     "devops",
+     "be"
+    ],
+    "skills": [
+     "AWS",
+     "Azure",
+     "Terraform",
+     "CI/CD",
+     "Docker",
+     "Kubernetes",
+     "Monitoring"
+    ],
+    "capacity_fte": 1.0,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Billable-adjacent: findings usually turn into paid optimisation work with existing clients.",
+    "max_weeks": null,
+    "target_type": "internal"
+   },
+   {
+    "id": "IW6",
+    "name": "QA automation regression packs for retainers",
+    "roles": [
+     "qa"
+    ],
+    "skills": [
+     "Cypress",
+     "Playwright",
+     "Selenium",
+     "Appium",
+     "API testing"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Cuts manual regression time on maintenance retainers; reusable across clients.",
+    "max_weeks": null,
+    "target_type": "internal"
+   },
+   {
+    "id": "IW7",
+    "name": "Cloud certification sprint (AWS / Azure)",
+    "roles": [
+     "be",
+     "fe",
+     "devops",
+     "data",
+     "ml",
+     "lead"
+    ],
+    "skills": [
+     "AWS",
+     "Azure",
+     "Serverless",
+     "AWS Lambda"
+    ],
+    "capacity_fte": 3.0,
+    "min_weeks": 2,
+    "max_weeks": 3,
+    "priority": "low",
+    "value": "More certified engineers strengthen partner status and RFP scoring.",
+    "target_type": "internal"
+   },
+   {
+    "id": "IW8",
+    "name": "Internal data pipelines for the Deal Desk and Staffing data",
+    "roles": [
+     "be",
+     "data",
+     "ba"
+    ],
+    "skills": [
+     "Python",
+     "SQL",
+     "FastAPI",
+     "ETL",
+     "Requirements"
+    ],
+    "capacity_fte": 1.0,
+    "min_weeks": 3,
+    "priority": "low",
+    "value": "Replaces spreadsheet exports with live data for estimates, staffing and appraisals.",
+    "max_weeks": null,
+    "target_type": "internal"
+   }
+  ],
+  "gaps": [
+   {
+    "skill": "Firebase",
+    "demand_score": 0.5,
+    "deals": [
+     "Pocketful round-up savings MVP · Pocketful Ltd"
+    ],
+    "people_with_skill": 4,
+    "coming_free_with_skill": 0,
+    "gap": true,
+    "courses": []
+   },
+   {
+    "skill": "Next.js",
+    "demand_score": 2.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "Pocketful round-up savings MVP · Pocketful Ltd",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 6,
+    "coming_free_with_skill": 5,
+    "gap": false,
+    "courses": [
+     "C17"
+    ]
+   },
+   {
+    "skill": "Node.js",
+    "demand_score": 2.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "Pocketful round-up savings MVP · Pocketful Ltd",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 3,
+    "coming_free_with_skill": 3,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "React Native",
+    "demand_score": 1.5,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "Pocketful round-up savings MVP · Pocketful Ltd",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 5,
+    "coming_free_with_skill": 1,
+    "gap": false,
+    "courses": [
+     "C01"
+    ]
+   },
+   {
+    "skill": "Stripe",
+    "demand_score": 1.5,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 2,
+    "coming_free_with_skill": 2,
+    "gap": false,
+    "courses": [
+     "C11"
+    ]
+   },
+   {
+    "skill": "AWS",
+    "demand_score": 1.0,
+    "deals": [
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "Pocketful round-up savings MVP · Pocketful Ltd"
+    ],
+    "people_with_skill": 4,
+    "coming_free_with_skill": 4,
+    "gap": false,
+    "courses": [
+     "C07"
+    ]
+   },
+   {
+    "skill": "Azure",
+    "demand_score": 1.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 4,
+    "coming_free_with_skill": 4,
+    "gap": false,
+    "courses": [
+     "C06"
+    ]
+   },
+   {
+    "skill": "GDPR",
+    "demand_score": 1.0,
+    "deals": [
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "Pocketful round-up savings MVP · Pocketful Ltd"
+    ],
+    "people_with_skill": 1,
+    "coming_free_with_skill": 1,
+    "gap": false,
+    "courses": [
+     "C16"
+    ]
+   },
+   {
+    "skill": "SQL",
+    "demand_score": 1.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 7,
+    "coming_free_with_skill": 7,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "SQL Server",
+    "demand_score": 1.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 3,
+    "coming_free_with_skill": 3,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "Twilio",
+    "demand_score": 1.0,
+    "deals": [
+     "Patient booking app · BrightSmile Dental Group",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 4,
+    "coming_free_with_skill": 3,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "TypeScript",
+    "demand_score": 1.0,
+    "deals": [
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+     "BrightSmile Patient Booking App · BrightSmile Dental Group"
+    ],
+    "people_with_skill": 4,
+    "coming_free_with_skill": 2,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "Fintech domain",
+    "demand_score": 0.5,
+    "deals": [
+     "Pocketful round-up savings MVP · Pocketful Ltd"
+    ],
+    "people_with_skill": 1,
+    "coming_free_with_skill": 1,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "PostgreSQL",
+    "demand_score": 0.5,
+    "deals": [
+     "Pocketful round-up savings MVP · Pocketful Ltd"
+    ],
+    "people_with_skill": 2,
+    "coming_free_with_skill": 2,
+    "gap": false,
+    "courses": []
+   },
+   {
+    "skill": "REST APIs",
+    "demand_score": 0.5,
+    "deals": [
+     "Maison Verlaine headless e-commerce · Maison Verlaine SA"
+    ],
+    "people_with_skill": 2,
+    "coming_free_with_skill": 2,
+    "gap": false,
+    "courses": []
+   }
+  ],
+  "totals": {
+   "people_rolling_off": 44,
+   "on_bench_now": 33,
+   "rolling_off_later": 11,
+   "bench_fte_avg_8w": 22.2,
+   "bench_cost_if_nothing_inr": 14709888,
+   "bench_cost_8w_inr": 8797204
+  },
+  "horizon_end": "2027-01-18",
+  "match_plan": {
+   "matches": [
+    {
+     "emp_id": "E029",
+     "target_type": "deal",
+     "target_id": "5678fef5aa",
+     "allocation_pct": 100,
+     "start_date": "2026-10-26",
+     "weeks": 12,
+     "rationale": "Mobile developer with React Native experience fits the app role; this is a soft booking pending the 50% win-probability decision.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E011",
+     "target_type": "deal",
+     "target_id": "1e8168cc4b",
+     "allocation_pct": 75,
+     "start_date": "2026-10-26",
+     "weeks": 12,
+     "rationale": "Frontend developer with Next.js experience fits the e-commerce build; soft booking while the deal decision is pending at 50%.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E024",
+     "target_type": "deal",
+     "target_id": "5678fef5aa",
+     "allocation_pct": 50,
+     "start_date": "2026-10-26",
+     "weeks": 12,
+     "rationale": "Senior backend developer with SQL Server and Twilio skills matches the patient-booking stack; soft booking pending the 50% decision.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E050",
+     "target_type": "internal",
+     "target_id": "IW1",
+     "allocation_pct": 50,
+     "start_date": "2026-10-26",
+     "weeks": 12,
+     "rationale": "ML engineer with OpenAI API and Python skills strongly fits the reusable RAG accelerator.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E017",
+     "target_type": "internal",
+     "target_id": "IW3",
+     "allocation_pct": 100,
+     "start_date": "2026-11-23",
+     "weeks": 8,
+     "rationale": "Senior frontend developer with Accessibility (WCAG) and React skills fits the UI component library after rolling off.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E044",
+     "target_type": "internal",
+     "target_id": "IW5",
+     "allocation_pct": 50,
+     "start_date": "2026-10-26",
+     "weeks": 12,
+     "rationale": "Senior DevOps engineer with Azure, Kubernetes, Monitoring and Terraform skills fits cloud and CI/CD hardening.",
+     "confidence": "high"
+    }
+   ],
+   "left_unmatched": [
+    "E009",
+    "E014",
+    "E007",
+    "E052",
+    "E051",
+    "E002",
+    "E037",
+    "E043",
+    "E046",
+    "E045",
+    "E016",
+    "E027",
+    "E042",
+    "E003",
+    "E008",
+    "E001",
+    "E004",
+    "E006",
+    "E010",
+    "E015",
+    "E018",
+    "E028",
+    "E038",
+    "E035",
+    "E022",
+    "E053",
+    "E054",
+    "E005",
+    "E019",
+    "E021",
+    "E040",
+    "E025",
+    "E047",
+    "E049",
+    "E039",
+    "E020",
+    "E032",
+    "E048"
+   ],
+   "notes": [
+    "Deals shown are soft bookings because each has a 50% win probability. No suitable demand match was made for most rolloffs; they are passed to the Upskilling Planner.",
+    "Deal allocations are limited to the 12-week planning horizon."
+   ]
+  },
+  "matches": [
+   {
+    "emp_id": "E029",
+    "target_type": "deal",
+    "target_id": "5678fef5aa",
+    "allocation_pct": 100,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "rationale": "Mobile developer with React Native experience fits the app role; this is a soft booking pending the 50% win-probability decision.",
+    "confidence": "medium",
+    "name": "Ritika Tiwari",
+    "title": "Mid Mobile Developer",
+    "role": "mobile",
+    "office": "Pune",
+    "target_name": "Patient booking app · BrightSmile Dental Group",
+    "link": "#/deals/5678fef5aa",
+    "fit": "partial",
+    "matched_skills": [
+     "React Native"
+    ],
+    "win_probability": 0.5,
+    "hours_in_horizon": 480.0,
+    "cost_covered_inr": 384960,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E011",
+    "target_type": "deal",
+    "target_id": "1e8168cc4b",
+    "allocation_pct": 75,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "rationale": "Frontend developer with Next.js experience fits the e-commerce build; soft booking while the deal decision is pending at 50%.",
+    "confidence": "medium",
+    "name": "Jayesh Chouhan",
+    "title": "Mid Frontend Developer",
+    "role": "fe",
+    "office": "Pune",
+    "target_name": "Maison Verlaine headless e-commerce · Maison Verlaine SA",
+    "link": "#/deals/1e8168cc4b",
+    "fit": "partial",
+    "matched_skills": [
+     "Next.js"
+    ],
+    "win_probability": 0.5,
+    "hours_in_horizon": 360.0,
+    "cost_covered_inr": 347868,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E024",
+    "target_type": "deal",
+    "target_id": "5678fef5aa",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "rationale": "Senior backend developer with SQL Server and Twilio skills matches the patient-booking stack; soft booking pending the 50% decision.",
+    "confidence": "high",
+    "name": "Pooja Sharma",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "office": "Pune",
+    "target_name": "Patient booking app · BrightSmile Dental Group",
+    "link": "#/deals/5678fef5aa",
+    "fit": "strong",
+    "matched_skills": [
+     "SQL Server",
+     "Twilio"
+    ],
+    "win_probability": 0.5,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 305376,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E050",
+    "target_type": "internal",
+    "target_id": "IW1",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "rationale": "ML engineer with OpenAI API and Python skills strongly fits the reusable RAG accelerator.",
+    "confidence": "high",
+    "name": "Abhishek Kulkarni",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "office": "Pune",
+    "target_name": "Empower AI accelerator: reusable RAG starter kit",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "OpenAI API",
+     "Python"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 222576,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E017",
+    "target_type": "internal",
+    "target_id": "IW3",
+    "allocation_pct": 100,
+    "start_date": "2026-11-23",
+    "weeks": 8,
+    "rationale": "Senior frontend developer with Accessibility (WCAG) and React skills fits the UI component library after rolling off.",
+    "confidence": "high",
+    "name": "Rakesh Gupta",
+    "title": "Senior Frontend Developer",
+    "role": "fe",
+    "office": "Pune",
+    "target_name": "Reusable UI component library (React + Angular kits)",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Accessibility (WCAG)",
+     "React"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 320.0,
+    "cost_covered_inr": 309216,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E044",
+    "target_type": "internal",
+    "target_id": "IW5",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "rationale": "Senior DevOps engineer with Azure, Kubernetes, Monitoring and Terraform skills fits cloud and CI/CD hardening.",
+    "confidence": "high",
+    "name": "Naveen Rajput",
+    "title": "Senior DevOps / Cloud Engineer",
+    "role": "devops",
+    "office": "Indore",
+    "target_name": "Cloud cost and CI/CD hardening for retainer clients",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Azure",
+     "Kubernetes",
+     "Monitoring",
+     "Terraform"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 212424,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E049",
+    "target_type": "internal",
+    "target_id": "IW1",
+    "allocation_pct": 100,
+    "start_date": "2026-12-28",
+    "weeks": 4,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 100% matched to Empower AI accelerator: reusable RAG starter kit by role and skills (OpenAI API, Python).",
+    "name": "Manish Choudhary",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "office": "Indore",
+    "target_name": "Empower AI accelerator: reusable RAG starter kit",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "OpenAI API",
+     "Python"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 120.0,
+    "cost_covered_inr": 111288,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E048",
+    "target_type": "internal",
+    "target_id": "IW1",
+    "allocation_pct": 50,
+    "start_date": "2027-01-11",
+    "weeks": 4,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 100% matched to Empower AI accelerator: reusable RAG starter kit by role and skills (LLM / RAG, Python).",
+    "name": "Swati Malviya",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "office": "Indore",
+    "target_name": "Empower AI accelerator: reusable RAG starter kit",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "LLM / RAG",
+     "Python"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 20.0,
+    "cost_covered_inr": 18548,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E010",
+    "target_type": "internal",
+    "target_id": "IW2",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 6,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Sales demo builds for open proposals by role and skills (Figma, Prototyping).",
+    "name": "Pooja Patidar",
+    "title": "Senior UI/UX Designer",
+    "role": "uiux",
+    "office": "Pune",
+    "target_name": "Sales demo builds for open proposals",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Figma",
+     "Prototyping"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 120.0,
+    "cost_covered_inr": 129048,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E008",
+    "target_type": "internal",
+    "target_id": "IW2",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 6,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Sales demo builds for open proposals by role and skills (Prototyping).",
+    "name": "Zoya Shukla",
+    "title": "Senior UI/UX Designer",
+    "role": "uiux",
+    "office": "Pune",
+    "target_name": "Sales demo builds for open proposals",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Prototyping"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 120.0,
+    "cost_covered_inr": 129048,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E009",
+    "target_type": "internal",
+    "target_id": "IW2",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 6,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 100% matched to Sales demo builds for open proposals by role and skills (Figma).",
+    "name": "Chirag Deshmukh",
+    "title": "Junior UI/UX Designer",
+    "role": "uiux",
+    "office": "Bhopal",
+    "target_name": "Sales demo builds for open proposals",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Figma"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 120.0,
+    "cost_covered_inr": 129048,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E015",
+    "target_type": "internal",
+    "target_id": "IW3",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Reusable UI component library (React + Angular kits) by role and skills (Angular, React, TypeScript).",
+    "name": "Mohit Kaur",
+    "title": "Senior Frontend Developer",
+    "role": "fe",
+    "office": "Bhopal",
+    "target_name": "Reusable UI component library (React + Angular kits)",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Angular",
+     "React",
+     "TypeScript"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 231912,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E045",
+    "target_type": "internal",
+    "target_id": "IW4",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 100% matched to Pre-sales proofs of concept: IoT telemetry and BI dashboards by role and skills (Power BI, Spark).",
+    "name": "Varsha Patidar",
+    "title": "Mid Data / BI Engineer",
+    "role": "data",
+    "office": "Pune",
+    "target_name": "Pre-sales proofs of concept: IoT telemetry and BI dashboards",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Power BI",
+     "Spark"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 252288,
+    "status": "flagged",
+    "issues": [
+     "Allocation cut from 100% to 50% (only 50% free)."
+    ]
+   },
+   {
+    "emp_id": "E022",
+    "target_type": "internal",
+    "target_id": "IW4",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Pre-sales proofs of concept: IoT telemetry and BI dashboards by role and skills (Python).",
+    "name": "Tanvi Solanki",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "office": "Bhopal",
+    "target_name": "Pre-sales proofs of concept: IoT telemetry and BI dashboards",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Python"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 200.0,
+    "cost_covered_inr": 254480,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E027",
+    "target_type": "internal",
+    "target_id": "IW4",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Pre-sales proofs of concept: IoT telemetry and BI dashboards by role and skills (Python).",
+    "name": "Aditya Patil",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "office": "Indore",
+    "target_name": "Pre-sales proofs of concept: IoT telemetry and BI dashboards",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Python"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 305376,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E043",
+    "target_type": "internal",
+    "target_id": "IW5",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Cloud cost and CI/CD hardening for retainer clients by role and skills (AWS, Kubernetes, Monitoring).",
+    "name": "Aarav Soni",
+    "title": "Junior DevOps / Cloud Engineer",
+    "role": "devops",
+    "office": "Indore",
+    "target_name": "Cloud cost and CI/CD hardening for retainer clients",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "AWS",
+     "Kubernetes",
+     "Monitoring"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 212424,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E040",
+    "target_type": "internal",
+    "target_id": "IW6",
+    "allocation_pct": 100,
+    "start_date": "2026-11-23",
+    "weeks": 8,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 100% matched to QA automation regression packs for retainers by role and skills (API testing, Appium, Cypress).",
+    "name": "Tarun Khandelwal",
+    "title": "Senior QA Engineer",
+    "role": "qa",
+    "office": "Pune",
+    "target_name": "QA automation regression packs for retainers",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "API testing",
+     "Appium",
+     "Cypress",
+     "Playwright",
+     "Selenium"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 285552,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E037",
+    "target_type": "internal",
+    "target_id": "IW6",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to QA automation regression packs for retainers by role and skills (Appium, Cypress, Playwright).",
+    "name": "Bhavna Goyal",
+    "title": "Mid QA Engineer",
+    "role": "qa",
+    "office": "Indore",
+    "target_name": "QA automation regression packs for retainers",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "Appium",
+     "Cypress",
+     "Playwright",
+     "Selenium"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 285552,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E053",
+    "target_type": "internal",
+    "target_id": "IW7",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 3,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Cloud certification sprint (AWS / Azure) by role and skills (AWS, Azure).",
+    "name": "Komal Gupta",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "office": "Indore",
+    "target_name": "Cloud certification sprint (AWS / Azure)",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "AWS",
+     "Azure"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 60.0,
+    "cost_covered_inr": 131178,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E042",
+    "target_type": "internal",
+    "target_id": "IW7",
+    "allocation_pct": 75,
+    "start_date": "2026-10-26",
+    "weeks": 3,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 75% matched to Cloud certification sprint (AWS / Azure) by role and skills (Serverless).",
+    "name": "Nikhil Parmar",
+    "title": "Junior DevOps / Cloud Engineer",
+    "role": "devops",
+    "office": "Pune",
+    "target_name": "Cloud certification sprint (AWS / Azure)",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Serverless"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 90.0,
+    "cost_covered_inr": 79659,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E051",
+    "target_type": "internal",
+    "target_id": "IW7",
+    "allocation_pct": 75,
+    "start_date": "2026-10-26",
+    "weeks": 3,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 75% matched to Cloud certification sprint (AWS / Azure) by role and skills (Azure).",
+    "name": "Vikram Gupta",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "office": "Pune",
+    "target_name": "Cloud certification sprint (AWS / Azure)",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Azure"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 90.0,
+    "cost_covered_inr": 196767,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E052",
+    "target_type": "internal",
+    "target_id": "IW7",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 3,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Cloud certification sprint (AWS / Azure) by role and skills (Azure).",
+    "name": "Manish Goyal",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "office": "Indore",
+    "target_name": "Cloud certification sprint (AWS / Azure)",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "Azure"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 60.0,
+    "cost_covered_inr": 131178,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E054",
+    "target_type": "internal",
+    "target_id": "IW7",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 3,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Cloud certification sprint (AWS / Azure) by role and skills (AWS).",
+    "name": "Nidhi Raghuwanshi",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "office": "Bhopal",
+    "target_name": "Cloud certification sprint (AWS / Azure)",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "AWS"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 60.0,
+    "cost_covered_inr": 131178,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E046",
+    "target_type": "internal",
+    "target_id": "IW8",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Internal data pipelines for the Deal Desk and Staffing data by role and skills (ETL, SQL).",
+    "name": "Pooja Kothari",
+    "title": "Mid Data / BI Engineer",
+    "role": "data",
+    "office": "Indore",
+    "target_name": "Internal data pipelines for the Deal Desk and Staffing data",
+    "link": null,
+    "fit": "strong",
+    "matched_skills": [
+     "ETL",
+     "SQL"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 252288,
+    "status": "ok",
+    "issues": []
+   },
+   {
+    "emp_id": "E006",
+    "target_type": "internal",
+    "target_id": "IW8",
+    "allocation_pct": 50,
+    "start_date": "2026-10-26",
+    "weeks": 12,
+    "confidence": "medium",
+    "source": "calculator",
+    "rationale": "Calculator fill: free 50% matched to Internal data pipelines for the Deal Desk and Staffing data by role and skills (SQL).",
+    "name": "Yash Bhatt",
+    "title": "Senior Business Analyst",
+    "role": "ba",
+    "office": "Pune",
+    "target_name": "Internal data pipelines for the Deal Desk and Staffing data",
+    "link": null,
+    "fit": "partial",
+    "matched_skills": [
+     "SQL"
+    ],
+    "win_probability": 1.0,
+    "hours_in_horizon": 240.0,
+    "cost_covered_inr": 254472,
+    "status": "ok",
+    "issues": []
+   }
+  ],
+  "rejected_matches": [],
+  "value": {
+   "bench_hours_if_nothing": 11960.0,
+   "bench_cost_if_nothing_inr": 14709888,
+   "billable_hours_expected": 540.0,
+   "billable_hours_if_all_deals_won": 1080.0,
+   "bench_cost_covered_by_billable_inr": 519102,
+   "internal_hours": 3780.0,
+   "internal_investment_inr": 4265500,
+   "training_hours": 18,
+   "training_time_inr": 17393,
+   "course_fees_inr": 3000,
+   "idle_cost_remaining_inr": 9907893,
+   "people_rolling_off": 44,
+   "people_matched": 25,
+   "people_upskilled": 1,
+   "people_without_plan": 18
+  },
+  "upskilling": [
+   {
+    "emp_id": "E014",
+    "course_id": "C17",
+    "start_date": "2026-10-26",
+    "hours_per_week": 18,
+    "reason": "Deepen Next.js for the Maison Verlaine headless e-commerce, BrightSmile patient booking, and Pocketful MVP pipeline demand.",
+    "name": "Mohit Shukla",
+    "title": "Mid Frontend Developer",
+    "course": "Next.js App Router in production",
+    "skill": "Next.js",
+    "provider": "Vercel / Udemy",
+    "course_hours": 18,
+    "cost_inr": 3000,
+    "end_date": "2026-11-02",
+    "weeks": 1,
+    "status": "ok",
+    "issues": []
+   }
+  ],
+  "rejected_upskilling": [],
+  "brief": {
+   "headline": "The 12-week plan converts some bench time to work, but leaves 18 people without a match or course.",
+   "summary": "Over 12 weeks, the plan starts from 11,960.0 idle hours and INR 1,47,09,888 idle cost if no plan. It assigns 540.0 billable hours expected weighted by win chance (1,080.0 if all deals are won), turning INR 5,19,102 of idle cost billable. It also assigns 3,780.0 internal hours (INR 42,65,500) and 18 training hours (INR 17,393, plus INR 3,000 in course fees). INR 99,07,893 idle cost remains. Eighteen people have no match or course; examples include Swati Solanki, Rajat Dubey and Nidhi Parmar. The listed deals are pending, so those bookings are soft and could be lost. Firebase is a skill gap.",
+   "decisions_needed": [
+    "Confirm whether to proceed with the pending Patient booking app and Maison Verlaine bookings as soft allocations.",
+    "Approve the INR 3,000 course fee for Mohit Shukla.",
+    "Decide how to address the 18 people still without a plan and the Firebase skill gap."
+   ],
+   "risks": [
+    "Pending deals may be lost, reducing expected billable work.",
+    "Firebase remains a skill gap.",
+    "Eighteen people remain without a match or course."
+   ]
+  }
+ },
+ "decision": null,
+ "error": null,
+ "usage": {
+  "input_tokens": 36539,
+  "cached_tokens": 17095,
+  "output_tokens": 2241,
+  "reasoning_tokens": 658,
+  "requests": 8,
+  "tool_calls": 22,
+  "cost_usd": 0.003236,
+  "cache_hit_pct": 46.8
+ }
+}

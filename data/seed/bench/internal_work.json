@@ -1,0 +1,171 @@
+[
+  {
+    "id": "IW1",
+    "name": "Empower AI accelerator: reusable RAG starter kit",
+    "roles": [
+      "ml",
+      "be",
+      "fe"
+    ],
+    "skills": [
+      "LLM / RAG",
+      "OpenAI API",
+      "Python",
+      "FastAPI",
+      "React"
+    ],
+    "capacity_fte": 2.0,
+    "min_weeks": 4,
+    "priority": "high",
+    "value": "Cuts 2-3 weeks from every AI deal; reusable demo for CES follow-ups and EdTech/healthcare pitches.",
+    "max_weeks": null
+  },
+  {
+    "id": "IW2",
+    "name": "Sales demo builds for open proposals",
+    "roles": [
+      "fe",
+      "mobile",
+      "uiux"
+    ],
+    "skills": [
+      "React",
+      "React Native",
+      "Flutter",
+      "Figma",
+      "Prototyping"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 2,
+    "max_weeks": 6,
+    "priority": "high",
+    "value": "Clickable demos raise win rates on proposals that are waiting for a client decision."
+  },
+  {
+    "id": "IW3",
+    "name": "Reusable UI component library (React + Angular kits)",
+    "roles": [
+      "fe",
+      "uiux"
+    ],
+    "skills": [
+      "React",
+      "Angular",
+      "TypeScript",
+      "Design systems",
+      "Accessibility (WCAG)"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 4,
+    "priority": "medium",
+    "value": "Saves 5-10% of frontend hours on new web portals; WCAG compliance built in.",
+    "max_weeks": null
+  },
+  {
+    "id": "IW4",
+    "name": "Pre-sales proofs of concept: IoT telemetry and BI dashboards",
+    "roles": [
+      "be",
+      "data",
+      "devops"
+    ],
+    "skills": [
+      "Node.js",
+      "Python",
+      "Power BI",
+      "Azure",
+      "Docker",
+      "Spark"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Ready-made PoCs for manufacturing and energy prospects in Germany and Belgium.",
+    "max_weeks": null
+  },
+  {
+    "id": "IW5",
+    "name": "Cloud cost and CI/CD hardening for retainer clients",
+    "roles": [
+      "devops",
+      "be"
+    ],
+    "skills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "Monitoring"
+    ],
+    "capacity_fte": 1.0,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Billable-adjacent: findings usually turn into paid optimisation work with existing clients.",
+    "max_weeks": null
+  },
+  {
+    "id": "IW6",
+    "name": "QA automation regression packs for retainers",
+    "roles": [
+      "qa"
+    ],
+    "skills": [
+      "Cypress",
+      "Playwright",
+      "Selenium",
+      "Appium",
+      "API testing"
+    ],
+    "capacity_fte": 1.5,
+    "min_weeks": 3,
+    "priority": "medium",
+    "value": "Cuts manual regression time on maintenance retainers; reusable across clients.",
+    "max_weeks": null
+  },
+  {
+    "id": "IW7",
+    "name": "Cloud certification sprint (AWS / Azure)",
+    "roles": [
+      "be",
+      "fe",
+      "devops",
+      "data",
+      "ml",
+      "lead"
+    ],
+    "skills": [
+      "AWS",
+      "Azure",
+      "Serverless",
+      "AWS Lambda"
+    ],
+    "capacity_fte": 3.0,
+    "min_weeks": 2,
+    "max_weeks": 3,
+    "priority": "low",
+    "value": "More certified engineers strengthen partner status and RFP scoring."
+  },
+  {
+    "id": "IW8",
+    "name": "Internal data pipelines for the Deal Desk and Staffing data",
+    "roles": [
+      "be",
+      "data",
+      "ba"
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "FastAPI",
+      "ETL",
+      "Requirements"
+    ],
+    "capacity_fte": 1.0,
+    "min_weeks": 3,
+    "priority": "low",
+    "value": "Replaces spreadsheet exports with live data for estimates, staffing and appraisals.",
+    "max_weeks": null
+  }
+]

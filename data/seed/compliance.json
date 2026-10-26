@@ -1,0 +1,29 @@
+{
+  "_comment": "Checklist the Deal Critic uses. Triggers match on client country, industry and feature keywords (lower-case).",
+  "rules": [
+    {"id": "gdpr", "name": "GDPR (EU)", "countries": ["DE", "BE", "FR", "NL", "IE", "ES", "IT", "AT", "SE", "DK", "FI", "PL", "PT", "EU"],
+     "requires": ["Data Processing Agreement (DPA) with Standard Contractual Clauses for India access", "EU data residency for production data", "Right-to-erasure and data-export features", "Cookie consent if there is a public website"],
+     "effort_hint": "Add ~40-80 h (consent, export/erase, DPA review)"},
+    {"id": "uk_gdpr", "name": "UK GDPR", "countries": ["UK", "GB"],
+     "requires": ["UK International Data Transfer Agreement / addendum", "Right-to-erasure and data-export features"],
+     "effort_hint": "Add ~30-60 h"},
+    {"id": "hipaa", "name": "HIPAA (US health data)", "countries": ["US"], "industries": ["healthcare", "health", "telehealth", "medical", "clinic", "hospital", "dental"],
+     "requires": ["Business Associate Agreement (BAA) signed before any PHI access", "Encryption of PHI at rest and in transit", "Audit logs of every PHI access", "Role-based access control and session timeouts", "HIPAA-eligible cloud services only"],
+     "effort_hint": "Add the 'Audit logging & compliance controls' module (high) and ~10% extra QA"},
+    {"id": "pci", "name": "PCI-DSS (card payments)", "keywords": ["payment", "payments", "card", "checkout", "stripe", "wallet", "billing"],
+     "requires": ["Use hosted payment fields / tokenisation so card data never touches our servers (SAQ A)", "No card numbers in logs", "Annual PCI attestation owned by the client"],
+     "effort_hint": "Keep scope at SAQ A; full PCI scope adds weeks"},
+    {"id": "coppa", "name": "COPPA / children's data", "countries": ["US"], "keywords": ["children", "kids", "k-12", "students under 13", "school"],
+     "requires": ["Verifiable parental consent for users under 13", "No behavioural advertising to children"],
+     "effort_hint": "Add ~40 h for consent flows"},
+    {"id": "accessibility", "name": "Accessibility (WCAG 2.2 AA / ADA / EAA)", "keywords": ["public", "portal", "website", "government", "patients", "students", "e-commerce", "store"],
+     "requires": ["WCAG 2.2 AA design and testing", "European Accessibility Act applies to EU consumer e-commerce since June 2025"],
+     "effort_hint": "Add ~8-12% to UI and QA hours"},
+    {"id": "ai_act", "name": "EU AI Act transparency", "countries": ["DE", "BE", "FR", "NL", "IE", "ES", "IT", "AT", "SE", "DK", "FI", "PL", "PT", "EU"], "keywords": ["ai", "llm", "chatbot", "gpt", "machine learning", "model"],
+     "requires": ["Tell users they are talking to an AI", "Log model versions and keep human oversight for consequential decisions"],
+     "effort_hint": "Add ~20-40 h"},
+    {"id": "llm_safety", "name": "LLM feature safety", "keywords": ["ai", "llm", "chatbot", "gpt", "assistant", "rag"],
+     "requires": ["Prompt-injection and data-leak testing", "Evaluation set and acceptance criteria agreed with client", "Monthly model/API cost estimate passed to the client"],
+     "effort_hint": "Add ~15% to the LLM module for evals and guardrails"}
+  ]
+}

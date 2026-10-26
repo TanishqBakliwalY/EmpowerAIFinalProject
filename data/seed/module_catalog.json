@@ -1,0 +1,440 @@
+{
+  "complexity_multipliers": {
+    "low": 0.6,
+    "medium": 1.0,
+    "high": 1.6
+  },
+  "modules": {
+    "auth": {
+      "name": "User accounts, login & roles",
+      "tags": [
+        "auth",
+        "login",
+        "sso",
+        "roles",
+        "users",
+        "accounts",
+        "permissions"
+      ],
+      "base_hours_medium": {
+        "ba": 8,
+        "uiux": 12,
+        "fe": 40,
+        "be": 56,
+        "qa": 24
+      }
+    },
+    "admin_panel": {
+      "name": "Admin panel & back office",
+      "tags": [
+        "admin",
+        "back office",
+        "dashboard",
+        "management",
+        "backoffice"
+      ],
+      "base_hours_medium": {
+        "ba": 16,
+        "uiux": 24,
+        "fe": 80,
+        "be": 72,
+        "qa": 40
+      }
+    },
+    "web_portal": {
+      "name": "Customer-facing web portal (UI build)",
+      "tags": [
+        "portal",
+        "website",
+        "web app",
+        "frontend",
+        "responsive",
+        "ui"
+      ],
+      "base_hours_medium": {
+        "ba": 16,
+        "uiux": 60,
+        "fe": 160,
+        "qa": 40
+      }
+    },
+    "mobile_app": {
+      "name": "Mobile app (iOS + Android, cross-platform)",
+      "tags": [
+        "mobile",
+        "ios",
+        "android",
+        "app",
+        "react native",
+        "flutter"
+      ],
+      "base_hours_medium": {
+        "uiux": 60,
+        "mobile": 320,
+        "be": 40,
+        "qa": 120
+      }
+    },
+    "payments": {
+      "name": "Payments & billing integration",
+      "tags": [
+        "payments",
+        "billing",
+        "stripe",
+        "checkout",
+        "subscription",
+        "wallet",
+        "invoice"
+      ],
+      "base_hours_medium": {
+        "ba": 16,
+        "fe": 32,
+        "be": 96,
+        "qa": 48
+      }
+    },
+    "booking": {
+      "name": "Booking & scheduling engine",
+      "tags": [
+        "booking",
+        "scheduling",
+        "appointments",
+        "reservations",
+        "calendar",
+        "availability"
+      ],
+      "base_hours_medium": {
+        "ba": 24,
+        "uiux": 24,
+        "fe": 64,
+        "be": 120,
+        "qa": 56
+      }
+    },
+    "notifications": {
+      "name": "Notifications (email, SMS, push)",
+      "tags": [
+        "notifications",
+        "email",
+        "sms",
+        "push",
+        "alerts",
+        "reminders"
+      ],
+      "base_hours_medium": {
+        "be": 40,
+        "mobile": 16,
+        "qa": 16
+      }
+    },
+    "reporting": {
+      "name": "Reporting & analytics dashboard",
+      "tags": [
+        "reporting",
+        "analytics",
+        "dashboard",
+        "kpi",
+        "charts",
+        "bi",
+        "power bi"
+      ],
+      "base_hours_medium": {
+        "uiux": 16,
+        "fe": 56,
+        "be": 40,
+        "data": 40,
+        "qa": 24
+      }
+    },
+    "etl": {
+      "name": "Data pipeline / ETL",
+      "tags": [
+        "etl",
+        "data pipeline",
+        "warehouse",
+        "ingestion",
+        "big data",
+        "spark",
+        "airflow"
+      ],
+      "base_hours_medium": {
+        "be": 24,
+        "data": 120,
+        "devops": 16,
+        "qa": 24
+      }
+    },
+    "iot": {
+      "name": "IoT device ingestion & telemetry",
+      "tags": [
+        "iot",
+        "sensors",
+        "telemetry",
+        "devices",
+        "mqtt",
+        "machines"
+      ],
+      "base_hours_medium": {
+        "be": 96,
+        "data": 40,
+        "devops": 40,
+        "qa": 32
+      }
+    },
+    "cms": {
+      "name": "CMS & content management",
+      "tags": [
+        "cms",
+        "content",
+        "blog",
+        "pages",
+        "wordpress",
+        "headless"
+      ],
+      "base_hours_medium": {
+        "uiux": 16,
+        "fe": 48,
+        "be": 40,
+        "qa": 20
+      }
+    },
+    "search": {
+      "name": "Search, filters & listings",
+      "tags": [
+        "search",
+        "filters",
+        "listings",
+        "catalog",
+        "elasticsearch"
+      ],
+      "base_hours_medium": {
+        "fe": 40,
+        "be": 56,
+        "qa": 20
+      }
+    },
+    "integration": {
+      "name": "Third-party API integration",
+      "tags": [
+        "integration",
+        "api",
+        "third-party",
+        "erp",
+        "salesforce",
+        "sap",
+        "webhook"
+      ],
+      "base_hours_medium": {
+        "ba": 12,
+        "be": 72,
+        "qa": 24
+      }
+    },
+    "llm_assistant": {
+      "name": "LLM assistant / RAG chatbot",
+      "tags": [
+        "llm",
+        "ai",
+        "chatbot",
+        "rag",
+        "gpt",
+        "assistant",
+        "genai"
+      ],
+      "base_hours_medium": {
+        "fe": 32,
+        "be": 48,
+        "ml": 140,
+        "qa": 40
+      }
+    },
+    "ml_model": {
+      "name": "Predictive ML model",
+      "tags": [
+        "machine learning",
+        "ml",
+        "prediction",
+        "forecast",
+        "model",
+        "recommendation"
+      ],
+      "base_hours_medium": {
+        "data": 60,
+        "ml": 160,
+        "qa": 24
+      }
+    },
+    "compliance": {
+      "name": "Audit logging & compliance controls",
+      "tags": [
+        "compliance",
+        "audit",
+        "hipaa",
+        "gdpr",
+        "security",
+        "logging",
+        "pci"
+      ],
+      "base_hours_medium": {
+        "ba": 16,
+        "be": 64,
+        "devops": 24,
+        "qa": 24
+      }
+    },
+    "migration": {
+      "name": "Legacy data migration",
+      "tags": [
+        "migration",
+        "legacy",
+        "data migration",
+        "modernization"
+      ],
+      "base_hours_medium": {
+        "ba": 16,
+        "be": 40,
+        "data": 64,
+        "qa": 32
+      }
+    },
+    "cloud_infra": {
+      "name": "Cloud infrastructure, CI/CD & environments",
+      "tags": [
+        "aws",
+        "azure",
+        "cloud",
+        "devops",
+        "ci/cd",
+        "serverless",
+        "kubernetes",
+        "hosting"
+      ],
+      "base_hours_medium": {
+        "be": 16,
+        "devops": 80
+      }
+    },
+    "realtime": {
+      "name": "Real-time sync & live updates",
+      "tags": [
+        "real-time",
+        "realtime",
+        "live",
+        "websocket",
+        "polling",
+        "streaming",
+        "sync"
+      ],
+      "base_hours_medium": {
+        "fe": 40,
+        "be": 80,
+        "devops": 16,
+        "qa": 32
+      }
+    },
+    "ecommerce": {
+      "name": "Product catalog, cart & checkout",
+      "tags": [
+        "ecommerce",
+        "e-commerce",
+        "shop",
+        "cart",
+        "catalog",
+        "orders",
+        "store"
+      ],
+      "base_hours_medium": {
+        "uiux": 32,
+        "fe": 96,
+        "be": 104,
+        "qa": 56
+      }
+    },
+    "crm": {
+      "name": "CRM workflows & customer records",
+      "tags": [
+        "crm",
+        "customers",
+        "leads",
+        "sales",
+        "pipeline",
+        "contacts"
+      ],
+      "base_hours_medium": {
+        "ba": 32,
+        "fe": 64,
+        "be": 96,
+        "qa": 40
+      }
+    },
+    "bpm": {
+      "name": "Workflow & approval engine (BPM)",
+      "tags": [
+        "workflow",
+        "approval",
+        "bpm",
+        "process",
+        "automation",
+        "forms"
+      ],
+      "base_hours_medium": {
+        "ba": 32,
+        "fe": 56,
+        "be": 104,
+        "qa": 40
+      }
+    },
+    "patient_records": {
+      "name": "Patient records & care plans",
+      "tags": [
+        "patient",
+        "ehr",
+        "emr",
+        "health records",
+        "care plan",
+        "clinical"
+      ],
+      "base_hours_medium": {
+        "ba": 40,
+        "fe": 80,
+        "be": 120,
+        "qa": 56
+      }
+    },
+    "tracking": {
+      "name": "Event tracking & pixel analytics",
+      "tags": [
+        "tracking",
+        "pixel",
+        "events",
+        "web analytics",
+        "clickstream",
+        "monitoring"
+      ],
+      "base_hours_medium": {
+        "be": 80,
+        "data": 80,
+        "devops": 32,
+        "qa": 24
+      }
+    },
+    "geo": {
+      "name": "Maps, geolocation & route tracking",
+      "tags": [
+        "maps",
+        "gps",
+        "geolocation",
+        "location",
+        "routes",
+        "tracking",
+        "fleet"
+      ],
+      "base_hours_medium": {
+        "fe": 40,
+        "be": 56,
+        "mobile": 40,
+        "qa": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+emp_id,project_code,project_name,client,allocation_pct,start_date,end_date,kind
+E004,A201,Wallets on the Fly - v3 features,PayNest,50,2026-07-06,2027-02-01,project
+E054,A201,Wallets on the Fly - v3 features,PayNest,50,2026-07-06,2027-02-01,project
+E034,A201,Wallets on the Fly - v3 features,PayNest,100,2026-07-06,2027-02-01,project
+E031,A201,Wallets on the Fly - v3 features,PayNest,100,2026-07-06,2027-02-01,project
+E026,A201,Wallets on the Fly - v3 features,PayNest,100,2026-07-06,2027-02-01,project
+E024,A201,Wallets on the Fly - v3 features,PayNest,50,2026-07-06,2027-02-01,project
+E041,A201,Wallets on the Fly - v3 features,PayNest,100,2026-07-06,2027-02-01,project
+E028,A202,Patient portal - maintenance retainer,CareBridge Health,50,2026-02-23,2027-05-24,project
+E015,A202,Patient portal - maintenance retainer,CareBridge Health,50,2026-02-23,2027-05-24,project
+E038,A202,Patient portal - maintenance retainer,CareBridge Health,50,2026-02-23,2027-05-24,project
+E044,A202,Patient portal - maintenance retainer,CareBridge Health,25,2026-02-23,2027-05-24,project
+E002,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,50,2026-09-07,2026-12-07,project
+E047,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,100,2026-09-07,2026-12-07,project
+E046,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,50,2026-09-07,2026-12-07,project
+E025,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,100,2026-09-07,2026-12-07,project
+E043,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,50,2026-09-07,2026-12-07,project
+E037,A203,Smart-meter analytics - phase 2,Nordlicht Energie AG,50,2026-09-07,2026-12-07,project
+E003,A204,Language-learning app - growth features,Sakura Learning KK,50,2026-07-06,2027-01-04,project
+E032,A204,Language-learning app - growth features,Sakura Learning KK,100,2026-07-06,2027-01-04,project
+E030,A204,Language-learning app - growth features,Sakura Learning KK,100,2026-07-06,2027-01-04,project
+E048,A204,Language-learning app - growth features,Sakura Learning KK,100,2026-07-06,2027-01-04,project
+E020,A204,Language-learning app - growth features,Sakura Learning KK,100,2026-07-06,2027-01-04,project
+E035,A204,Language-learning app - growth features,Sakura Learning KK,50,2026-07-06,2027-01-04,project
+E008,A204,Language-learning app - growth features,Sakura Learning KK,50,2026-07-06,2027-01-04,project
+E018,A205,Headless storefront - retainer,Vandenberg Retail NV,50,2026-08-10,2027-03-29,project
+E036,A205,Headless storefront - retainer,Vandenberg Retail NV,25,2026-08-10,2027-03-29,project
+E052,A206,Claims portal - stabilisation,Kiwi Insure,50,2026-02-23,2026-11-16,project
+E021,A206,Claims portal - stabilisation,Kiwi Insure,100,2026-02-23,2026-11-16,project
+E019,A206,Claims portal - stabilisation,Kiwi Insure,100,2026-02-23,2026-11-16,project
+E017,A206,Claims portal - stabilisation,Kiwi Insure,100,2026-02-23,2026-11-16,project
+E040,A206,Claims portal - stabilisation,Kiwi Insure,100,2026-02-23,2026-11-16,project
+E007,A206,Claims portal - stabilisation,Kiwi Insure,50,2026-02-23,2026-11-16,project
+E049,A207,Support RAG assistant - v2,PayNest,100,2026-04-06,2026-12-21,project
+E027,A207,Support RAG assistant - v2,PayNest,50,2026-04-06,2026-12-21,project
+E016,A207,Support RAG assistant - v2,PayNest,50,2026-04-06,2026-12-21,project
+E039,A207,Support RAG assistant - v2,PayNest,50,2026-04-06,2026-12-21,project
+E050,A208,Internal: Empower AI accelerator,Empower (internal),50,2026-07-13,2027-10-25,project
+E051,A208,Internal: Empower AI accelerator,Empower (internal),25,2026-07-13,2027-10-25,project
+E001,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,50,2026-08-17,2027-01-18,project
+E033,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,100,2026-08-17,2027-01-18,project
+E013,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,100,2026-08-17,2027-01-18,project
+E022,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,50,2026-08-17,2027-01-18,project
+E036,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,50,2026-08-17,2027-01-18,project
+E010,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,50,2026-08-17,2027-01-18,project
+E005,A209,Fleet tracking - Arabic + iPad,Gulf Freight Lines,50,2026-08-17,2027-01-18,project
+E053,A210,Sales CRM - phase 2,MediLink Partners,50,2026-02-16,2027-03-01,project
+E023,A210,Sales CRM - phase 2,MediLink Partners,100,2026-02-16,2027-03-01,project
+E012,A210,Sales CRM - phase 2,MediLink Partners,100,2026-02-16,2027-03-01,project
+E039,A210,Sales CRM - phase 2,MediLink Partners,50,2026-02-16,2027-03-01,project
+E006,A210,Sales CRM - phase 2,MediLink Partners,50,2026-02-16,2027-03-01,project
+E042,A210,Sales CRM - phase 2,MediLink Partners,25,2026-02-16,2027-03-01,project
+E030,A211,Kiwi Insure - claims v2 (signed),Kiwi Insure,100,2026-11-16,2027-03-08,project
+E012,A211,Kiwi Insure - claims v2 (signed),Kiwi Insure,100,2026-11-09,2027-03-29,project
+E045,A212,Coachline - peak-season upgrades (signed),Coachline Travel,50,2026-11-23,2027-02-15,project
+E022,LEAVE,Planned leave,,100,2026-12-25,2026-12-31,leave
+E035,LEAVE,Planned leave,,100,2026-12-03,2026-12-10,leave
+E054,LEAVE,Planned leave,,100,2026-12-11,2026-12-19,leave
+E040,LEAVE,Planned leave,,100,2026-12-19,2026-12-27,leave
+E042,LEAVE,Planned leave,,100,2026-11-24,2026-11-30,leave
+E053,LEAVE,Planned leave,,100,2026-12-25,2026-12-30,leave
+E005,LEAVE,Planned leave,,100,2026-12-30,2027-01-12,leave

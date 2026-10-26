@@ -1,0 +1,370 @@
+[
+  {
+    "sow_id": "SOW-A201",
+    "project_code": "A201",
+    "project_name": "Wallets on the Fly - v3 features",
+    "client": "PayNest",
+    "client_country": "UK",
+    "contract_type": "fixed",
+    "currency": "GBP",
+    "contract_value": 240000,
+    "signed": "2026-06-24",
+    "start_date": "2026-07-06",
+    "end_date": "2027-02-01",
+    "warranty_days": 60,
+    "cr_rates": {
+      "pm": 31.0,
+      "ba": 26.0,
+      "uiux": 25.0,
+      "fe": 23.0,
+      "be": 25.0,
+      "mobile": 26.0,
+      "qa": 18.0,
+      "devops": 29.0,
+      "data": 29.0,
+      "ml": 37.0,
+      "lead": 37.0
+    },
+    "clauses": [
+      {
+        "id": "S1",
+        "type": "in_scope",
+        "title": "Peer-to-peer transfers",
+        "text": "Send and request money between PayNest users by phone number or contact, with confirmation screen, limits from the existing risk engine and push receipts."
+      },
+      {
+        "id": "S2",
+        "type": "in_scope",
+        "title": "Savings pots v2",
+        "text": "Up to 10 named savings pots per user with goal amount, target date, progress ring and manual top-up / withdraw."
+      },
+      {
+        "id": "S3",
+        "type": "in_scope",
+        "title": "Card controls",
+        "text": "Freeze / unfreeze card, show PIN, and set per-category spending limits through the existing card-processor API."
+      },
+      {
+        "id": "S4",
+        "type": "in_scope",
+        "title": "Dark mode",
+        "text": "System-following dark theme for all v3 screens on iOS and Android, meeting WCAG AA contrast."
+      },
+      {
+        "id": "S5",
+        "type": "in_scope",
+        "title": "Notification revamp",
+        "text": "New push notification templates for transfers, card events and pot milestones, with per-type opt-out in settings."
+      },
+      {
+        "id": "X1",
+        "type": "out_of_scope",
+        "title": "Wallet provisioning",
+        "text": "Apple Pay, Google Pay and other device wallet provisioning are not included."
+      },
+      {
+        "id": "X2",
+        "type": "out_of_scope",
+        "title": "New channels",
+        "text": "A web app or desktop version of the wallet is not included."
+      },
+      {
+        "id": "X3",
+        "type": "out_of_scope",
+        "title": "Analytics features",
+        "text": "Spending reports, insights, budgets or emailed statements beyond the existing transaction list are not included."
+      },
+      {
+        "id": "X4",
+        "type": "out_of_scope",
+        "title": "Provider migrations",
+        "text": "Changing KYC, card-processor or banking providers is not included."
+      },
+      {
+        "id": "A1",
+        "type": "assumption",
+        "title": "Sandbox access",
+        "text": "PayNest provides card-processor sandbox credentials and test cards by 20 July 2026."
+      },
+      {
+        "id": "A2",
+        "type": "assumption",
+        "title": "Design system",
+        "text": "Screens follow the existing PayNest design system; new visual identity work is not assumed."
+      },
+      {
+        "id": "W1",
+        "type": "warranty",
+        "title": "Defect warranty",
+        "text": "Defects against the agreed acceptance criteria, reported within 60 days of go-live, are fixed at no charge."
+      },
+      {
+        "id": "C1",
+        "type": "change_control",
+        "title": "Change requests",
+        "text": "Anything not listed under S-clauses is a change request: Empower estimates it, PayNest approves the price in writing, then work is scheduled."
+      }
+    ]
+  },
+  {
+    "sow_id": "SOW-A206",
+    "project_code": "A206",
+    "project_name": "Claims portal - stabilisation",
+    "client": "Kiwi Insure",
+    "client_country": "NZ",
+    "contract_type": "fixed",
+    "currency": "USD",
+    "contract_value": 96000,
+    "signed": "2026-02-16",
+    "start_date": "2026-02-23",
+    "end_date": "2026-11-16",
+    "warranty_days": 30,
+    "cr_rates": {
+      "pm": 38.0,
+      "ba": 32.0,
+      "uiux": 30.0,
+      "fe": 28.0,
+      "be": 30.0,
+      "mobile": 32.0,
+      "qa": 22.0,
+      "devops": 36.0,
+      "data": 36.0,
+      "ml": 45.0,
+      "lead": 45.0
+    },
+    "clauses": [
+      {
+        "id": "S1",
+        "type": "in_scope",
+        "title": "Defect backlog",
+        "text": "Fix the 64 P1/P2 defects in the agreed backlog (Jira filter KI-STAB) in the claims portal and adjuster console."
+      },
+      {
+        "id": "S2",
+        "type": "in_scope",
+        "title": "Performance",
+        "text": "Bring the five slowest pages (claims list, claim detail, document upload, reports, exports) under 2 seconds at the 95th percentile with 500 concurrent users."
+      },
+      {
+        "id": "S3",
+        "type": "in_scope",
+        "title": "Monitoring",
+        "text": "Application monitoring, error alerting to the Kiwi Insure on-call channel and a weekly stability report."
+      },
+      {
+        "id": "X1",
+        "type": "out_of_scope",
+        "title": "New claim types",
+        "text": "New insurance products or claim types (forms, rules, workflows) are not included."
+      },
+      {
+        "id": "X2",
+        "type": "out_of_scope",
+        "title": "New integrations",
+        "text": "Integrations with systems not already connected to the portal are not included."
+      },
+      {
+        "id": "X3",
+        "type": "out_of_scope",
+        "title": "Redesign",
+        "text": "Visual redesign or rebranding of the portal is not included; layout fixes needed to resolve backlog defects are."
+      },
+      {
+        "id": "A1",
+        "type": "assumption",
+        "title": "Environments",
+        "text": "Kiwi Insure provides a production-like staging environment with anonymised data."
+      },
+      {
+        "id": "W1",
+        "type": "warranty",
+        "title": "Defect warranty",
+        "text": "Regressions caused by Empower's changes, reported within 30 days of each release, are fixed at no charge."
+      },
+      {
+        "id": "C1",
+        "type": "change_control",
+        "title": "Change requests",
+        "text": "Work outside S1-S3 is quoted as a change request at the rates in this SOW and needs written approval."
+      }
+    ]
+  },
+  {
+    "sow_id": "SOW-A209",
+    "project_code": "A209",
+    "project_name": "Fleet tracking - Arabic + iPad",
+    "client": "Gulf Freight Lines",
+    "client_country": "AE",
+    "contract_type": "fixed",
+    "currency": "USD",
+    "contract_value": 138000,
+    "signed": "2026-08-10",
+    "start_date": "2026-08-17",
+    "end_date": "2027-01-18",
+    "warranty_days": 60,
+    "cr_rates": {
+      "pm": 38.0,
+      "ba": 32.0,
+      "uiux": 30.0,
+      "fe": 28.0,
+      "be": 30.0,
+      "mobile": 32.0,
+      "qa": 22.0,
+      "devops": 36.0,
+      "data": 36.0,
+      "ml": 45.0,
+      "lead": 45.0
+    },
+    "clauses": [
+      {
+        "id": "S1",
+        "type": "in_scope",
+        "title": "Arabic localisation",
+        "text": "Arabic (right-to-left) for every screen of the driver app and the dispatcher web console, including dates, numbers and maps labels."
+      },
+      {
+        "id": "S2",
+        "type": "in_scope",
+        "title": "iPad dispatcher",
+        "text": "A dispatcher layout for iPad (portrait and landscape) with live map, job board and driver chat."
+      },
+      {
+        "id": "S3",
+        "type": "in_scope",
+        "title": "Offline maps",
+        "text": "Offline map tiles cached for the driver's planned route, refreshed when the device is online."
+      },
+      {
+        "id": "X1",
+        "type": "out_of_scope",
+        "title": "Other languages",
+        "text": "Languages other than English and Arabic (e.g. Urdu, Hindi) are not included."
+      },
+      {
+        "id": "X2",
+        "type": "out_of_scope",
+        "title": "Android tablets",
+        "text": "Android tablet layouts are not included."
+      },
+      {
+        "id": "X3",
+        "type": "out_of_scope",
+        "title": "Telematics hardware",
+        "text": "Integration with vehicle telematics devices or new hardware is not included."
+      },
+      {
+        "id": "A1",
+        "type": "assumption",
+        "title": "Translations",
+        "text": "Gulf Freight Lines supplies and approves all Arabic translations; Empower provides the string files."
+      },
+      {
+        "id": "A2",
+        "type": "assumption",
+        "title": "Map provider",
+        "text": "The existing Google Maps contract and API keys are used."
+      },
+      {
+        "id": "W1",
+        "type": "warranty",
+        "title": "Defect warranty",
+        "text": "Defects against acceptance criteria reported within 60 days of go-live are fixed at no charge."
+      },
+      {
+        "id": "C1",
+        "type": "change_control",
+        "title": "Change requests",
+        "text": "Additional features are estimated and priced as change requests before work starts."
+      }
+    ]
+  },
+  {
+    "sow_id": "SOW-A210",
+    "project_code": "A210",
+    "project_name": "Sales CRM - phase 2",
+    "client": "MediLink Partners",
+    "client_country": "US",
+    "contract_type": "fixed",
+    "currency": "USD",
+    "contract_value": 172000,
+    "signed": "2026-02-09",
+    "start_date": "2026-02-16",
+    "end_date": "2027-03-01",
+    "warranty_days": 60,
+    "cr_rates": {
+      "pm": 38.0,
+      "ba": 32.0,
+      "uiux": 30.0,
+      "fe": 28.0,
+      "be": 30.0,
+      "mobile": 32.0,
+      "qa": 22.0,
+      "devops": 36.0,
+      "data": 36.0,
+      "ml": 45.0,
+      "lead": 45.0
+    },
+    "clauses": [
+      {
+        "id": "S1",
+        "type": "in_scope",
+        "title": "Lead scoring",
+        "text": "A configurable lead-scoring rules engine (up to 25 rules) with score history on each lead."
+      },
+      {
+        "id": "S2",
+        "type": "in_scope",
+        "title": "Salesforce sync",
+        "text": "Two-way sync of contacts and opportunities with MediLink's Salesforce org, every 15 minutes, with conflict log."
+      },
+      {
+        "id": "S3",
+        "type": "in_scope",
+        "title": "Sales dashboard",
+        "text": "A sales dashboard with six KPIs: pipeline value, win rate, average deal size, sales cycle length, new leads, activities per rep."
+      },
+      {
+        "id": "S4",
+        "type": "in_scope",
+        "title": "Access control",
+        "text": "Role-based access for three roles: rep, manager, admin."
+      },
+      {
+        "id": "X1",
+        "type": "out_of_scope",
+        "title": "Marketing automation",
+        "text": "Email campaigns, newsletters and marketing automation are not included."
+      },
+      {
+        "id": "X2",
+        "type": "out_of_scope",
+        "title": "Mobile app",
+        "text": "A native mobile CRM app is not included; the web app is responsive."
+      },
+      {
+        "id": "X3",
+        "type": "out_of_scope",
+        "title": "Data migration",
+        "text": "Migration of data from HubSpot or other legacy CRMs is not included."
+      },
+      {
+        "id": "A1",
+        "type": "assumption",
+        "title": "Salesforce limits",
+        "text": "MediLink's Salesforce Enterprise edition API limits are sufficient for 15-minute sync."
+      },
+      {
+        "id": "W1",
+        "type": "warranty",
+        "title": "Defect warranty",
+        "text": "Defects against acceptance criteria reported within 60 days of go-live are fixed at no charge."
+      },
+      {
+        "id": "C1",
+        "type": "change_control",
+        "title": "Change requests",
+        "text": "Changes to agreed scope are raised as change requests, estimated at the SOW rates and approved in writing."
+      }
+    ]
+  }
+]

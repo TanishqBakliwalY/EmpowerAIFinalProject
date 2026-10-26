@@ -1,0 +1,87 @@
+{
+  "cycle": "FY2026-27",
+  "effective_date": "2027-04-01",
+  "currency": "INR",
+  "pool_pct_of_payroll": 9.0,
+  "guideline_hike_pct": {
+    "5": [
+      12,
+      18
+    ],
+    "4": [
+      8,
+      12
+    ],
+    "3": [
+      5,
+      8
+    ],
+    "2": [
+      0,
+      3
+    ],
+    "1": [
+      0,
+      0
+    ]
+  },
+  "promotion_addon_pct": [
+    5,
+    10
+  ],
+  "min_hike_pct": 0.0,
+  "max_hike_pct": 25.0,
+  "guideline_slack_pp": 3.0,
+  "compa_ratio": {
+    "floor": 0.88,
+    "target": 1.0,
+    "ceiling": 1.15,
+    "market_gap_factor": 0.5,
+    "market_component_bounds_pct": [
+      -3,
+      10
+    ]
+  },
+  "retention": {
+    "high_risk_bonus_pct": 3.0,
+    "medium_risk_bonus_pct": 1.5
+  },
+  "strategy_bounds": {
+    "performance_weight": [
+      0.4,
+      0.8
+    ],
+    "market_weight": [
+      0.1,
+      0.5
+    ],
+    "retention_weight": [
+      0.0,
+      0.3
+    ],
+    "promotion_share_pct": [
+      5,
+      25
+    ]
+  },
+  "default_strategy": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12
+  },
+  "fairness": {
+    "gender_gap_pp_within_rating": 1.0,
+    "manager_rating_gap_vs_evidence": 0.5,
+    "office_compa_gap": 0.06,
+    "tenure_gap_pp_within_rating": 1.5,
+    "compa_outlier_low": 0.85,
+    "compa_outlier_high": 1.2,
+    "min_group_size": 2
+  },
+  "max_adjustment_pp": [
+    -3.0,
+    5.0
+  ],
+  "notes": "Demo policy. HR edits this file; agents never invent pay rules."
+}

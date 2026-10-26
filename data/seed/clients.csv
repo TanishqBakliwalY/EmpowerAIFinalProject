@@ -1,0 +1,17 @@
+client,country,industry,client_since,notes
+CareBridge Health,US,Healthcare,2018,Long-term client; HIPAA-heavy work; slow UAT sign-offs
+MediLink Partners,US,Healthcare,2021,Pays on time; prefers fixed price
+PayNest,UK,Fintech,2020,Wallet and payments platform; strict PCI expectations
+Kraftwerk Maschinenbau GmbH,DE,Manufacturing,2019,German manufacturer; GDPR + data residency in EU required
+Coachline Travel,UK,Travel,2017,Coach and tour booking; peak-season deadlines
+BrightPath Learning,US,EdTech,2022,K-12 learning platform; interested in AI tutoring
+StoryLive Media,US,Media,2016,Live TV companion apps; hard real-time deadlines
+SafeWatch Registry,US,Public safety,2015,Government-adjacent; 50-state data; security reviews
+Vandenberg Retail NV,BE,Retail,2021,Belgian retailer; BI and e-commerce
+Gulf Freight Lines,AE,Logistics,2023,Fleet tracking; Arabic UI was a scope surprise
+Outback Realty Group,AU,Real estate,2022,Listing portal; time-zone gap needs async process
+Kiwi Insure,NZ,Insurance,2024,Claims portal; legacy data migration was messy
+CapeTech Ventures,ZA,Startup / VC,2023,"Funds MVPs; budget-sensitive, fast timelines"
+Pixelwise Analytics,US,Marketing tech,2016,Pixel tracking at ~1B hits/month
+Nordlicht Energie AG,DE,Energy,2024,Smart-meter dashboards; EU hosting only
+Sakura Learning KK,JP,EdTech,2025,Language-learning app; Japanese localisation

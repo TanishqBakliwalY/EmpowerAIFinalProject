@@ -1,0 +1,581 @@
+{
+  "as_of": "2026-10-26",
+  "synthetic": true,
+  "note": "Synthetic delivery tracker data for the demo; not real Empower projects.",
+  "projects": [
+    {
+      "code": "A201",
+      "name": "Wallets on the Fly - v3 features",
+      "client": "PayNest",
+      "country": "UK",
+      "sow_id": "SOW-A201",
+      "contract_type": "fixed",
+      "currency": "GBP",
+      "contract_value": 240000,
+      "start": "2026-07-06",
+      "end": "2027-02-01",
+      "status": "active",
+      "budget_hours": 6600,
+      "hours_booked": 3520,
+      "pct_complete": 0.5,
+      "planned_team_size": 7,
+      "milestones": [
+        {
+          "name": "P2P transfers in UAT",
+          "planned": "2026-08-17",
+          "forecast": "2026-08-17",
+          "actual": "2026-08-17",
+          "status": "done"
+        },
+        {
+          "name": "Savings pots v2 in UAT",
+          "planned": "2026-09-28",
+          "forecast": "2026-09-28",
+          "actual": "2026-09-28",
+          "status": "done"
+        },
+        {
+          "name": "Card controls (S3) in UAT",
+          "planned": "2026-11-09",
+          "forecast": "2026-11-18",
+          "actual": null,
+          "status": "at_risk"
+        },
+        {
+          "name": "Dark mode + notifications",
+          "planned": "2026-12-21",
+          "forecast": "2026-12-21",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "App-store release",
+          "planned": "2027-02-01",
+          "forecast": "2027-02-01",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [
+        {
+          "item": "Card-processor sandbox keys",
+          "owner": "vendor",
+          "due": "2026-10-21",
+          "status": "late"
+        }
+      ],
+      "seeded_risk": "schedule_slip"
+    },
+    {
+      "code": "A202",
+      "name": "Patient portal - maintenance retainer",
+      "client": "CareBridge Health",
+      "country": "US",
+      "sow_id": null,
+      "contract_type": "tm",
+      "currency": "USD",
+      "contract_value": 127000,
+      "start": "2026-02-23",
+      "end": "2027-05-24",
+      "status": "active",
+      "budget_hours": 4550,
+      "hours_booked": 2376,
+      "pct_complete": 0.54,
+      "planned_team_size": 4,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-06-17",
+          "forecast": "2026-06-17",
+          "actual": "2026-06-17",
+          "status": "done"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2026-10-09",
+          "forecast": "2026-10-09",
+          "actual": "2026-10-09",
+          "status": "done"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2027-01-30",
+          "forecast": "2027-01-30",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-05-24",
+          "forecast": "2027-05-24",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "none"
+    },
+    {
+      "code": "A203",
+      "name": "Smart-meter analytics - phase 2",
+      "client": "Nordlicht Energie AG",
+      "country": "DE",
+      "sow_id": null,
+      "contract_type": "fixed",
+      "currency": "EUR",
+      "contract_value": 60000,
+      "start": "2026-09-07",
+      "end": "2026-12-07",
+      "status": "active",
+      "budget_hours": 2080,
+      "hours_booked": 1176,
+      "pct_complete": 0.43,
+      "planned_team_size": 6,
+      "milestones": [
+        {
+          "name": "Analytics design signed off",
+          "planned": "2026-09-30",
+          "forecast": "2026-09-30",
+          "actual": "2026-09-30",
+          "status": "done"
+        },
+        {
+          "name": "Meter data pipeline live",
+          "planned": "2026-10-23",
+          "forecast": "2026-11-10",
+          "actual": null,
+          "status": "late"
+        },
+        {
+          "name": "Dashboards beta",
+          "planned": "2026-11-14",
+          "forecast": "2026-11-14",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2026-12-07",
+          "forecast": "2026-12-07",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [
+        {
+          "item": "Utility's historical meter export",
+          "owner": "client",
+          "due": "2026-10-14",
+          "status": "late"
+        }
+      ],
+      "seeded_risk": "cost_overrun"
+    },
+    {
+      "code": "A204",
+      "name": "Language-learning app - growth features",
+      "client": "Sakura Learning KK",
+      "country": "JP",
+      "sow_id": null,
+      "contract_type": "fixed",
+      "currency": "USD",
+      "contract_value": 177000,
+      "start": "2026-07-06",
+      "end": "2027-01-04",
+      "status": "active",
+      "budget_hours": 5720,
+      "hours_booked": 3450,
+      "pct_complete": 0.63,
+      "planned_team_size": 7,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-08-21",
+          "forecast": "2026-08-21",
+          "actual": "2026-08-21",
+          "status": "done"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2026-10-05",
+          "forecast": "2026-10-05",
+          "actual": "2026-10-05",
+          "status": "done"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2026-11-19",
+          "forecast": "2026-11-19",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-01-04",
+          "forecast": "2027-01-04",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "none"
+    },
+    {
+      "code": "A205",
+      "name": "Headless storefront - retainer",
+      "client": "Vandenberg Retail NV",
+      "country": "BE",
+      "sow_id": null,
+      "contract_type": "tm",
+      "currency": "EUR",
+      "contract_value": 27000,
+      "start": "2026-08-10",
+      "end": "2027-03-29",
+      "status": "active",
+      "budget_hours": 990,
+      "hours_booked": 330,
+      "pct_complete": 0.33,
+      "planned_team_size": 2,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-10-07",
+          "forecast": "2026-10-07",
+          "actual": "2026-10-07",
+          "status": "done"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2026-12-04",
+          "forecast": "2026-12-04",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2027-01-30",
+          "forecast": "2027-01-30",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-03-29",
+          "forecast": "2027-03-29",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "none"
+    },
+    {
+      "code": "A206",
+      "name": "Claims portal - stabilisation",
+      "client": "Kiwi Insure",
+      "country": "NZ",
+      "sow_id": "SOW-A206",
+      "contract_type": "fixed",
+      "currency": "USD",
+      "contract_value": 96000,
+      "start": "2026-02-23",
+      "end": "2026-11-16",
+      "status": "active",
+      "budget_hours": 7600,
+      "hours_booked": 7420,
+      "pct_complete": 0.83,
+      "planned_team_size": 6,
+      "milestones": [
+        {
+          "name": "Defect backlog triaged",
+          "planned": "2026-04-30",
+          "forecast": "2026-04-30",
+          "actual": "2026-04-30",
+          "status": "done"
+        },
+        {
+          "name": "Regression suite signed off",
+          "planned": "2026-07-06",
+          "forecast": "2026-07-12",
+          "actual": "2026-07-12",
+          "status": "done_late"
+        },
+        {
+          "name": "Performance fixes",
+          "planned": "2026-09-11",
+          "forecast": "2026-09-11",
+          "actual": "2026-09-11",
+          "status": "done"
+        },
+        {
+          "name": "Handover",
+          "planned": "2026-11-16",
+          "forecast": "2026-11-16",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "cost_overrun"
+    },
+    {
+      "code": "A207",
+      "name": "Support RAG assistant - v2",
+      "client": "PayNest",
+      "country": "UK",
+      "sow_id": null,
+      "contract_type": "fixed",
+      "currency": "GBP",
+      "contract_value": 96000,
+      "start": "2026-04-06",
+      "end": "2026-12-21",
+      "status": "active",
+      "budget_hours": 3700,
+      "hours_booked": 2784,
+      "pct_complete": 0.61,
+      "planned_team_size": 4,
+      "milestones": [
+        {
+          "name": "Ingestion v2",
+          "planned": "2026-06-10",
+          "forecast": "2026-06-10",
+          "actual": "2026-06-10",
+          "status": "done"
+        },
+        {
+          "name": "Retrieval evaluation passed",
+          "planned": "2026-08-14",
+          "forecast": "2026-08-14",
+          "actual": "2026-08-14",
+          "status": "done"
+        },
+        {
+          "name": "Agent hand-off flows",
+          "planned": "2026-10-17",
+          "forecast": "2026-11-07",
+          "actual": null,
+          "status": "late"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2026-12-21",
+          "forecast": "2026-12-21",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [
+        {
+          "item": "Client's support ticket export",
+          "owner": "client",
+          "due": "2026-10-06",
+          "status": "late"
+        }
+      ],
+      "seeded_risk": "schedule_slip"
+    },
+    {
+      "code": "A209",
+      "name": "Fleet tracking - Arabic + iPad",
+      "client": "Gulf Freight Lines",
+      "country": "AE",
+      "sow_id": "SOW-A209",
+      "contract_type": "fixed",
+      "currency": "USD",
+      "contract_value": 138000,
+      "start": "2026-08-17",
+      "end": "2027-01-18",
+      "status": "active",
+      "budget_hours": 3960,
+      "hours_booked": 1836,
+      "pct_complete": 0.44,
+      "planned_team_size": 7,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-09-24",
+          "forecast": "2026-09-24",
+          "actual": "2026-09-24",
+          "status": "done"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2026-11-02",
+          "forecast": "2026-11-02",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2026-12-11",
+          "forecast": "2026-12-11",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-01-18",
+          "forecast": "2027-01-18",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [
+        {
+          "item": "Arabic content from client",
+          "owner": "client",
+          "due": "2026-11-05",
+          "status": "open"
+        }
+      ],
+      "seeded_risk": "none"
+    },
+    {
+      "code": "A210",
+      "name": "Sales CRM - phase 2",
+      "client": "MediLink Partners",
+      "country": "US",
+      "sow_id": "SOW-A210",
+      "contract_type": "fixed",
+      "currency": "USD",
+      "contract_value": 172000,
+      "start": "2026-02-16",
+      "end": "2027-03-01",
+      "status": "active",
+      "budget_hours": 8100,
+      "hours_booked": 5346,
+      "pct_complete": 0.67,
+      "planned_team_size": 6,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-05-21",
+          "forecast": "2026-05-21",
+          "actual": "2026-05-21",
+          "status": "done"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2026-08-24",
+          "forecast": "2026-08-24",
+          "actual": "2026-08-24",
+          "status": "done"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2026-11-27",
+          "forecast": "2026-11-27",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-03-01",
+          "forecast": "2027-03-01",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "none"
+    },
+    {
+      "code": "A211",
+      "name": "Kiwi Insure - claims v2 (signed)",
+      "client": "Kiwi Insure",
+      "country": "NZ",
+      "sow_id": null,
+      "contract_type": "fixed",
+      "currency": "USD",
+      "contract_value": 45000,
+      "start": "2026-11-09",
+      "end": "2027-03-29",
+      "status": "starting",
+      "budget_hours": 1440,
+      "hours_booked": 0,
+      "pct_complete": 0.0,
+      "planned_team_size": 5,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-12-14",
+          "forecast": "2026-12-14",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2027-01-18",
+          "forecast": "2027-01-18",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2027-02-22",
+          "forecast": "2027-02-22",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-03-29",
+          "forecast": "2027-03-29",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "staffing_gap"
+    },
+    {
+      "code": "A212",
+      "name": "Coachline - peak-season upgrades (signed)",
+      "client": "Coachline Travel",
+      "country": "UK",
+      "sow_id": null,
+      "contract_type": "fixed",
+      "currency": "GBP",
+      "contract_value": 6000,
+      "start": "2026-11-23",
+      "end": "2027-02-15",
+      "status": "starting",
+      "budget_hours": 240,
+      "hours_booked": 0,
+      "pct_complete": 0.0,
+      "planned_team_size": 4,
+      "milestones": [
+        {
+          "name": "Design signed off",
+          "planned": "2026-12-14",
+          "forecast": "2026-12-14",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Build complete",
+          "planned": "2027-01-04",
+          "forecast": "2027-01-04",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "UAT complete",
+          "planned": "2027-01-25",
+          "forecast": "2027-01-25",
+          "actual": null,
+          "status": "upcoming"
+        },
+        {
+          "name": "Go-live",
+          "planned": "2027-02-15",
+          "forecast": "2027-02-15",
+          "actual": null,
+          "status": "upcoming"
+        }
+      ],
+      "dependencies": [],
+      "seeded_risk": "staffing_gap"
+    }
+  ]
+}

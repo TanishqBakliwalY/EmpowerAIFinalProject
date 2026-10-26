@@ -1,0 +1,104 @@
+%PDF-1.3
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+/Title (BrightSmile Dental Group \055 Request for Proposal\072 Patient Booking App)
+/Author (Sample client \050synthetic\051)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 6 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+>>
+/MediaBox [ 0.0 0.0 612 792 ]
+/Parent 2 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 2579
+>>
+stream
+0 0 0 rg BT /F2 17 Tf 64 735.4 Td (BrightSmile Dental Group - Request for Proposal: Patient Booking App) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 711.4 Td (Issued by: Megan Walsh, COO, BrightSmile Dental Group \(Ohio and Michigan, USA\)) Tj ET
+0 0 0 rg BT /F2 12 Tf 64 678.1 Td (Background and needs) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 662.8 Td (Hi Empower team,) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 640.4 Td (We run 14 dental clinics across Ohio and Michigan \(BrightSmile Dental Group\). Right now) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 625.1 Td (patients call the front desk to book, and our staff spend most of the morning on the phone.) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 609.9 Td (We want:) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 587.4 Td (1. A patient app \(iPhone + Android\) and a matching website where patients can book,) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 572.2 Td (reschedule and cancel cleanings and appointments with a specific dentist or hygienist.) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 549.7 Td (2. SMS and email reminders 48h and 2h before the visit, with a 'confirm' button. No-shows) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 534.5 Td (cost us a lot.) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 512.0 Td (3. Patients should see their upcoming visits, past visit summaries and outstanding balance,) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 496.8 Td (and pay the balance by card.) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 474.3 Td (4. A simple admin panel for front-desk staff to manage dentist schedules, block holidays and) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 459.1 Td (see the day's bookings per clinic.) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 436.6 Td (5. Our practice management system is Dentrix; bookings need to sync with it \(they have an) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 421.4 Td (API, we think\).) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 398.9 Td (We obviously need this to be HIPAA compliant. We'd like to go live before our busy season in) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 383.7 Td (early April. Budget is not fixed but our board was thinking around $60-80k. Can you send a) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 368.5 Td (proposal with timeline and price?) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 346.0 Td (Thanks,) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 323.5 Td (Megan Walsh) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 301.1 Td (COO, BrightSmile Dental Group) Tj ET
+0 0 0 rg BT /F2 12 Tf 64 267.7 Td (Evaluation) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 252.5 Td (Proposals will be compared on understanding of our needs, HIPAA approach, timeline, team and) Tj ET
+0 0 0 rg BT /F1 10.5 Tf 64 237.3 Td (price. Please include assumptions and questions for us.) Tj ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000180 00000 n 
+0000000239 00000 n 
+0000000288 00000 n 
+0000000385 00000 n 
+0000000487 00000 n 
+0000000629 00000 n 
+trailer
+<<
+/Size 8
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+3260
+%%EOF

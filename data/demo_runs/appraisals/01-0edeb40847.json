@@ -1,0 +1,4067 @@
+{
+ "id": "0edeb40847",
+ "module": "appraisals",
+ "status": "ready",
+ "created_at": "2026-10-25T07:56:16+00:00",
+ "title": "FY2026-27 · pool 9% of payroll",
+ "model": "gpt-6-luna",
+ "input": {
+  "pool_pct": 9.0,
+  "note": "Retention in Bhopal is a concern this year."
+ },
+ "created_by": "Anita Rao",
+ "steps": {
+  "evidence": {
+   "key": "evidence",
+   "label": "Evidence & market data",
+   "kind": "code",
+   "job": "Evidence scores, compa-ratios and retention risk for everyone.",
+   "status": "done",
+   "started_at": 0.01,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 0.02,
+   "seconds": 0.0,
+   "summary": "54 people · payroll ₹8,50,68,000 · pool ₹76,56,120 (9%) · 9 high retention risk"
+  },
+  "calibration": {
+   "key": "calibration",
+   "label": "Calibration Analyst",
+   "kind": "agent",
+   "job": "Flags ratings that don't match the evidence. Never sees gender or pay.",
+   "status": "done",
+   "started_at": 0.02,
+   "detail": "",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 7792,
+    "cached_tokens": 0,
+    "output_tokens": 2429,
+    "reasoning_tokens": 1550,
+    "requests": 2,
+    "tool_calls": 3,
+    "cost_usd": 0.001994,
+    "cache_hit_pct": 0.0
+   },
+   "ended_at": 0.54,
+   "seconds": 0.5,
+   "summary": "11 rating flags · 3 manager patterns"
+  },
+  "strategy": {
+   "key": "strategy",
+   "label": "Hike Strategist",
+   "kind": "agent",
+   "job": "Weighs performance, market correction and retention within HR's bounds.",
+   "status": "done",
+   "started_at": 0.54,
+   "detail": "",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 7508,
+    "cached_tokens": 4287,
+    "output_tokens": 501,
+    "reasoning_tokens": 0,
+    "requests": 5,
+    "tool_calls": 6,
+    "cost_usd": 0.000615,
+    "cache_hit_pct": 57.1
+   },
+   "ended_at": 1.66,
+   "seconds": 1.1,
+   "summary": "performance 0.6 · market 0.3 · retention 0.1 · promotions 12.0%"
+  },
+  "optimizer": {
+   "key": "optimizer",
+   "label": "Budget optimizer",
+   "kind": "code",
+   "job": "Spends the pool exactly, inside each person's caps.",
+   "status": "done",
+   "started_at": 1.67,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 1.67,
+   "seconds": 0.0,
+   "summary": "Pool used exactly · avg hike 9.0% · 5 promotions"
+  },
+  "fairness": {
+   "key": "fairness",
+   "label": "Fairness Auditor",
+   "kind": "agent",
+   "job": "Finds unfair gaps (gender, manager, office, tenure) and proposes fixes once.",
+   "status": "done",
+   "started_at": 2.34,
+   "detail": "Review round 2",
+   "rounds": 2,
+   "usage": {
+    "input_tokens": 22870,
+    "cached_tokens": 6587,
+    "output_tokens": 7760,
+    "reasoning_tokens": 5863,
+    "requests": 6,
+    "tool_calls": 8,
+    "cost_usd": 0.005574,
+    "cache_hit_pct": 28.8
+   },
+   "ended_at": 3.07,
+   "seconds": 0.7,
+   "summary": "Round 2: ESCALATE · 7 issues (3 high) · 1 adjustments"
+  },
+  "rebalance": {
+   "key": "rebalance",
+   "label": "Rebalance",
+   "kind": "code",
+   "job": "Applies the auditor's adjustments and rebalances to the pool.",
+   "status": "done",
+   "started_at": 2.33,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 2.34,
+   "seconds": 0.0,
+   "summary": "9 people adjusted · everyone else rebalanced · pool used exactly"
+  },
+  "briefs": {
+   "key": "briefs",
+   "label": "Manager Brief Writer",
+   "kind": "agent",
+   "job": "Talking points for each manager about their own team only. No tools.",
+   "status": "done",
+   "started_at": 3.07,
+   "detail": "8 managers in parallel",
+   "rounds": 1,
+   "usage": {
+    "input_tokens": 10445,
+    "cached_tokens": 0,
+    "output_tokens": 3724,
+    "reasoning_tokens": 0,
+    "requests": 8,
+    "tool_calls": 8,
+    "cost_usd": 0.002906,
+    "cache_hit_pct": 0.0
+   },
+   "ended_at": 8.05,
+   "seconds": 5.0,
+   "summary": "8 manager briefs drafted"
+  },
+  "privacy": {
+   "key": "privacy",
+   "label": "Privacy check",
+   "kind": "code",
+   "job": "Blocks other teams' names and pay, gender and prompt text in briefs.",
+   "status": "done",
+   "started_at": 8.05,
+   "detail": "",
+   "rounds": 1,
+   "ended_at": 8.06,
+   "seconds": 0.0,
+   "summary": "Clean: each brief covers its own team only"
+  }
+ },
+ "trace": [
+  {
+   "t": 0.01,
+   "agent": "evidence",
+   "kind": "agent_start",
+   "text": "Evidence & market data started",
+   "data": null
+  },
+  {
+   "t": 0.02,
+   "agent": "evidence",
+   "kind": "agent_end",
+   "text": "54 people · payroll ₹8,50,68,000 · pool ₹76,56,120 (9%) · 9 high retention risk",
+   "data": null
+  },
+  {
+   "t": 0.02,
+   "agent": "calibration",
+   "kind": "agent_start",
+   "text": "Calibration Analyst started",
+   "data": null
+  },
+  {
+   "t": 0.28,
+   "agent": "calibration",
+   "kind": "tool_call",
+   "text": "rating_distribution",
+   "data": {}
+  },
+  {
+   "t": 0.28,
+   "agent": "calibration",
+   "kind": "tool_call",
+   "text": "team_evidence",
+   "data": {}
+  },
+  {
+   "t": 0.28,
+   "agent": "calibration",
+   "kind": "tool_result",
+   "text": "rating_distribution",
+   "data": "{\"overall\": {\"counts\": {\"1\": 0, \"2\": 5, \"3\": 25, \"4\": 19, \"5\": 5}, \"avg_rating\": 3.44, \"avg_evidence\": 3.44}, \"managers\": [{\"manager_emp_id\": \"E001\", \"manager\": \"Saurabh Bhargava\", \"team_size\": 5, \"avg_rating\": 3.8, \"avg_rating_minus_evidence\": 0.42}, {\"manager_emp_id\": \"E002\", \"manager\": \"Rajat Dubey\", \"team_size\": 7, \"avg_rating\": 3.29, \"avg_rating_minus_evidence\": 0.04}, {\"manager_emp_id\": \"E003\", \"manager\": \"Kriti Bhargava\", \"team_size\": 4, \"avg_rating\": 4.25, \"avg_rating_minus_evidence\": 0.83}, {\"manager_emp_id\": \"E004\", \"manager\": \"Rohan Raghuwanshi\", \"team_size\": 4, \"avg_rating\": 2.75, \"avg_rating_minus_evidence\": -0.99}, {\"manager_emp_id\": \"E051\", \"manager\": \"Vikram Gupta\", \"team_size\": 9, \"avg_rating\": 3.44, \"avg_rating_minus_evidence\": 0.19}, {\"manager_emp_id\": \"E052\", \"manager\": \"Manish Goyal\", \"team_size\": 8, \"avg_rating\": 3.5, \"avg_rating_minus_evidence\": 0.09}, {\"manager_emp_id\": \"E053\", \"manager\": \"Komal Gupta\", \"team_size\": 8, \"avg_rating\": 3.5, \"avg_rating_minus_evidence\": -0.03}, {\"manager_emp_id\": \"E054\", \"manager\": \"Nidhi Raghuwanshi\", \"team_size\": 8, \"avg_rating\": 3.25, \"avg_rating_minus_evidence\": -0.43}]}"
+  },
+  {
+   "t": 0.28,
+   "agent": "calibration",
+   "kind": "tool_result",
+   "text": "team_evidence",
+   "data": "[{\"emp_id\": \"E002\", \"name\": \"Rajat Dubey\", \"role\": \"pm\", \"level\": \"Lead\", \"office\": \"Indore\", \"manager\": \"(director)\", \"rating\": 3, \"evidence_score\": 3.45, \"client_feedback\": 5, \"utilization_pct\": 53.8, \"skills_added\": 0, \"promotion_recommended\": false, \"tenure_years\": 11.5, \"manager_notes\": \"Good team player; growth area is estimation and planning.\"}, {\"emp_id\": \"E005\", \"name\": \"Aditya Deshmukh\", \"role\": \"ba\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager\": \"E001\", \"rating\": 5, \"evidence_score\": 3.61, \"client_feedback\": 4, \"utilization_pct\": 57.9, \"skills_added\": 3, \"promotion_recommended\": false, \"tenure_years\": 3.9, \"manager_notes\": \"Owned the hardest module on Language-learning app - growth features and raised the team's bar.\"}, {\"emp_id\": \"E008\", \"name\": \"Zoya Shukla\", \"role\": \"uiux\", \"level\": \"Senior\", \"office\": \"Pune\", \"manager\": \"E001\", \"rating\": 4, \"evidence_score\": 3.52, \"client_feedback\": 4, \"utilization_pct\": 54.7, \"skills_added\": 3, \"promotion_recommended\": false, \"tenure_years\": 4.7, \"manager_notes\": \"Good technical depth; took ownership of releases on Support RAG assistant - v2.\"}, {\"emp_id\": \"E035\", \"name\": \"Bhavna Verma\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager\": \"E001\", \"rating\": 3, \"evidence_score\": 3.23, \"client_feedback\": 4, \"utilization_pct\": 56.2, \"skills_added\": 1, \"promotion_recommended\": false, \"tenure_years\": 2.4, \"manager_notes\": \"Delivered assigned work on Internal: Empower AI accelerator; should push for more ownership.\"}, {\"emp_id\": \"E038\", \"name\": \"Ritika Solanki\", \"role\": \"qa\", \"level\": \"Senior\", \"office\": \"Indore\", \"manager\": \"E001\", \"rating\": 4, \"evidence_score\": 3.55, \"client_feedback\": 5, \"utilization_pct\": 57.5, \"skills_added\": 0, \"promotion_recommended\": false, \"tenure_years\": 2.0, \"manager_notes\": \"Solid year, positive client feedback, ready for more scope.\"}, {\"emp_id\": \"E041\", \"name\": \"Mohit Bhonsle\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Pune\", \"manager\": \"E001\", \"rating\": 3, \"evidence_score\": 2.97, \"client_feedback\": 3, \"utilization_pct\": 70.3, \"skills_added\": 0, \"promotion_recommended\": false, \"tenure_years\": 1.1, \"manager_notes\": \"Met expectations on Language-learning app - growth features; steady and dependable.\"}, {\"emp_id\": \"E001\", \"name\": \"Saurabh Bhargava\", \"role\": \"pm\", \"level\": \"Senior\", \"office\": \"Pune\", \"manager\": \"E002\", \"rating\": 4, \"evidence_score\": 3.23, \"client_feedback\": 4, \"utilization_pct\": 56.3, \"skills_added\": 1, \"promotion_recommended\": false, \"tenure_years\": 1.0, \"manager_notes\": \"Strong delivery on Language-learning app - growth features; reliable under deadline pressure.\"}, {\"emp_id\": \"E003\", \"name\": \"Kriti Bhargava\", \"role\": \"pm\", \"level\": \"Senior\", \"office\": \"Indore\", \"manager\": \"E002\", \"rating\": 2, \"evidence_score\": 3.27, \"client_feedback\": 4, \"utilization_pct\": 64.5, \"skills_added\": 0, \"promotion_recommended\": false, \"tenure_years\": 2.1, \"manager_notes\": \"Quality issues in two releases; improvement plan agreed.\"}, {\"emp_id\": \"E004\", \"name\": \"Rohan Raghuw …[+16806 chars]"
+  },
+  {
+   "t": 0.53,
+   "agent": "calibration",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "flags": [
+     {
+      "emp_id": "E037",
+      "issue": "rating_below_evidence",
+      "current_rating": 2,
+      "suggested_rating": 5,
+      "evidence": "Rating 2 is 2.78 points below evidence_score 4.78; client feedback is 5, utilisation 93.0%, and 2 skills were added.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E037",
+      "issue": "notes_inconsistent",
+      "current_rating": 2,
+      "evidence": "Manager notes say deadlines were missed and closer supervision was needed, while the data show client feedback 5, utilisation 93.0%, and evidence_score 4.78.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E036",
+      "issue": "rating_above_evidence",
+      "current_rating": 5,
+      "evidence": "Rating 5 is 2.55 points above evidence_score 2.45; client feedback is 2 and utilisation is 61.0%.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E036",
+      "issue": "notes_inconsistent",
+      "current_rating": 5,
+      "evidence": "Notes describe an outstanding year with the client loving every delivery, while client feedback is 2 and evidence_score is 2.45.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E005",
+      "issue": "rating_above_evidence",
+      "current_rating": 5,
+      "suggested_rating": 4,
+      "evidence": "Rating 5 is 1.39 points above evidence_score 3.61; client feedback is 4, utilisation 57.9%, and 3 skills were added.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E021",
+      "issue": "rating_below_evidence",
+      "current_rating": 3,
+      "suggested_rating": 4,
+      "evidence": "Rating 3 is 1.15 points below evidence_score 4.15; client feedback is 4, utilisation 85.9%, and 2 skills were added.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E021",
+      "issue": "notes_inconsistent",
+      "current_rating": 3,
+      "evidence": "Notes call this an average year with nothing special, despite evidence_score 4.15, utilisation 85.9%, and 2 skills added.",
+      "confidence": "high"
+     },
+     {
+      "emp_id": "E019",
+      "issue": "promotion_ready",
+      "current_rating": 4,
+      "evidence": "No promotion is recommended despite evidence_score 4.38, utilisation 96.1%, client feedback 4, and 2 skills added.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E023",
+      "issue": "promotion_ready",
+      "current_rating": 5,
+      "evidence": "No promotion is recommended despite evidence_score 4.53, utilisation 89.8%, client feedback 5, and a client request by name noted.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E039",
+      "issue": "promotion_ready",
+      "current_rating": 5,
+      "evidence": "No promotion is recommended despite evidence_score 4.46, utilisation 80.4%, client feedback 5, and notes that the client requested them by name.",
+      "confidence": "medium"
+     },
+     {
+      "emp_id": "E012",
+      "issue": "promotion_ready",
+      "current_rating": 5,
+      "evidence": "No promotion is recommended despite evidence_score 4.21, utilisation 76.9%, client feedback 5, and notes that the client requested them by name.",
+      "confidence": "medium"
+     }
+    ],
+    "manager_patterns": [
+     {
+      "manager_emp_id": "E003",
+      "pattern": "Ratings sit consistently above evidence across all four team members; average rating-minus-evidence is +0.83."
+     },
+     {
+      "manager_emp_id": "E004",
+      "pattern": "Ratings sit consistently below evidence across all four team members; average rating-minus-evidence is -0.99."
+     },
+     {
+      "manager_emp_id": "E054",
+      "pattern": "Ratings trend below evidence for most team members (6 of 8); average rating-minus-evidence is -0.43."
+     }
+    ],
+    "summary": "The clearest calibration concerns are E037's substantially understated rating and contradictory notes, and E036's substantially overstated rating and contradictory notes; E005 and E021 also merit review. Review the promotion cases flagged against level expectations and role scope; the Bhopal retention note should not itself influence individual ratings or promotion decisions."
+   }
+  },
+  {
+   "t": 0.54,
+   "agent": "calibration",
+   "kind": "agent_end",
+   "text": "11 rating flags · 3 manager patterns",
+   "data": null
+  },
+  {
+   "t": 0.54,
+   "agent": "strategy",
+   "kind": "agent_start",
+   "text": "Hike Strategist started",
+   "data": null
+  },
+  {
+   "t": 0.74,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "hike_policy",
+   "data": {}
+  },
+  {
+   "t": 0.74,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "pool_summary",
+   "data": {}
+  },
+  {
+   "t": 0.74,
+   "agent": "strategy",
+   "kind": "tool_result",
+   "text": "hike_policy",
+   "data": "{\"cycle\": \"FY2026-27\", \"pool_pct_of_payroll\": 9.0, \"guideline_hike_pct\": {\"5\": [12, 18], \"4\": [8, 12], \"3\": [5, 8], \"2\": [0, 3], \"1\": [0, 0]}, \"promotion_addon_pct\": [5, 10], \"min_hike_pct\": 0.0, \"max_hike_pct\": 25.0, \"compa_ratio\": {\"floor\": 0.88, \"target\": 1.0, \"ceiling\": 1.15, \"market_gap_factor\": 0.5, \"market_component_bounds_pct\": [-3, 10]}, \"retention\": {\"high_risk_bonus_pct\": 3.0, \"medium_risk_bonus_pct\": 1.5}, \"strategy_bounds\": {\"performance_weight\": [0.4, 0.8], \"market_weight\": [0.1, 0.5], \"retention_weight\": [0.0, 0.3], \"promotion_share_pct\": [5, 25]}, \"default_strategy\": {\"performance_weight\": 0.6, \"market_weight\": 0.3, \"retention_weight\": 0.1, \"promotion_share_pct\": 12}}"
+  },
+  {
+   "t": 0.74,
+   "agent": "strategy",
+   "kind": "tool_result",
+   "text": "pool_summary",
+   "data": "{\"headcount\": 54, \"payroll_inr\": 85068000, \"pool_pct\": 9.0, \"pool_inr\": 7656120, \"ratings\": {\"1\": 0, \"2\": 5, \"3\": 25, \"4\": 19, \"5\": 5}, \"promotions_recommended\": 5, \"retention_risk\": {\"high\": 9, \"medium\": 15, \"low\": 30}, \"market_position_by_office\": {\"Bhopal\": {\"people\": 9, \"avg_compa_ratio\": 0.844, \"below_0_88\": 7}, \"Indore\": {\"people\": 27, \"avg_compa_ratio\": 0.958, \"below_0_88\": 5}, \"Pune\": {\"people\": 18, \"avg_compa_ratio\": 0.918, \"below_0_88\": 7}}, \"calibration_flags\": 11}"
+  },
+  {
+   "t": 0.98,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "simulate_strategy",
+   "data": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12
+   }
+  },
+  {
+   "t": 0.98,
+   "agent": "strategy",
+   "kind": "tool_result",
+   "text": "simulate_strategy",
+   "data": "{\"strategy_used\": {\"performance_weight\": 0.6, \"market_weight\": 0.3, \"retention_weight\": 0.1, \"promotion_share_pct\": 12.0}, \"avg_hike_by_rating\": {\"5\": 14.57, \"4\": 12.08, \"3\": 6.96, \"2\": 3.23}, \"pool_used_exactly\": true, \"feasible\": true, \"note\": \"\", \"avg_compa_after_by_office\": {\"Bhopal\": 0.959, \"Indore\": 1.032, \"Pune\": 0.994}, \"high_retention_risk_still_below_0_9\": 3, \"people_at_cap\": 0}"
+  },
+  {
+   "t": 1.18,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "simulate_strategy",
+   "data": {
+    "performance_weight": 0.7,
+    "market_weight": 0.4,
+    "retention_weight": 0.2,
+    "promotion_share_pct": 15
+   }
+  },
+  {
+   "t": 1.18,
+   "agent": "strategy",
+   "kind": "tool_result",
+   "text": "simulate_strategy",
+   "data": "{\"strategy_used\": {\"performance_weight\": 0.7, \"market_weight\": 0.4, \"retention_weight\": 0.2, \"promotion_share_pct\": 15.0}, \"avg_hike_by_rating\": {\"5\": 14.58, \"4\": 12.12, \"3\": 6.95, \"2\": 3.43}, \"pool_used_exactly\": true, \"feasible\": true, \"note\": \"\", \"avg_compa_after_by_office\": {\"Bhopal\": 0.961, \"Indore\": 1.031, \"Pune\": 0.994}, \"high_retention_risk_still_below_0_9\": 3, \"people_at_cap\": 0}"
+  },
+  {
+   "t": 1.38,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "simulate_strategy",
+   "data": {
+    "performance_weight": 0.8,
+    "market_weight": 0.5,
+    "retention_weight": 0.3,
+    "promotion_share_pct": 20
+   }
+  },
+  {
+   "t": 1.38,
+   "agent": "strategy",
+   "kind": "tool_result",
+   "text": "simulate_strategy",
+   "data": "{\"strategy_used\": {\"performance_weight\": 0.8, \"market_weight\": 0.5, \"retention_weight\": 0.3, \"promotion_share_pct\": 20.0}, \"avg_hike_by_rating\": {\"5\": 14.58, \"4\": 12.16, \"3\": 6.93, \"2\": 3.56}, \"pool_used_exactly\": true, \"feasible\": true, \"note\": \"\", \"avg_compa_after_by_office\": {\"Bhopal\": 0.963, \"Indore\": 1.031, \"Pune\": 0.995}, \"high_retention_risk_still_below_0_9\": 2, \"people_at_cap\": 0}"
+  },
+  {
+   "t": 1.65,
+   "agent": "strategy",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12,
+    "rationale": [
+     "The pool is 9% of payroll (₹7,656,120) for 54 employees; there are five recommended promotions and 11 calibration flags. Resolve the flagged calibration and promotion cases through review rather than treating flags as evidence for individual pay decisions.",
+     "Selected strategy spends the pool exactly and gives clearly differentiated averages by rating: rating 5 14.57%, rating 4 12.08%, rating 3 6.96%, and rating 2 3.23%.",
+     "Under the selected strategy, average compa-ratio after the cycle is Bhopal 0.959, Indore 1.032, and Pune 0.994; three high-retention-risk employees remain below 0.9, with no one at the cap.",
+     "Compared with the higher-weight alternative (0.8 performance / 0.5 market / 0.3 retention; 20% promotion share), the selected balance leaves one more high-risk employee below 0.9, while producing similarly differentiated rating averages and no employees at the cap. Bhopal starts furthest below market (0.844 average compa-ratio; seven below 0.88), so market correction remains a meaningful component.",
+     "Do not use the Bhopal retention note to influence ratings or promotion decisions; assess calibration concerns, including the noted cases, and promotion eligibility on evidence and role expectations."
+    ]
+   }
+  },
+  {
+   "t": 1.66,
+   "agent": "strategy",
+   "kind": "calculator",
+   "text": "Weights clamped to HR policy bounds",
+   "data": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12.0
+   }
+  },
+  {
+   "t": 1.66,
+   "agent": "strategy",
+   "kind": "agent_end",
+   "text": "performance 0.6 · market 0.3 · retention 0.1 · promotions 12.0%",
+   "data": null
+  },
+  {
+   "t": 1.67,
+   "agent": "optimizer",
+   "kind": "agent_start",
+   "text": "Budget optimizer started",
+   "data": null
+  },
+  {
+   "t": 1.67,
+   "agent": "optimizer",
+   "kind": "calculator",
+   "text": "Allocated ₹76,56,120 of ₹76,56,120",
+   "data": {
+    "feasible": true,
+    "note": "",
+    "by_rating": [
+     {
+      "rating": 5,
+      "people": 5,
+      "avg_hike_pct": 14.57,
+      "min_hike_pct": 13.3,
+      "max_hike_pct": 16.16
+     },
+     {
+      "rating": 4,
+      "people": 19,
+      "avg_hike_pct": 12.08,
+      "min_hike_pct": 7.01,
+      "max_hike_pct": 22.78
+     },
+     {
+      "rating": 3,
+      "people": 25,
+      "avg_hike_pct": 6.96,
+      "min_hike_pct": 4.12,
+      "max_hike_pct": 15.15
+     },
+     {
+      "rating": 2,
+      "people": 5,
+      "avg_hike_pct": 3.23,
+      "min_hike_pct": 1.01,
+      "max_hike_pct": 4.21
+     }
+    ]
+   }
+  },
+  {
+   "t": 1.67,
+   "agent": "optimizer",
+   "kind": "agent_end",
+   "text": "Pool used exactly · avg hike 9.0% · 5 promotions",
+   "data": null
+  },
+  {
+   "t": 1.68,
+   "agent": "fairness",
+   "kind": "agent_start",
+   "text": "Review round 1",
+   "data": null
+  },
+  {
+   "t": 1.9,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "fairness_metrics",
+   "data": {}
+  },
+  {
+   "t": 1.9,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "calibration_findings",
+   "data": {}
+  },
+  {
+   "t": 1.9,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "fairness_metrics",
+   "data": "{\"gender_gap_within_rating\": [{\"rating\": 2, \"women\": 2, \"men\": 3, \"avg_hike_women\": 3.4, \"avg_hike_men\": 3.11, \"gap_pp_men_minus_women\": -0.29}, {\"rating\": 3, \"women\": 11, \"men\": 14, \"avg_hike_women\": 6.48, \"avg_hike_men\": 7.34, \"gap_pp_men_minus_women\": 0.86}, {\"rating\": 4, \"women\": 9, \"men\": 10, \"avg_hike_women\": 12.83, \"avg_hike_men\": 11.41, \"gap_pp_men_minus_women\": -1.42}, {\"rating\": 5, \"women\": 3, \"men\": 2, \"avg_hike_women\": 14.45, \"avg_hike_men\": 14.75, \"gap_pp_men_minus_women\": 0.3}], \"managers\": [{\"manager_emp_id\": \"E001\", \"manager\": \"Saurabh Bhargava\", \"team_size\": 5, \"avg_rating_minus_evidence\": 0.42, \"women\": 3, \"men\": 2, \"women_rating_minus_evidence\": 0.23, \"men_rating_minus_evidence\": 0.71, \"gap\": 0.48}, {\"manager_emp_id\": \"E002\", \"manager\": \"Rajat Dubey\", \"team_size\": 7, \"avg_rating_minus_evidence\": 0.04, \"women\": 3, \"men\": 4, \"women_rating_minus_evidence\": 0.05, \"men_rating_minus_evidence\": 0.04, \"gap\": -0.01}, {\"manager_emp_id\": \"E003\", \"manager\": \"Kriti Bhargava\", \"team_size\": 4, \"avg_rating_minus_evidence\": 0.83}, {\"manager_emp_id\": \"E004\", \"manager\": \"Rohan Raghuwanshi\", \"team_size\": 4, \"avg_rating_minus_evidence\": -0.99}, {\"manager_emp_id\": \"E051\", \"manager\": \"Vikram Gupta\", \"team_size\": 9, \"avg_rating_minus_evidence\": 0.19, \"women\": 2, \"men\": 7, \"women_rating_minus_evidence\": 0.43, \"men_rating_minus_evidence\": 0.12, \"gap\": -0.31}, {\"manager_emp_id\": \"E052\", \"manager\": \"Manish Goyal\", \"team_size\": 8, \"avg_rating_minus_evidence\": 0.09, \"women\": 4, \"men\": 4, \"women_rating_minus_evidence\": 0.29, \"men_rating_minus_evidence\": -0.11, \"gap\": -0.4}, {\"manager_emp_id\": \"E053\", \"manager\": \"Komal Gupta\", \"team_size\": 8, \"avg_rating_minus_evidence\": -0.03, \"women\": 4, \"men\": 4, \"women_rating_minus_evidence\": 0.32, \"men_rating_minus_evidence\": -0.38, \"gap\": -0.7}, {\"manager_emp_id\": \"E054\", \"manager\": \"Nidhi Raghuwanshi\", \"team_size\": 8, \"avg_rating_minus_evidence\": -0.43, \"women\": 5, \"men\": 3, \"women_rating_minus_evidence\": -0.73, \"men_rating_minus_evidence\": 0.08, \"gap\": 0.81}], \"offices\": [{\"office\": \"Bhopal\", \"people\": 9, \"avg_compa_before\": 0.844, \"avg_compa_after\": 0.959, \"gap_vs_company_before\": 0.081, \"gap_vs_company_after\": 0.049, \"avg_hike_pct\": 13.92}, {\"office\": \"Indore\", \"people\": 27, \"avg_compa_before\": 0.958, \"avg_compa_after\": 1.032, \"gap_vs_company_before\": -0.033, \"gap_vs_company_after\": -0.024, \"avg_hike_pct\": 7.9}, {\"office\": \"Pune\", \"people\": 18, \"avg_compa_before\": 0.918, \"avg_compa_after\": 0.994, \"gap_vs_company_before\": 0.007, \"gap_vs_company_after\": 0.014, \"avg_hike_pct\": 8.55}], \"tenure\": [{\"rating\": 3, \"under_2y\": 10, \"over_2y\": 15, \"gap_pp_long_minus_short\": 0.42}, {\"rating\": 4, \"under_2y\": 8, \"over_2y\": 11, \"gap_pp_long_minus_short\": 2.03}, {\"rating\": 5, \"under_2y\": 3, \"over_2y\": 2, \"gap_pp_long_minus_short\": 1.05}], \"compa_outliers\": [{\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"office\": \"Pune\", \"rating\": 3, \"compa_after\": 0.801}, {\"emp_id\": \"E020\", \"name\": \"Rahul Parmar\", \"office\": \"Indore\", \"rating\": 3, \"c …[+1139 chars]"
+  },
+  {
+   "t": 1.9,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "calibration_findings",
+   "data": "{\"flags\": [{\"emp_id\": \"E037\", \"issue\": \"rating_below_evidence\", \"current_rating\": 2, \"suggested_rating\": 5, \"evidence\": \"Rating 2 is 2.78 points below evidence_score 4.78; client feedback is 5, utilisation 93.0%, and 2 skills were added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E037\", \"issue\": \"notes_inconsistent\", \"current_rating\": 2, \"suggested_rating\": null, \"evidence\": \"Manager notes say deadlines were missed and closer supervision was needed, while the data show client feedback 5, utilisation 93.0%, and evidence_score 4.78.\", \"confidence\": \"high\"}, {\"emp_id\": \"E036\", \"issue\": \"rating_above_evidence\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"Rating 5 is 2.55 points above evidence_score 2.45; client feedback is 2 and utilisation is 61.0%.\", \"confidence\": \"high\"}, {\"emp_id\": \"E036\", \"issue\": \"notes_inconsistent\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"Notes describe an outstanding year with the client loving every delivery, while client feedback is 2 and evidence_score is 2.45.\", \"confidence\": \"high\"}, {\"emp_id\": \"E005\", \"issue\": \"rating_above_evidence\", \"current_rating\": 5, \"suggested_rating\": 4, \"evidence\": \"Rating 5 is 1.39 points above evidence_score 3.61; client feedback is 4, utilisation 57.9%, and 3 skills were added.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E021\", \"issue\": \"rating_below_evidence\", \"current_rating\": 3, \"suggested_rating\": 4, \"evidence\": \"Rating 3 is 1.15 points below evidence_score 4.15; client feedback is 4, utilisation 85.9%, and 2 skills were added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E021\", \"issue\": \"notes_inconsistent\", \"current_rating\": 3, \"suggested_rating\": null, \"evidence\": \"Notes call this an average year with nothing special, despite evidence_score 4.15, utilisation 85.9%, and 2 skills added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E019\", \"issue\": \"promotion_ready\", \"current_rating\": 4, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.38, utilisation 96.1%, client feedback 4, and 2 skills added.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E023\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.53, utilisation 89.8%, client feedback 5, and a client request by name noted.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E039\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.46, utilisation 80.4%, client feedback 5, and notes that the client requested them by name.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E012\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.21, utilisation 76.9%, client feedback 5, and notes that the client requested them by name.\", \"confidence\": \"medium\"}], \"manager_patterns\": [{\"manager_emp_id\": \"E003\", \"pattern\": \"Ratings sit consistently above evidence across a …[+753 chars]"
+  },
+  {
+   "t": 2.12,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "proposal_for",
+   "data": {
+    "emp_ids": [
+     "E043",
+     "E026",
+     "E052",
+     "E015",
+     "E031",
+     "E044",
+     "E013",
+     "E001",
+     "E019",
+     "E006",
+     "E018",
+     "E030",
+     "E022",
+     "E034",
+     "E045",
+     "E037",
+     "E036",
+     "E005",
+     "E021",
+     "E011",
+     "E020",
+     "E029",
+     "E048",
+     "E023",
+     "E039",
+     "E012"
+    ]
+   }
+  },
+  {
+   "t": 2.13,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "proposal_for",
+   "data": "[{\"emp_id\": \"E043\", \"name\": \"Aarav Soni\", \"title\": \"Junior DevOps / Cloud Engineer\", \"role\": \"devops\", \"level\": \"Junior\", \"office\": \"Indore\", \"manager_emp_id\": \"E052\", \"rating\": 4, \"evidence_score\": 3.29, \"promotion_recommended\": false, \"retention_risk\": \"low\", \"ctc\": 780000, \"hike_pct\": 7.21, \"increase\": 56274, \"new_ctc\": 836274, \"promotion_addon_pct\": 0.0, \"compa_before\": 1.05, \"compa_after\": 1.126, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E005\", \"name\": \"Aditya Deshmukh\", \"title\": \"Mid Business Analyst\", \"role\": \"ba\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E001\", \"rating\": 5, \"evidence_score\": 3.61, \"promotion_recommended\": false, \"retention_risk\": \"medium\", \"ctc\": 1152000, \"hike_pct\": 14.24, \"increase\": 164087, \"new_ctc\": 1316087, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.919, \"compa_after\": 1.05, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E026\", \"name\": \"Akash Rajput\", \"title\": \"Mid Backend Developer\", \"role\": \"be\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E054\", \"rating\": 4, \"evidence_score\": 3.62, \"promotion_recommended\": false, \"retention_risk\": \"high\", \"ctc\": 1092000, \"hike_pct\": 11.58, \"increase\": 126503, \"new_ctc\": 1218503, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.858, \"compa_after\": 0.957, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E037\", \"name\": \"Bhavna Goyal\", \"title\": \"Mid QA Engineer\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E004\", \"rating\": 2, \"evidence_score\": 4.78, \"promotion_recommended\": false, \"retention_risk\": \"low\", \"ctc\": 1176000, \"hike_pct\": 2.99, \"increase\": 35149, \"new_ctc\": 1211149, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.915, \"compa_after\": 0.943, \"adjusted\": false, \"gender\": \"F\"}, {\"emp_id\": \"E039\", \"name\": \"Gaurav Shinde\", \"title\": \"Mid QA Engineer\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Pune\", \"manager_emp_id\": \"E003\", \"rating\": 5, \"evidence_score\": 4.46, \"promotion_recommended\": false, \"retention_risk\": \"high\", \"ctc\": 1152000, \"hike_pct\": 15.27, \"increase\": 175960, \"new_ctc\": 1327960, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.879, \"compa_after\": 1.013, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"title\": \"Mid Frontend Developer\", \"role\": \"fe\", \"level\": \"Mid\", \"office\": \"Pune\", \"manager_emp_id\": \"E051\", \"rating\": 3, \"evidence_score\": 2.31, \"promotion_recommended\": false, \"retention_risk\": \"low\", \"ctc\": 1020000, \"hike_pct\": 9.48, \"increase\": 96717, \"new_ctc\": 1116717, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.732, \"compa_after\": 0.801, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E012\", \"name\": \"Komal Sinha\", \"title\": \"Junior Frontend Developer\", \"role\": \"fe\", \"level\": \"Junior\", \"office\": \"Pune\", \"manager_emp_id\": \"E052\", \"rating\": 5, \"evidence_score\": 4.21, \"promotion_recommended\": false, \"retention_risk\": \"medium\", \"ctc\": 780000, \"hike_pct\": 13.3, \"increase\": 103705, \"new_ctc\": 883705, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.965, \"compa_after\": 1.094, \"adjusted\": false, \"g …[+8255 chars]"
+  },
+  {
+   "t": 2.32,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "verdict": "escalate",
+    "issues": [
+     {
+      "kind": "manager_pattern",
+      "group": "Women on E054's team",
+      "finding": "The rating-minus-evidence average is -0.73 for women versus +0.08 for men, a 0.81-point gender difference exceeding the 0.5 threshold. Proposal samples show E018, E030 and E034 each rated 3 against evidence scores of 3.89; E022 and E045 are rated 4 against 4.50.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E004's team",
+      "finding": "Ratings average 0.99 points below evidence across all four team members. E037 is rated 2 against evidence 4.78, with high-confidence calibration findings and contradictory manager notes.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E003's team",
+      "finding": "Ratings average 0.83 points above evidence across all four members. E036 is rated 5 against evidence 2.45, with high-confidence calibration findings and contradictory manager notes.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E021",
+      "finding": "Rating 3 is 1.15 points below evidence 4.15; calibration suggests rating 4. The employee already has a promotion recommendation, but the rating still needs review.",
+      "severity": "medium"
+     },
+     {
+      "kind": "tenure_gap",
+      "group": "Rating 4 employees by tenure",
+      "finding": "Employees with over 2 years' tenure average hikes 2.03 percentage points higher than those under 2 years, above the 1.5-point threshold. Available data do not establish whether this is evidence- or market-related.",
+      "severity": "medium"
+     },
+     {
+      "kind": "compa_outlier",
+      "group": "E011, E020, E029 and E048",
+      "finding": "All four remain below the 0.85 compa-ratio floor after the cycle: 0.801, 0.825, 0.799 and 0.796, respectively. Individual evidence differs, so this warrants role/market review rather than uniform correction.",
+      "severity": "medium"
+     }
+    ],
+    "adjustments": [
+     {
+      "emp_id": "E037",
+      "add_pp": 5,
+      "reason": "High-confidence evidence supports a materially higher rating than 2; partially correct the associated pay outcome pending rating re-review."
+     },
+     {
+      "emp_id": "E018",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E030",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E034",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E021",
+      "add_pp": 1,
+      "reason": "High-confidence calibration finding shows rating 3 below evidence 4.15; supplement existing promotion-related pay outcome pending review."
+     },
+     {
+      "emp_id": "E036",
+      "add_pp": -3,
+      "reason": "High-confidence evidence is substantially below rating 5; reduce the rating-linked hike component pending rating re-review."
+     },
+     {
+      "emp_id": "E005",
+      "add_pp": -1.5,
+      "reason": "Medium-confidence calibration finding indicates rating 5 exceeds evidence 3.61 and suggests rating 4."
+     },
+     {
+      "emp_id": "E020",
+      "add_pp": 1,
+      "reason": "Below-floor compa ratio of 0.825 with evidence score 3.37 supports a modest targeted market-position correction."
+     },
+     {
+      "emp_id": "E048",
+      "add_pp": 1,
+      "reason": "Below-floor compa ratio of 0.796 with rating 4 supports a modest targeted market-position correction, subject to role/market validation."
+     }
+    ],
+    "summary": "Recommend HR re-review ratings and manager practices for E003, E004 and especially E054; pay adjustments only partially mitigate the impact and cannot fix inaccurate ratings or contradictory notes. Also validate the rating-4 tenure gap and below-floor compa ratios against role-level market data. The rating-4 gender hike gap is not an adverse gap for women (women average 1.42 points more), and Bhopal's company-relative compa gap narrowed from 0.081 to 0.049, below the 0.06 threshold this cycle."
+   }
+  },
+  {
+   "t": 2.33,
+   "agent": "fairness",
+   "kind": "agent_end",
+   "text": "Round 1: ESCALATE · 6 issues (3 high) · 9 adjustments",
+   "data": null
+  },
+  {
+   "t": 2.33,
+   "agent": "rebalance",
+   "kind": "agent_start",
+   "text": "Rebalance started",
+   "data": null
+  },
+  {
+   "t": 2.34,
+   "agent": "rebalance",
+   "kind": "calculator",
+   "text": "Applied 9 adjustments; pool still exact: True",
+   "data": [
+    {
+     "emp_id": "E037",
+     "name": "Bhavna Goyal",
+     "requested_pp": 5.0,
+     "hike_before": 2.99,
+     "hike_after": 6.0,
+     "reason": "High-confidence evidence supports a materially higher rating than 2; partially correct the associated pay outcome pending rating re-review."
+    },
+    {
+     "emp_id": "E018",
+     "name": "Pooja Dubey",
+     "requested_pp": 1.5,
+     "hike_before": 6.62,
+     "hike_after": 8.12,
+     "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+    },
+    {
+     "emp_id": "E030",
+     "name": "Prachi Patidar",
+     "requested_pp": 1.5,
+     "hike_before": 4.33,
+     "hike_after": 5.83,
+     "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+    },
+    {
+     "emp_id": "E034",
+     "name": "Vaishali Gupta",
+     "requested_pp": 1.5,
+     "hike_before": 5.36,
+     "hike_after": 6.86,
+     "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+    },
+    {
+     "emp_id": "E021",
+     "name": "Tushar Nair",
+     "requested_pp": 1.0,
+     "hike_before": 15.15,
+     "hike_after": 16.15,
+     "reason": "High-confidence calibration finding shows rating 3 below evidence 4.15; supplement existing promotion-related pay outcome pending review."
+    },
+    {
+     "emp_id": "E036",
+     "name": "Priya Solanki",
+     "requested_pp": -3.0,
+     "hike_before": 16.16,
+     "hike_after": 13.16,
+     "reason": "High-confidence evidence is substantially below rating 5; reduce the rating-linked hike component pending rating re-review."
+    },
+    {
+     "emp_id": "E005",
+     "name": "Aditya Deshmukh",
+     "requested_pp": -1.5,
+     "hike_before": 14.24,
+     "hike_after": 12.74,
+     "reason": "Medium-confidence calibration finding indicates rating 5 exceeds evidence 3.61 and suggests rating 4."
+    },
+    {
+     "emp_id": "E020",
+     "name": "Rahul Parmar",
+     "requested_pp": 1.0,
+     "hike_before": 9.48,
+     "hike_after": 10.48,
+     "reason": "Below-floor compa ratio of 0.825 with evidence score 3.37 supports a modest targeted market-position correction."
+    },
+    {
+     "emp_id": "E048",
+     "name": "Swati Malviya",
+     "requested_pp": 1.0,
+     "hike_before": 12.78,
+     "hike_after": 13.78,
+     "reason": "Below-floor compa ratio of 0.796 with rating 4 supports a modest targeted market-position correction, subject to role/market validation."
+    }
+   ]
+  },
+  {
+   "t": 2.34,
+   "agent": "rebalance",
+   "kind": "agent_end",
+   "text": "9 people adjusted · everyone else rebalanced · pool used exactly",
+   "data": null
+  },
+  {
+   "t": 2.34,
+   "agent": "fairness",
+   "kind": "agent_start",
+   "text": "Review round 2",
+   "data": null
+  },
+  {
+   "t": 2.59,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "fairness_metrics",
+   "data": {}
+  },
+  {
+   "t": 2.59,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "calibration_findings",
+   "data": {}
+  },
+  {
+   "t": 2.6,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "fairness_metrics",
+   "data": "{\"gender_gap_within_rating\": [{\"rating\": 2, \"women\": 2, \"men\": 3, \"avg_hike_women\": 4.89, \"avg_hike_men\": 3.09, \"gap_pp_men_minus_women\": -1.8}, {\"rating\": 3, \"women\": 11, \"men\": 14, \"avg_hike_women\": 6.85, \"avg_hike_men\": 7.44, \"gap_pp_men_minus_women\": 0.59}, {\"rating\": 4, \"women\": 9, \"men\": 10, \"avg_hike_women\": 12.86, \"avg_hike_men\": 11.33, \"gap_pp_men_minus_women\": -1.53}, {\"rating\": 5, \"women\": 3, \"men\": 2, \"avg_hike_women\": 13.37, \"avg_hike_men\": 13.94, \"gap_pp_men_minus_women\": 0.57}], \"managers\": [{\"manager_emp_id\": \"E001\", \"manager\": \"Saurabh Bhargava\", \"team_size\": 5, \"avg_rating_minus_evidence\": 0.42, \"women\": 3, \"men\": 2, \"women_rating_minus_evidence\": 0.23, \"men_rating_minus_evidence\": 0.71, \"gap\": 0.48}, {\"manager_emp_id\": \"E002\", \"manager\": \"Rajat Dubey\", \"team_size\": 7, \"avg_rating_minus_evidence\": 0.04, \"women\": 3, \"men\": 4, \"women_rating_minus_evidence\": 0.05, \"men_rating_minus_evidence\": 0.04, \"gap\": -0.01}, {\"manager_emp_id\": \"E003\", \"manager\": \"Kriti Bhargava\", \"team_size\": 4, \"avg_rating_minus_evidence\": 0.83}, {\"manager_emp_id\": \"E004\", \"manager\": \"Rohan Raghuwanshi\", \"team_size\": 4, \"avg_rating_minus_evidence\": -0.99}, {\"manager_emp_id\": \"E051\", \"manager\": \"Vikram Gupta\", \"team_size\": 9, \"avg_rating_minus_evidence\": 0.19, \"women\": 2, \"men\": 7, \"women_rating_minus_evidence\": 0.43, \"men_rating_minus_evidence\": 0.12, \"gap\": -0.31}, {\"manager_emp_id\": \"E052\", \"manager\": \"Manish Goyal\", \"team_size\": 8, \"avg_rating_minus_evidence\": 0.09, \"women\": 4, \"men\": 4, \"women_rating_minus_evidence\": 0.29, \"men_rating_minus_evidence\": -0.11, \"gap\": -0.4}, {\"manager_emp_id\": \"E053\", \"manager\": \"Komal Gupta\", \"team_size\": 8, \"avg_rating_minus_evidence\": -0.03, \"women\": 4, \"men\": 4, \"women_rating_minus_evidence\": 0.32, \"men_rating_minus_evidence\": -0.38, \"gap\": -0.7}, {\"manager_emp_id\": \"E054\", \"manager\": \"Nidhi Raghuwanshi\", \"team_size\": 8, \"avg_rating_minus_evidence\": -0.43, \"women\": 5, \"men\": 3, \"women_rating_minus_evidence\": -0.73, \"men_rating_minus_evidence\": 0.08, \"gap\": 0.81}], \"offices\": [{\"office\": \"Bhopal\", \"people\": 9, \"avg_compa_before\": 0.844, \"avg_compa_after\": 0.956, \"gap_vs_company_before\": 0.081, \"gap_vs_company_after\": 0.052, \"avg_hike_pct\": 13.51}, {\"office\": \"Indore\", \"people\": 27, \"avg_compa_before\": 0.958, \"avg_compa_after\": 1.035, \"gap_vs_company_before\": -0.033, \"gap_vs_company_after\": -0.027, \"avg_hike_pct\": 8.19}, {\"office\": \"Pune\", \"people\": 18, \"avg_compa_before\": 0.918, \"avg_compa_after\": 0.994, \"gap_vs_company_before\": 0.007, \"gap_vs_company_after\": 0.014, \"avg_hike_pct\": 8.48}], \"tenure\": [{\"rating\": 3, \"under_2y\": 10, \"over_2y\": 15, \"gap_pp_long_minus_short\": 0.35}, {\"rating\": 4, \"under_2y\": 8, \"over_2y\": 11, \"gap_pp_long_minus_short\": 1.89}, {\"rating\": 5, \"under_2y\": 3, \"over_2y\": 2, \"gap_pp_long_minus_short\": -1.08}], \"compa_outliers\": [{\"emp_id\": \"E011\", \"name\": \"Jayesh Chouhan\", \"office\": \"Pune\", \"rating\": 3, \"compa_after\": 0.8}, {\"emp_id\": \"E020\", \"name\": \"Rahul Parmar\", \"office\": \"Indore\", \"rating\": 3, \" …[+1237 chars]"
+  },
+  {
+   "t": 2.6,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "calibration_findings",
+   "data": "{\"flags\": [{\"emp_id\": \"E037\", \"issue\": \"rating_below_evidence\", \"current_rating\": 2, \"suggested_rating\": 5, \"evidence\": \"Rating 2 is 2.78 points below evidence_score 4.78; client feedback is 5, utilisation 93.0%, and 2 skills were added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E037\", \"issue\": \"notes_inconsistent\", \"current_rating\": 2, \"suggested_rating\": null, \"evidence\": \"Manager notes say deadlines were missed and closer supervision was needed, while the data show client feedback 5, utilisation 93.0%, and evidence_score 4.78.\", \"confidence\": \"high\"}, {\"emp_id\": \"E036\", \"issue\": \"rating_above_evidence\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"Rating 5 is 2.55 points above evidence_score 2.45; client feedback is 2 and utilisation is 61.0%.\", \"confidence\": \"high\"}, {\"emp_id\": \"E036\", \"issue\": \"notes_inconsistent\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"Notes describe an outstanding year with the client loving every delivery, while client feedback is 2 and evidence_score is 2.45.\", \"confidence\": \"high\"}, {\"emp_id\": \"E005\", \"issue\": \"rating_above_evidence\", \"current_rating\": 5, \"suggested_rating\": 4, \"evidence\": \"Rating 5 is 1.39 points above evidence_score 3.61; client feedback is 4, utilisation 57.9%, and 3 skills were added.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E021\", \"issue\": \"rating_below_evidence\", \"current_rating\": 3, \"suggested_rating\": 4, \"evidence\": \"Rating 3 is 1.15 points below evidence_score 4.15; client feedback is 4, utilisation 85.9%, and 2 skills were added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E021\", \"issue\": \"notes_inconsistent\", \"current_rating\": 3, \"suggested_rating\": null, \"evidence\": \"Notes call this an average year with nothing special, despite evidence_score 4.15, utilisation 85.9%, and 2 skills added.\", \"confidence\": \"high\"}, {\"emp_id\": \"E019\", \"issue\": \"promotion_ready\", \"current_rating\": 4, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.38, utilisation 96.1%, client feedback 4, and 2 skills added.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E023\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.53, utilisation 89.8%, client feedback 5, and a client request by name noted.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E039\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.46, utilisation 80.4%, client feedback 5, and notes that the client requested them by name.\", \"confidence\": \"medium\"}, {\"emp_id\": \"E012\", \"issue\": \"promotion_ready\", \"current_rating\": 5, \"suggested_rating\": null, \"evidence\": \"No promotion is recommended despite evidence_score 4.21, utilisation 76.9%, client feedback 5, and notes that the client requested them by name.\", \"confidence\": \"medium\"}], \"manager_patterns\": [{\"manager_emp_id\": \"E003\", \"pattern\": \"Ratings sit consistently above evidence across a …[+753 chars]"
+  },
+  {
+   "t": 2.82,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "proposal_for",
+   "data": {
+    "emp_ids": [
+     "E014",
+     "E042",
+     "E004",
+     "E043",
+     "E026",
+     "E052",
+     "E015",
+     "E031",
+     "E044",
+     "E013",
+     "E001",
+     "E019",
+     "E006",
+     "E018",
+     "E030",
+     "E022",
+     "E034",
+     "E045",
+     "E037",
+     "E036",
+     "E005",
+     "E021",
+     "E023",
+     "E039",
+     "E012"
+    ]
+   }
+  },
+  {
+   "t": 2.82,
+   "agent": "fairness",
+   "kind": "tool_result",
+   "text": "proposal_for",
+   "data": "[{\"emp_id\": \"E043\", \"name\": \"Aarav Soni\", \"title\": \"Junior DevOps / Cloud Engineer\", \"role\": \"devops\", \"level\": \"Junior\", \"office\": \"Indore\", \"manager_emp_id\": \"E052\", \"rating\": 4, \"evidence_score\": 3.29, \"promotion_recommended\": false, \"retention_risk\": \"low\", \"ctc\": 780000, \"hike_pct\": 7.15, \"increase\": 55796, \"new_ctc\": 835796, \"promotion_addon_pct\": 0.0, \"compa_before\": 1.05, \"compa_after\": 1.125, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E005\", \"name\": \"Aditya Deshmukh\", \"title\": \"Mid Business Analyst\", \"role\": \"ba\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E001\", \"rating\": 5, \"evidence_score\": 3.61, \"promotion_recommended\": false, \"retention_risk\": \"medium\", \"ctc\": 1152000, \"hike_pct\": 12.74, \"increase\": 146807, \"new_ctc\": 1298807, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.919, \"compa_after\": 1.036, \"adjusted\": true, \"gender\": \"M\"}, {\"emp_id\": \"E026\", \"name\": \"Akash Rajput\", \"title\": \"Mid Backend Developer\", \"role\": \"be\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E054\", \"rating\": 4, \"evidence_score\": 3.62, \"promotion_recommended\": false, \"retention_risk\": \"high\", \"ctc\": 1092000, \"hike_pct\": 11.49, \"increase\": 125428, \"new_ctc\": 1217428, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.858, \"compa_after\": 0.956, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E037\", \"name\": \"Bhavna Goyal\", \"title\": \"Mid QA Engineer\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Indore\", \"manager_emp_id\": \"E004\", \"rating\": 2, \"evidence_score\": 4.78, \"promotion_recommended\": false, \"retention_risk\": \"low\", \"ctc\": 1176000, \"hike_pct\": 6.0, \"increase\": 70560, \"new_ctc\": 1246560, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.915, \"compa_after\": 0.97, \"adjusted\": true, \"gender\": \"F\"}, {\"emp_id\": \"E039\", \"name\": \"Gaurav Shinde\", \"title\": \"Mid QA Engineer\", \"role\": \"qa\", \"level\": \"Mid\", \"office\": \"Pune\", \"manager_emp_id\": \"E003\", \"rating\": 5, \"evidence_score\": 4.46, \"promotion_recommended\": false, \"retention_risk\": \"high\", \"ctc\": 1152000, \"hike_pct\": 15.14, \"increase\": 174465, \"new_ctc\": 1326465, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.879, \"compa_after\": 1.012, \"adjusted\": false, \"gender\": \"M\"}, {\"emp_id\": \"E012\", \"name\": \"Komal Sinha\", \"title\": \"Junior Frontend Developer\", \"role\": \"fe\", \"level\": \"Junior\", \"office\": \"Pune\", \"manager_emp_id\": \"E052\", \"rating\": 5, \"evidence_score\": 4.21, \"promotion_recommended\": false, \"retention_risk\": \"medium\", \"ctc\": 780000, \"hike_pct\": 13.18, \"increase\": 102823, \"new_ctc\": 882823, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.965, \"compa_after\": 1.093, \"adjusted\": false, \"gender\": \"F\"}, {\"emp_id\": \"E052\", \"name\": \"Manish Goyal\", \"title\": \"Tech Lead / Architect\", \"role\": \"lead\", \"level\": \"Lead\", \"office\": \"Indore\", \"manager_emp_id\": \"E002\", \"rating\": 4, \"evidence_score\": 3.76, \"promotion_recommended\": false, \"retention_risk\": \"medium\", \"ctc\": 2736000, \"hike_pct\": 10.12, \"increase\": 276795, \"new_ctc\": 3012795, \"promotion_addon_pct\": 0.0, \"compa_before\": 0.915, \"compa_after\": 1.008, \"adjusted\": fals …[+7829 chars]"
+  },
+  {
+   "t": 3.06,
+   "agent": "fairness",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "verdict": "escalate",
+    "issues": [
+     {
+      "kind": "manager_pattern",
+      "group": "E054's team, women versus men",
+      "finding": "Women’s mean rating-minus-evidence is -0.73 versus +0.08 for men, a 0.81-point gap; 6 of 8 team ratings are below evidence. Pay changes do not resolve the rating-calibration concern.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E004's team",
+      "finding": "Team ratings average 0.99 points below evidence; E037 is rated 2 against evidence 4.78, with inconsistent manager notes. E037’s current proposed hike is 6.0%.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E003's team",
+      "finding": "Team ratings average 0.83 points above evidence; E036 is rated 5 against evidence 2.45, with inconsistent manager notes. E036’s current proposed hike is 13.16%.",
+      "severity": "high"
+     },
+     {
+      "kind": "gender_gap",
+      "group": "rating 2",
+      "finding": "Women average 4.89% versus men 3.09%, a 1.80 percentage-point gap favoring women (2 women, 3 men). The gap crosses the audit threshold; the available data do not establish its cause.",
+      "severity": "medium"
+     },
+     {
+      "kind": "gender_gap",
+      "group": "rating 4",
+      "finding": "Women average 12.86% versus men 11.33%, a 1.53 percentage-point gap favoring women (9 women, 10 men). The gap crosses the audit threshold; verify that non-gender factors explain it.",
+      "severity": "medium"
+     },
+     {
+      "kind": "tenure_gap",
+      "group": "rating 4",
+      "finding": "Employees with over 2 years’ tenure average 1.89 percentage points more than those under 2 years, above the 1.5-point threshold; no supplied evidence establishes the reason.",
+      "severity": "medium"
+     },
+     {
+      "kind": "compa_outlier",
+      "group": "four employees below 0.85 compa-ratio after the cycle",
+      "finding": "E011 is at 0.800, E020 at 0.832, E029 at 0.798, and E048 at 0.803, all below the 0.85 threshold. Review role/market positioning; the metric alone does not establish an inequity.",
+      "severity": "medium"
+     }
+    ],
+    "adjustments": [
+     {
+      "emp_id": "E037",
+      "add_pp": 3,
+      "reason": "Recommendation only in round 2: strong evidence (4.78) materially exceeds the rating (2), and the proposed hike remains 6.0%; a targeted increase partly mitigates the pay impact pending HR rating re-review."
+     }
+    ],
+    "summary": "The rebalanced proposal has substantially narrowed Bhopal’s market-position gap (0.081 to 0.052, below the 0.06 threshold), so no further office correction is indicated. The remaining priority is a human review of E003, E004 and especially E054’s ratings and inconsistent notes; pay cannot correct a potentially biased or inaccurate rating record. I recommend a further 3-point increase for E037 as a round-2 recommendation, while HR reviews the rating. Check the flagged gender and tenure differentials and the four low compa-ratios against legitimate market, role and promotion factors before approval; none should be justified by protected characteristics."
+   }
+  },
+  {
+   "t": 3.07,
+   "agent": "fairness",
+   "kind": "agent_end",
+   "text": "Round 2: ESCALATE · 7 issues (3 high) · 1 adjustments",
+   "data": null
+  },
+  {
+   "t": 3.07,
+   "agent": "briefs",
+   "kind": "agent_start",
+   "text": "8 managers in parallel",
+   "data": null
+  },
+  {
+   "t": 6.73,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "FY2026–27 manager conversation brief for E003’s team",
+    "team_summary": "Use the outcomes in HR’s attached table and connect each conversation to the person’s evidence and next steps. Keep feedback specific, recognize contributions, and agree on a practical growth focus; the effective date is 2027-04-01.",
+    "talking_points": [
+     {
+      "emp_id": "E009",
+      "points": [
+       "Recognize their contribution as a collaborative team player and the year’s positive client feedback.",
+       "Set a focused goal around estimation and planning, with regular check-ins on delivery forecasts."
+      ]
+     },
+     {
+      "emp_id": "E039",
+      "points": [
+       "Recognize the client’s request for them by name and their consistent delivery ahead of plan, alongside strong client feedback.",
+       "Discuss how to build on this impact and identify the next skills or scope to develop."
+      ]
+     },
+     {
+      "emp_id": "E036",
+      "points": [
+       "Acknowledge their strong rating and contribution, and discuss the feedback received as an opportunity to align on client expectations.",
+       "Agree on specific actions to improve client outcomes and check progress together during the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E006",
+      "points": [
+       "Recognize their technical depth and ownership of releases on Sales CRM - phase 2, supported by strong client feedback.",
+       "Choose a relevant skill-development goal, since no new skills were recorded this cycle, and discuss how to extend their release ownership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and outcome confidential; discuss only with that employee.",
+     "The effective date is 2027-04-01; refer to HR’s attached table for compensation figures.",
+     "Route questions or concerns through the appropriate HR channel."
+    ]
+   }
+  },
+  {
+   "t": 6.95,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Manager conversation brief for E002’s team — effective 2027-04-01",
+    "team_summary": "Keep the discussions focused on each person’s documented contribution, feedback, and next steps. Explain outcomes in the context of the year’s evidence and agreed development areas; the attached HR table contains the figures.",
+    "talking_points": [
+     {
+      "emp_id": "E053",
+      "points": [
+       "Recognize strong technical depth and ownership of releases on the Empower AI accelerator.",
+       "Connect the outcome to this year’s contributions, and agree how to broaden impact and strengthen utilization next cycle."
+      ]
+     },
+     {
+      "emp_id": "E003",
+      "points": [
+       "Acknowledge the positive client feedback alongside quality issues in two releases, which kept the year’s assessment lower.",
+       "Review the agreed improvement plan, set clear release-quality checkpoints, and offer support to help sustain progress."
+      ]
+     },
+     {
+      "emp_id": "E052",
+      "points": [
+       "Recognize the solid year, excellent client feedback, and added skill.",
+       "Discuss readiness for broader scope and identify a concrete opportunity to demonstrate it next cycle."
+      ]
+     },
+     {
+      "emp_id": "E054",
+      "points": [
+       "Recognize strong technical depth and ownership of Wallets on the Fly - v3 feature releases, along with excellent client feedback.",
+       "Discuss how to build on this contribution and choose a development goal for the coming cycle."
+      ]
+     },
+     {
+      "emp_id": "E004",
+      "points": [
+       "Be direct about missed sprint commitments on the Patient portal maintenance retainer and the need for closer support.",
+       "Agree on practical planning and delivery checkpoints, and make sure support is in place to improve reliability."
+      ]
+     },
+     {
+      "emp_id": "E001",
+      "points": [
+       "Recognize strong delivery on Language-learning app growth features and reliability under deadline pressure.",
+       "Build on the added skill by discussing a suitable next challenge and continued growth in delivery leadership."
+      ]
+     },
+     {
+      "emp_id": "E051",
+      "points": [
+       "Recognize positive teamwork and the skill added this year.",
+       "Set a focused development goal around estimation and planning, with regular opportunities to practice and review progress."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and rating confidential; discuss only their own outcome.",
+     "The effective date is 2027-04-01; use the HR-provided table for figures.",
+     "Route questions or requested follow-up through HR."
+    ]
+   }
+  },
+  {
+   "t": 7.43,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Manager brief for E004’s team — effective 2027-04-01",
+    "team_summary": "Keep the conversations focused on each person’s year, specific strengths, and one practical next step. Outcomes reflect the supplied review evidence and calibration; use the attached HR table for figures, and do not compare individual outcomes.",
+    "talking_points": [
+     {
+      "emp_id": "E037",
+      "points": [
+       "Recognize strong client feedback and high utilization as clear contributions this year.",
+       "Acknowledge that delivery deadlines and the need for closer supervision were growth areas; agree on concrete planning and check-in habits for the next cycle.",
+       "Frame the outcome neutrally as aligned with contribution and market position, and discuss how to build on strengths while improving predictability."
+      ]
+     },
+     {
+      "emp_id": "E010",
+      "points": [
+       "Recognize dependable delivery on the Language-learning app growth features and the three skills added this year.",
+       "Discuss how to take on a broader or more visible design contribution next cycle.",
+       "Agree on a development goal that supports growth while sustaining reliable delivery."
+      ]
+     },
+     {
+      "emp_id": "E007",
+      "points": [
+       "Recognize positive client feedback and contribution as a team player.",
+       "Connect the outcome to the year’s work, and reinforce estimation and planning as the next growth area.",
+       "Set a practical goal for improving estimates and surfacing delivery risks earlier."
+      ]
+     },
+     {
+      "emp_id": "E040",
+      "points": [
+       "Recognize strong utilization and positive contribution as a team player.",
+       "Discuss estimation and planning as the main growth area, with an emphasis on more predictable delivery.",
+       "Agree on a concrete goal to improve estimation and planning in the next cycle."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and review details confidential; use only the individual’s HR table when discussing figures.",
+     "The effective date is 2027-04-01.",
+     "Route questions through HR; do not promise changes outside the approved process."
+    ]
+   }
+  },
+  {
+   "t": 7.53,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "FY2026–27 manager conversation brief for E001’s team",
+    "team_summary": "The team’s outcomes reflect individual year-end contributions, feedback, skills growth, and role expectations. Keep each conversation focused on the person’s evidence and next steps; the attached HR table contains the outcome details.",
+    "talking_points": [
+     {
+      "emp_id": "E005",
+      "points": [
+       "You took ownership of a particularly challenging module on the language-learning app and helped raise the team’s bar; that contribution is recognized in your outcome.",
+       "Your client feedback and added skills are positive signals. Let’s align on how to sustain that impact and build consistency across the year."
+      ]
+     },
+     {
+      "emp_id": "E035",
+      "points": [
+       "You delivered your assigned work on the Empower AI accelerator, with positive client feedback.",
+       "For the coming year, focus on taking broader ownership and showing initiative beyond assigned tasks."
+      ]
+     },
+     {
+      "emp_id": "E041",
+      "points": [
+       "You were steady and dependable on the language-learning app and met expectations in your role.",
+       "Build on that reliability by developing new skills and looking for opportunities to take on wider responsibility."
+      ]
+     },
+     {
+      "emp_id": "E038",
+      "points": [
+       "You had a solid year, with strong client feedback and readiness for more scope reflected in your contribution and market position.",
+       "Let’s identify a stretch area where you can take the lead and grow your impact."
+      ]
+     },
+     {
+      "emp_id": "E008",
+      "points": [
+       "Your technical depth and ownership of releases on the Support RAG assistant were valuable contributions this year.",
+       "You added skills and delivered reliably; next, look for ways to extend that ownership and influence across the work."
+      ]
+     }
+    ],
+    "reminders": [
+     "The effective date is 2027-04-01; refer to the HR-provided table for each person’s outcome details.",
+     "Keep each conversation and its pay information confidential; discuss only that employee’s details.",
+     "Route questions you cannot resolve to HR."
+    ]
+   }
+  },
+  {
+   "t": 7.82,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Team conversation brief for the 2027-04-01 effective date",
+    "team_summary": "Discuss outcomes in the context of each person’s contribution, feedback, and next steps. For promoted employees, clarify the broader scope expected in the new role; keep the conversation focused on individual growth and avoid comparing outcomes across the team.",
+    "talking_points": [
+     {
+      "emp_id": "E044",
+      "points": [
+       "Recognize the technical depth and ownership shown on Wallets on the Fly v3 releases.",
+       "Agree on a development goal to build on the new skill and identify opportunities for broader release ownership."
+      ]
+     },
+     {
+      "emp_id": "E013",
+      "points": [
+       "Congratulate Omkar on the promotion, reflecting positive client feedback and readiness for greater scope.",
+       "Set clear expectations for the expanded role and agree on a milestone to review progress."
+      ]
+     },
+     {
+      "emp_id": "E025",
+      "points": [
+       "Congratulate Pooja on the promotion and recognize her technical depth, release ownership on Claims portal stabilisation, and skills growth.",
+       "Discuss how she can apply that experience across broader responsibilities in the new role."
+      ]
+     },
+     {
+      "emp_id": "E017",
+      "points": [
+       "Recognize dependable delivery on Fleet tracking’s Arabic and iPad work and the skills developed this year.",
+       "Choose a next goal focused on extending ownership or impact beyond assigned work."
+      ]
+     },
+     {
+      "emp_id": "E029",
+      "points": [
+       "Acknowledge delivery on Sales CRM phase 2 and discuss ways to take more ownership.",
+       "Agree on a practical opportunity to build confidence and demonstrate broader contribution in the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E048",
+      "points": [
+       "Recognize technical depth and ownership of Wallets on the Fly v3 releases; the outcome is aligned with contribution and market position.",
+       "Agree on a relevant skill-development goal and an opportunity to demonstrate it in upcoming work."
+      ]
+     },
+     {
+      "emp_id": "E033",
+      "points": [
+       "Recognize steady, dependable delivery on Fleet tracking’s Arabic and iPad work, along with skills growth.",
+       "Discuss a next step that builds on those skills and increases ownership of a feature or deliverable."
+      ]
+     },
+     {
+      "emp_id": "E021",
+      "points": [
+       "Congratulate Tushar on the promotion and recognize strong utilization, skills growth, and client feedback as evidence of contribution.",
+       "Align on expectations for the broader role and set a specific early-cycle goal to sustain delivery and ownership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation and the attached pay information confidential; do not compare individual outcomes.",
+     "The effective date is 2027-04-01.",
+     "Direct questions about the outcome or process to HR."
+    ]
+   }
+  },
+  {
+   "t": 7.84,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Manager conversation brief for FY2026–27; effective 1 April 2027",
+    "team_summary": "Keep the conversations focused on each person’s evidence, outcome, and next steps. Recognize strong delivery and expanded scope, and make development expectations specific and actionable.",
+    "talking_points": [
+     {
+      "emp_id": "E050",
+      "points": [
+       "Recognize their collaborative contribution and two skills added this year.",
+       "Set a clear next step on estimation and planning, with regular check-ins to build consistency."
+      ]
+     },
+     {
+      "emp_id": "E027",
+      "points": [
+       "Acknowledge their teamwork and the skill they added this year.",
+       "Discuss the client feedback and agree on concrete actions to strengthen delivery and planning."
+      ]
+     },
+     {
+      "emp_id": "E011",
+      "points": [
+       "Recognize steady, dependable delivery on Fleet tracking - Arabic + iPad.",
+       "Talk through client feedback and identify specific ways to improve the client experience next cycle."
+      ]
+     },
+     {
+      "emp_id": "E015",
+      "points": [
+       "Congratulate them on the promotion and recognize positive client feedback and a solid year.",
+       "Discuss the broader scope they are ready to take on and agree on priorities for succeeding at the next level."
+      ]
+     },
+     {
+      "emp_id": "E031",
+      "points": [
+       "Recognize their technical depth and ownership of releases on Language-learning app - growth features.",
+       "Build on strong client feedback by identifying opportunities to broaden ownership and deepen expertise."
+      ]
+     },
+     {
+      "emp_id": "E042",
+      "points": [
+       "Acknowledge the two skills added and review progress against the agreed improvement plan.",
+       "Focus next on preventing release-quality issues through clear checks and regular progress reviews."
+      ]
+     },
+     {
+      "emp_id": "E023",
+      "points": [
+       "Recognize that the client requested them by name and that they consistently delivered ahead of plan.",
+       "Discuss how to sustain this impact and broaden their influence through knowledge sharing or mentoring."
+      ]
+     },
+     {
+      "emp_id": "E046",
+      "points": [
+       "Recognize steady, dependable delivery on Wallets on the Fly - v3 features and the skills added this year.",
+       "Discuss ways to build on the current contribution, including development goals and opportunities for broader project ownership."
+      ]
+     },
+     {
+      "emp_id": "E019",
+      "points": [
+       "Recognize reliable delivery on Smart-meter analytics - phase 2, especially under deadline pressure, and the skills added.",
+       "Discuss how to sustain this performance and identify a concrete next step toward broader scope or leadership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay details and conversation confidential; use the HR-provided table for outcome figures.",
+     "The effective date is 1 April 2027.",
+     "Route questions or concerns through HR for review; do not promise changes during the conversation."
+    ]
+   }
+  },
+  {
+   "t": 7.87,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Team hike conversation brief — effective 1 April 2027",
+    "team_summary": "Use the points below to connect each outcome to the person’s contributions and next steps. Keep the conversation focused on their own work, growth, and goals for the coming cycle.",
+    "talking_points": [
+     {
+      "emp_id": "E043",
+      "points": [
+       "Your delivery on Fleet tracking, including the Arabic and iPad work, was strong, and you stayed reliable under deadline pressure.",
+       "Build on that foundation by deepening your cloud and DevOps skills and taking on a broader slice of delivery ownership."
+      ]
+     },
+     {
+      "emp_id": "E047",
+      "points": [
+       "You met expectations on Smart-meter analytics phase 2, with steady delivery and positive client feedback.",
+       "For the next cycle, look for opportunities to apply your BI skills more broadly and add a new capability to your toolkit."
+      ]
+     },
+     {
+      "emp_id": "E028",
+      "points": [
+       "You delivered the assigned work on the Patient portal maintenance retainer and received positive client feedback.",
+       "A key next step is to take more ownership—surface risks early, propose solutions, and lead a defined piece of work."
+      ]
+     },
+     {
+      "emp_id": "E012",
+      "points": [
+       "Your work on Support RAG assistant v2 consistently stayed ahead of plan, and the client specifically asked for you by name.",
+       "Keep building on that impact by sharing your approach with the team and taking on progressively broader responsibilities."
+      ]
+     },
+     {
+      "emp_id": "E016",
+      "points": [
+       "You had a solid year, earned positive client feedback, and added two skills.",
+       "You’re ready to take on more scope; agree on a stretch assignment and clear ownership goals for the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E024",
+      "points": [
+       "You met expectations on Sales CRM phase 2 and provided steady, dependable delivery.",
+       "Focus next on strengthening client outcomes and taking initiative on a discrete feature or improvement."
+      ]
+     },
+     {
+      "emp_id": "E020",
+      "points": [
+       "Your contribution and market position are reflected in this outcome; you delivered assigned Wallets on the Fly v3 features and added two skills.",
+       "For the next cycle, increase your ownership by leading a defined feature and communicating progress and risks proactively."
+      ]
+     },
+     {
+      "emp_id": "E032",
+      "points": [
+       "You contributed positively as a team player and delivered on your work this year.",
+       "Estimation and planning are useful growth areas; practice breaking work into smaller milestones and flagging schedule risks early."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation confidential and discuss only that employee’s outcome.",
+     "The effective date is 1 April 2027.",
+     "Direct questions about the figures or process to HR."
+    ]
+   }
+  },
+  {
+   "t": 8.04,
+   "agent": "briefs",
+   "kind": "tool_call",
+   "text": "final_result",
+   "data": {
+    "headline": "Manager conversation brief for the team effective 1 April 2027",
+    "team_summary": "Keep conversations grounded in each person’s year: recognize specific delivery and feedback, then connect the outcome to a practical next step. Use the attached HR table for hike figures and discuss each person’s information privately.",
+    "talking_points": [
+     {
+      "emp_id": "E026",
+      "points": [
+       "Recognize the technical depth and ownership shown in releases for Wallets on the Fly - v3; the rating and outcome reflect a strong year.",
+       "For the next cycle, look for opportunities to broaden ownership and maintain dependable delivery across releases."
+      ]
+     },
+     {
+      "emp_id": "E049",
+      "points": [
+       "Acknowledge steady, dependable work that met expectations on Smart-meter analytics - phase 2.",
+       "Client feedback was lower this year; discuss specific ways to improve stakeholder communication and the quality of delivery."
+      ]
+     },
+     {
+      "emp_id": "E014",
+      "points": [
+       "Be clear that several sprint commitments were missed on Headless storefront - retainer, and that closer support is needed.",
+       "Agree on near-term commitments, regular check-ins, and a plan to improve delivery consistency."
+      ]
+     },
+     {
+      "emp_id": "E018",
+      "points": [
+       "Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; next, build on the new skill and take on a well-scoped stretch task."
+      ]
+     },
+     {
+      "emp_id": "E030",
+      "points": [
+       "Recognize delivery of assigned work on Fleet tracking - Arabic + iPad, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; focus next on taking more ownership from planning through completion."
+      ]
+     },
+     {
+      "emp_id": "E022",
+      "points": [
+       "Highlight strong delivery on Smart-meter analytics - phase 2, reliability under deadline pressure, excellent client feedback, and two skills added.",
+       "The strong rating and outcome recognize this contribution; next, build on that momentum by sharing approaches that help the wider project team."
+      ]
+     },
+     {
+      "emp_id": "E034",
+      "points": [
+       "Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; continue developing the new skill and take on a progressively broader task."
+      ]
+     },
+     {
+      "emp_id": "E045",
+      "points": [
+       "Recognize strong delivery on Fleet tracking - Arabic + iPad, reliability under deadline pressure, excellent client feedback, and two skills added.",
+       "The promotion and outcome recognize this strong contribution; discuss expectations in the new role and agree on priorities for the next cycle."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation and the attached compensation table confidential; share only with the individual concerned.",
+     "The effective date is 1 April 2027.",
+     "Route questions or requests for review through HR; do not promise changes during the conversation."
+    ]
+   }
+  },
+  {
+   "t": 8.05,
+   "agent": "briefs",
+   "kind": "agent_end",
+   "text": "8 manager briefs drafted",
+   "data": null
+  },
+  {
+   "t": 8.05,
+   "agent": "privacy",
+   "kind": "agent_start",
+   "text": "Privacy check started",
+   "data": null
+  },
+  {
+   "t": 8.06,
+   "agent": "privacy",
+   "kind": "agent_end",
+   "text": "Clean: each brief covers its own team only",
+   "data": null
+  }
+ ],
+ "results": {
+  "evidence": {
+   "headcount": 54,
+   "payroll": 85068000,
+   "pool_pct": 9.0,
+   "pool_amount": 7656120,
+   "ratings": {
+    "1": 0,
+    "2": 5,
+    "3": 25,
+    "4": 19,
+    "5": 5
+   },
+   "promotions_recommended": 5,
+   "retention_high": 9,
+   "avg_compa_by_office": {
+    "Bhopal": 0.844,
+    "Indore": 0.958,
+    "Pune": 0.918
+   },
+   "managers": {
+    "E001": "Saurabh Bhargava",
+    "E002": "Rajat Dubey",
+    "E003": "Kriti Bhargava",
+    "E004": "Rohan Raghuwanshi",
+    "E051": "Vikram Gupta",
+    "E052": "Manish Goyal",
+    "E053": "Komal Gupta",
+    "E054": "Nidhi Raghuwanshi"
+   }
+  },
+  "calibration": {
+   "flags": [
+    {
+     "emp_id": "E037",
+     "issue": "rating_below_evidence",
+     "current_rating": 2,
+     "suggested_rating": 5,
+     "evidence": "Rating 2 is 2.78 points below evidence_score 4.78; client feedback is 5, utilisation 93.0%, and 2 skills were added.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E037",
+     "issue": "notes_inconsistent",
+     "current_rating": 2,
+     "suggested_rating": null,
+     "evidence": "Manager notes say deadlines were missed and closer supervision was needed, while the data show client feedback 5, utilisation 93.0%, and evidence_score 4.78.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E036",
+     "issue": "rating_above_evidence",
+     "current_rating": 5,
+     "suggested_rating": null,
+     "evidence": "Rating 5 is 2.55 points above evidence_score 2.45; client feedback is 2 and utilisation is 61.0%.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E036",
+     "issue": "notes_inconsistent",
+     "current_rating": 5,
+     "suggested_rating": null,
+     "evidence": "Notes describe an outstanding year with the client loving every delivery, while client feedback is 2 and evidence_score is 2.45.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E005",
+     "issue": "rating_above_evidence",
+     "current_rating": 5,
+     "suggested_rating": 4,
+     "evidence": "Rating 5 is 1.39 points above evidence_score 3.61; client feedback is 4, utilisation 57.9%, and 3 skills were added.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E021",
+     "issue": "rating_below_evidence",
+     "current_rating": 3,
+     "suggested_rating": 4,
+     "evidence": "Rating 3 is 1.15 points below evidence_score 4.15; client feedback is 4, utilisation 85.9%, and 2 skills were added.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E021",
+     "issue": "notes_inconsistent",
+     "current_rating": 3,
+     "suggested_rating": null,
+     "evidence": "Notes call this an average year with nothing special, despite evidence_score 4.15, utilisation 85.9%, and 2 skills added.",
+     "confidence": "high"
+    },
+    {
+     "emp_id": "E019",
+     "issue": "promotion_ready",
+     "current_rating": 4,
+     "suggested_rating": null,
+     "evidence": "No promotion is recommended despite evidence_score 4.38, utilisation 96.1%, client feedback 4, and 2 skills added.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E023",
+     "issue": "promotion_ready",
+     "current_rating": 5,
+     "suggested_rating": null,
+     "evidence": "No promotion is recommended despite evidence_score 4.53, utilisation 89.8%, client feedback 5, and a client request by name noted.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E039",
+     "issue": "promotion_ready",
+     "current_rating": 5,
+     "suggested_rating": null,
+     "evidence": "No promotion is recommended despite evidence_score 4.46, utilisation 80.4%, client feedback 5, and notes that the client requested them by name.",
+     "confidence": "medium"
+    },
+    {
+     "emp_id": "E012",
+     "issue": "promotion_ready",
+     "current_rating": 5,
+     "suggested_rating": null,
+     "evidence": "No promotion is recommended despite evidence_score 4.21, utilisation 76.9%, client feedback 5, and notes that the client requested them by name.",
+     "confidence": "medium"
+    }
+   ],
+   "manager_patterns": [
+    {
+     "manager_emp_id": "E003",
+     "pattern": "Ratings sit consistently above evidence across all four team members; average rating-minus-evidence is +0.83."
+    },
+    {
+     "manager_emp_id": "E004",
+     "pattern": "Ratings sit consistently below evidence across all four team members; average rating-minus-evidence is -0.99."
+    },
+    {
+     "manager_emp_id": "E054",
+     "pattern": "Ratings trend below evidence for most team members (6 of 8); average rating-minus-evidence is -0.43."
+    }
+   ],
+   "summary": "The clearest calibration concerns are E037's substantially understated rating and contradictory notes, and E036's substantially overstated rating and contradictory notes; E005 and E021 also merit review. Review the promotion cases flagged against level expectations and role scope; the Bhopal retention note should not itself influence individual ratings or promotion decisions."
+  },
+  "strategy": {
+   "chosen": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12.0
+   },
+   "proposed": {
+    "performance_weight": 0.6,
+    "market_weight": 0.3,
+    "retention_weight": 0.1,
+    "promotion_share_pct": 12.0,
+    "rationale": [
+     "The pool is 9% of payroll (₹7,656,120) for 54 employees; there are five recommended promotions and 11 calibration flags. Resolve the flagged calibration and promotion cases through review rather than treating flags as evidence for individual pay decisions.",
+     "Selected strategy spends the pool exactly and gives clearly differentiated averages by rating: rating 5 14.57%, rating 4 12.08%, rating 3 6.96%, and rating 2 3.23%.",
+     "Under the selected strategy, average compa-ratio after the cycle is Bhopal 0.959, Indore 1.032, and Pune 0.994; three high-retention-risk employees remain below 0.9, with no one at the cap.",
+     "Compared with the higher-weight alternative (0.8 performance / 0.5 market / 0.3 retention; 20% promotion share), the selected balance leaves one more high-risk employee below 0.9, while producing similarly differentiated rating averages and no employees at the cap. Bhopal starts furthest below market (0.844 average compa-ratio; seven below 0.88), so market correction remains a meaningful component.",
+     "Do not use the Bhopal retention note to influence ratings or promotion decisions; assess calibration concerns, including the noted cases, and promotion eligibility on evidence and role expectations."
+    ]
+   },
+   "rationale": [
+    "The pool is 9% of payroll (₹7,656,120) for 54 employees; there are five recommended promotions and 11 calibration flags. Resolve the flagged calibration and promotion cases through review rather than treating flags as evidence for individual pay decisions.",
+    "Selected strategy spends the pool exactly and gives clearly differentiated averages by rating: rating 5 14.57%, rating 4 12.08%, rating 3 6.96%, and rating 2 3.23%.",
+    "Under the selected strategy, average compa-ratio after the cycle is Bhopal 0.959, Indore 1.032, and Pune 0.994; three high-retention-risk employees remain below 0.9, with no one at the cap.",
+    "Compared with the higher-weight alternative (0.8 performance / 0.5 market / 0.3 retention; 20% promotion share), the selected balance leaves one more high-risk employee below 0.9, while producing similarly differentiated rating averages and no employees at the cap. Bhopal starts furthest below market (0.844 average compa-ratio; seven below 0.88), so market correction remains a meaningful component.",
+    "Do not use the Bhopal retention note to influence ratings or promotion decisions; assess calibration concerns, including the noted cases, and promotion eligibility on evidence and role expectations."
+   ]
+  },
+  "summary": {
+   "pool_amount": 7656120,
+   "used_amount": 7656120,
+   "feasible": true,
+   "note": "",
+   "payroll": 85068000,
+   "avg_hike_pct": 9.0,
+   "by_rating": [
+    {
+     "rating": 5,
+     "people": 5,
+     "avg_hike_pct": 13.6,
+     "min_hike_pct": 12.74,
+     "max_hike_pct": 15.14
+    },
+    {
+     "rating": 4,
+     "people": 19,
+     "avg_hike_pct": 12.05,
+     "min_hike_pct": 6.95,
+     "max_hike_pct": 22.67
+    },
+    {
+     "rating": 3,
+     "people": 25,
+     "avg_hike_pct": 7.18,
+     "min_hike_pct": 4.09,
+     "max_hike_pct": 16.15
+    },
+    {
+     "rating": 2,
+     "people": 5,
+     "avg_hike_pct": 3.81,
+     "min_hike_pct": 1.0,
+     "max_hike_pct": 6.0
+    }
+   ],
+   "promotions": 5,
+   "people_at_cap": 1,
+   "adjusted": 9
+  },
+  "proposal": [
+   {
+    "emp_id": "E043",
+    "name": "Aarav Soni",
+    "title": "Junior DevOps / Cloud Engineer",
+    "role": "devops",
+    "level": "Junior",
+    "office": "Indore",
+    "manager_emp_id": "E052",
+    "rating": 4,
+    "evidence_score": 3.29,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 780000,
+    "hike_pct": 7.15,
+    "increase": 55796,
+    "new_ctc": 835796,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.05,
+    "compa_after": 1.125,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E050",
+    "name": "Abhishek Kulkarni",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E051",
+    "rating": 3,
+    "evidence_score": 3.21,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1416000,
+    "hike_pct": 4.91,
+    "increase": 69456,
+    "new_ctc": 1485456,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.02,
+    "compa_after": 1.07,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E005",
+    "name": "Aditya Deshmukh",
+    "title": "Mid Business Analyst",
+    "role": "ba",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E001",
+    "rating": 5,
+    "evidence_score": 3.61,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1152000,
+    "hike_pct": 12.74,
+    "increase": 146807,
+    "new_ctc": 1298807,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.919,
+    "compa_after": 1.036,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E027",
+    "name": "Aditya Patil",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E051",
+    "rating": 3,
+    "evidence_score": 2.63,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1392000,
+    "hike_pct": 4.09,
+    "increase": 56899,
+    "new_ctc": 1448899,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.093,
+    "compa_after": 1.138,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E026",
+    "name": "Akash Rajput",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E054",
+    "rating": 4,
+    "evidence_score": 3.62,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 1092000,
+    "hike_pct": 11.49,
+    "increase": 125428,
+    "new_ctc": 1217428,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.858,
+    "compa_after": 0.956,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E047",
+    "name": "Ankit Patidar",
+    "title": "Mid Data / BI Engineer",
+    "role": "data",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E052",
+    "rating": 3,
+    "evidence_score": 3.34,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1428000,
+    "hike_pct": 6.09,
+    "increase": 86972,
+    "new_ctc": 1514972,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.962,
+    "compa_after": 1.02,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E037",
+    "name": "Bhavna Goyal",
+    "title": "Mid QA Engineer",
+    "role": "qa",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E004",
+    "rating": 2,
+    "evidence_score": 4.78,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1176000,
+    "hike_pct": 6.0,
+    "increase": 70560,
+    "new_ctc": 1246560,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.915,
+    "compa_after": 0.97,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E035",
+    "name": "Bhavna Verma",
+    "title": "Mid QA Engineer",
+    "role": "qa",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E001",
+    "rating": 3,
+    "evidence_score": 3.23,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1296000,
+    "hike_pct": 5.13,
+    "increase": 66484,
+    "new_ctc": 1362484,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.009,
+    "compa_after": 1.06,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E009",
+    "name": "Chirag Deshmukh",
+    "title": "Junior UI/UX Designer",
+    "role": "uiux",
+    "level": "Junior",
+    "office": "Bhopal",
+    "manager_emp_id": "E003",
+    "rating": 3,
+    "evidence_score": 2.97,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 600000,
+    "hike_pct": 8.67,
+    "increase": 51994,
+    "new_ctc": 651994,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.836,
+    "compa_after": 0.908,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E039",
+    "name": "Gaurav Shinde",
+    "title": "Mid QA Engineer",
+    "role": "qa",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E003",
+    "rating": 5,
+    "evidence_score": 4.46,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 1152000,
+    "hike_pct": 15.14,
+    "increase": 174465,
+    "new_ctc": 1326465,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.879,
+    "compa_after": 1.012,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E011",
+    "name": "Jayesh Chouhan",
+    "title": "Mid Frontend Developer",
+    "role": "fe",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E051",
+    "rating": 3,
+    "evidence_score": 2.31,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1020000,
+    "hike_pct": 9.4,
+    "increase": 95895,
+    "new_ctc": 1115895,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.732,
+    "compa_after": 0.8,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E028",
+    "name": "Karan Rao",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E052",
+    "rating": 3,
+    "evidence_score": 3.44,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 2004000,
+    "hike_pct": 6.87,
+    "increase": 137617,
+    "new_ctc": 2141617,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.934,
+    "compa_after": 0.998,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E053",
+    "name": "Komal Gupta",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "level": "Lead",
+    "office": "Indore",
+    "manager_emp_id": "E002",
+    "rating": 4,
+    "evidence_score": 3.2,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 3012000,
+    "hike_pct": 8.01,
+    "increase": 241312,
+    "new_ctc": 3253312,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.008,
+    "compa_after": 1.088,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E012",
+    "name": "Komal Sinha",
+    "title": "Junior Frontend Developer",
+    "role": "fe",
+    "level": "Junior",
+    "office": "Pune",
+    "manager_emp_id": "E052",
+    "rating": 5,
+    "evidence_score": 4.21,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 780000,
+    "hike_pct": 13.18,
+    "increase": 102823,
+    "new_ctc": 882823,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.965,
+    "compa_after": 1.093,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E003",
+    "name": "Kriti Bhargava",
+    "title": "Senior Project Manager",
+    "role": "pm",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E002",
+    "rating": 2,
+    "evidence_score": 3.27,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1812000,
+    "hike_pct": 3.78,
+    "increase": 68512,
+    "new_ctc": 1880512,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.875,
+    "compa_after": 0.908,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E049",
+    "name": "Manish Choudhary",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E054",
+    "rating": 3,
+    "evidence_score": 3.1,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1308000,
+    "hike_pct": 6.09,
+    "increase": 79664,
+    "new_ctc": 1387664,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.962,
+    "compa_after": 1.02,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E052",
+    "name": "Manish Goyal",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "level": "Lead",
+    "office": "Indore",
+    "manager_emp_id": "E002",
+    "rating": 4,
+    "evidence_score": 3.76,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 2736000,
+    "hike_pct": 10.12,
+    "increase": 276795,
+    "new_ctc": 3012795,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.915,
+    "compa_after": 1.008,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E041",
+    "name": "Mohit Bhonsle",
+    "title": "Mid QA Engineer",
+    "role": "qa",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E001",
+    "rating": 3,
+    "evidence_score": 2.97,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1320000,
+    "hike_pct": 5.17,
+    "increase": 68254,
+    "new_ctc": 1388254,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.007,
+    "compa_after": 1.059,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E015",
+    "name": "Mohit Kaur",
+    "title": "Senior Frontend Developer",
+    "role": "fe",
+    "level": "Senior",
+    "office": "Bhopal",
+    "manager_emp_id": "E051",
+    "rating": 4,
+    "evidence_score": 3.43,
+    "promotion_recommended": true,
+    "retention_risk": "medium",
+    "ctc": 2064000,
+    "hike_pct": 19.73,
+    "increase": 407195,
+    "new_ctc": 2471195,
+    "promotion_addon_pct": 10,
+    "compa_before": 0.934,
+    "compa_after": 1.118,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E014",
+    "name": "Mohit Shukla",
+    "title": "Mid Frontend Developer",
+    "role": "fe",
+    "level": "Mid",
+    "office": "Bhopal",
+    "manager_emp_id": "E054",
+    "rating": 2,
+    "evidence_score": 2.03,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1368000,
+    "hike_pct": 4.09,
+    "increase": 55918,
+    "new_ctc": 1423918,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.87,
+    "compa_after": 0.906,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E031",
+    "name": "Naveen Iyer",
+    "title": "Mid Mobile Developer",
+    "role": "mobile",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E051",
+    "rating": 4,
+    "evidence_score": 3.8,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1404000,
+    "hike_pct": 6.95,
+    "increase": 97562,
+    "new_ctc": 1501562,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.087,
+    "compa_after": 1.162,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E044",
+    "name": "Naveen Rajput",
+    "title": "Senior DevOps / Cloud Engineer",
+    "role": "devops",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E053",
+    "rating": 4,
+    "evidence_score": 3.42,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 2088000,
+    "hike_pct": 9.18,
+    "increase": 191608,
+    "new_ctc": 2279608,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.961,
+    "compa_after": 1.05,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E016",
+    "name": "Nidhi Parmar",
+    "title": "Mid Frontend Developer",
+    "role": "fe",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E052",
+    "rating": 4,
+    "evidence_score": 3.81,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1368000,
+    "hike_pct": 8.15,
+    "increase": 111557,
+    "new_ctc": 1479557,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.001,
+    "compa_after": 1.082,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E054",
+    "name": "Nidhi Raghuwanshi",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "level": "Lead",
+    "office": "Bhopal",
+    "manager_emp_id": "E002",
+    "rating": 4,
+    "evidence_score": 3.38,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 2724000,
+    "hike_pct": 12.67,
+    "increase": 345172,
+    "new_ctc": 3069172,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.793,
+    "compa_after": 0.893,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E042",
+    "name": "Nikhil Parmar",
+    "title": "Junior DevOps / Cloud Engineer",
+    "role": "devops",
+    "level": "Junior",
+    "office": "Pune",
+    "manager_emp_id": "E051",
+    "rating": 2,
+    "evidence_score": 2.4,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 648000,
+    "hike_pct": 4.17,
+    "increase": 27017,
+    "new_ctc": 675017,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.856,
+    "compa_after": 0.892,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E013",
+    "name": "Omkar Goyal",
+    "title": "Mid Frontend Developer",
+    "role": "fe",
+    "level": "Mid",
+    "office": "Bhopal",
+    "manager_emp_id": "E053",
+    "rating": 4,
+    "evidence_score": 4.21,
+    "promotion_recommended": true,
+    "retention_risk": "high",
+    "ctc": 1260000,
+    "hike_pct": 22.63,
+    "increase": 285146,
+    "new_ctc": 1545146,
+    "promotion_addon_pct": 10,
+    "compa_before": 0.802,
+    "compa_after": 0.983,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E023",
+    "name": "Pooja Dixit",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E051",
+    "rating": 5,
+    "evidence_score": 4.53,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1968000,
+    "hike_pct": 13.78,
+    "increase": 271095,
+    "new_ctc": 2239095,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.936,
+    "compa_after": 1.065,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E018",
+    "name": "Pooja Dubey",
+    "title": "Junior Frontend Developer",
+    "role": "fe",
+    "level": "Junior",
+    "office": "Indore",
+    "manager_emp_id": "E054",
+    "rating": 3,
+    "evidence_score": 3.89,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 744000,
+    "hike_pct": 8.12,
+    "increase": 60389,
+    "new_ctc": 804389,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.939,
+    "compa_after": 1.016,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E046",
+    "name": "Pooja Kothari",
+    "title": "Mid Data / BI Engineer",
+    "role": "data",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E051",
+    "rating": 3,
+    "evidence_score": 2.6,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1428000,
+    "hike_pct": 6.09,
+    "increase": 86972,
+    "new_ctc": 1514972,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.962,
+    "compa_after": 1.02,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E010",
+    "name": "Pooja Patidar",
+    "title": "Senior UI/UX Designer",
+    "role": "uiux",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E004",
+    "rating": 3,
+    "evidence_score": 3.08,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 2088000,
+    "hike_pct": 4.09,
+    "increase": 85349,
+    "new_ctc": 2173349,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.072,
+    "compa_after": 1.116,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E024",
+    "name": "Pooja Sharma",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E052",
+    "rating": 3,
+    "evidence_score": 2.7,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 2040000,
+    "hike_pct": 6.32,
+    "increase": 128832,
+    "new_ctc": 2168832,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.951,
+    "compa_after": 1.011,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E025",
+    "name": "Pooja Tiwari",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "level": "Mid",
+    "office": "Bhopal",
+    "manager_emp_id": "E053",
+    "rating": 4,
+    "evidence_score": 3.73,
+    "promotion_recommended": true,
+    "retention_risk": "high",
+    "ctc": 1056000,
+    "hike_pct": 22.67,
+    "increase": 239411,
+    "new_ctc": 1295411,
+    "promotion_addon_pct": 10,
+    "compa_before": 0.721,
+    "compa_after": 0.885,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E030",
+    "name": "Prachi Patidar",
+    "title": "Mid Mobile Developer",
+    "role": "mobile",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E054",
+    "rating": 3,
+    "evidence_score": 3.89,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1356000,
+    "hike_pct": 5.83,
+    "increase": 79038,
+    "new_ctc": 1435038,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.05,
+    "compa_after": 1.111,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E036",
+    "name": "Priya Solanki",
+    "title": "Senior QA Engineer",
+    "role": "qa",
+    "level": "Senior",
+    "office": "Bhopal",
+    "manager_emp_id": "E003",
+    "rating": 5,
+    "evidence_score": 2.45,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 1956000,
+    "hike_pct": 13.16,
+    "increase": 257423,
+    "new_ctc": 2213423,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.836,
+    "compa_after": 0.946,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E020",
+    "name": "Rahul Parmar",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E052",
+    "rating": 3,
+    "evidence_score": 3.37,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1584000,
+    "hike_pct": 10.48,
+    "increase": 166035,
+    "new_ctc": 1750035,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.753,
+    "compa_after": 0.832,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E002",
+    "name": "Rajat Dubey",
+    "title": "Lead Project Manager",
+    "role": "pm",
+    "level": "Lead",
+    "office": "Indore",
+    "manager_emp_id": "",
+    "rating": 3,
+    "evidence_score": 3.45,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 3204000,
+    "hike_pct": 6.09,
+    "increase": 195140,
+    "new_ctc": 3399140,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.962,
+    "compa_after": 1.02,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E017",
+    "name": "Rakesh Gupta",
+    "title": "Senior Frontend Developer",
+    "role": "fe",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E053",
+    "rating": 3,
+    "evidence_score": 3.72,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1632000,
+    "hike_pct": 8.73,
+    "increase": 142424,
+    "new_ctc": 1774424,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.833,
+    "compa_after": 0.905,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E032",
+    "name": "Ritika Rao",
+    "title": "Junior Mobile Developer",
+    "role": "mobile",
+    "level": "Junior",
+    "office": "Indore",
+    "manager_emp_id": "E052",
+    "rating": 3,
+    "evidence_score": 3.13,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 732000,
+    "hike_pct": 7.07,
+    "increase": 51764,
+    "new_ctc": 783764,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.924,
+    "compa_after": 0.99,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E038",
+    "name": "Ritika Solanki",
+    "title": "Senior QA Engineer",
+    "role": "qa",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E001",
+    "rating": 4,
+    "evidence_score": 3.55,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 2172000,
+    "hike_pct": 6.95,
+    "increase": 150930,
+    "new_ctc": 2322930,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.068,
+    "compa_after": 1.142,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E029",
+    "name": "Ritika Tiwari",
+    "title": "Mid Mobile Developer",
+    "role": "mobile",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E053",
+    "rating": 3,
+    "evidence_score": 2.43,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 960000,
+    "hike_pct": 9.61,
+    "increase": 92216,
+    "new_ctc": 1052216,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.728,
+    "compa_after": 0.798,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E004",
+    "name": "Rohan Raghuwanshi",
+    "title": "Senior Project Manager",
+    "role": "pm",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E002",
+    "rating": 2,
+    "evidence_score": 2.95,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 2136000,
+    "hike_pct": 1.0,
+    "increase": 21391,
+    "new_ctc": 2157391,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.011,
+    "compa_after": 1.021,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E001",
+    "name": "Saurabh Bhargava",
+    "title": "Senior Project Manager",
+    "role": "pm",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E002",
+    "rating": 4,
+    "evidence_score": 3.23,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1992000,
+    "hike_pct": 9.54,
+    "increase": 190127,
+    "new_ctc": 2182127,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.943,
+    "compa_after": 1.033,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E048",
+    "name": "Swati Malviya",
+    "title": "Mid AI / ML Engineer",
+    "role": "ml",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E053",
+    "rating": 4,
+    "evidence_score": 3.2,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 960000,
+    "hike_pct": 13.78,
+    "increase": 132289,
+    "new_ctc": 1092289,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.706,
+    "compa_after": 0.803,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E033",
+    "name": "Swati Sethi",
+    "title": "Mid Mobile Developer",
+    "role": "mobile",
+    "level": "Mid",
+    "office": "Indore",
+    "manager_emp_id": "E053",
+    "rating": 3,
+    "evidence_score": 3.34,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1128000,
+    "hike_pct": 8.11,
+    "increase": 91524,
+    "new_ctc": 1219524,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.873,
+    "compa_after": 0.944,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E007",
+    "name": "Swati Solanki",
+    "title": "Mid Business Analyst",
+    "role": "ba",
+    "level": "Mid",
+    "office": "Bhopal",
+    "manager_emp_id": "E004",
+    "rating": 3,
+    "evidence_score": 3.71,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1260000,
+    "hike_pct": 8.09,
+    "increase": 101977,
+    "new_ctc": 1361977,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.874,
+    "compa_after": 0.945,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E022",
+    "name": "Tanvi Solanki",
+    "title": "Mid Backend Developer",
+    "role": "be",
+    "level": "Mid",
+    "office": "Bhopal",
+    "manager_emp_id": "E054",
+    "rating": 4,
+    "evidence_score": 4.5,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1356000,
+    "hike_pct": 9.89,
+    "increase": 134135,
+    "new_ctc": 1490135,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.926,
+    "compa_after": 1.018,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E040",
+    "name": "Tarun Khandelwal",
+    "title": "Senior QA Engineer",
+    "role": "qa",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E004",
+    "rating": 3,
+    "evidence_score": 3.37,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 1956000,
+    "hike_pct": 6.48,
+    "increase": 126726,
+    "new_ctc": 2082726,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.943,
+    "compa_after": 1.004,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E021",
+    "name": "Tushar Nair",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E053",
+    "rating": 3,
+    "evidence_score": 4.15,
+    "promotion_recommended": true,
+    "retention_risk": "low",
+    "ctc": 2124000,
+    "hike_pct": 16.15,
+    "increase": 343096,
+    "new_ctc": 2467096,
+    "promotion_addon_pct": 10,
+    "compa_before": 1.01,
+    "compa_after": 1.173,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E034",
+    "name": "Vaishali Gupta",
+    "title": "Junior Mobile Developer",
+    "role": "mobile",
+    "level": "Junior",
+    "office": "Indore",
+    "manager_emp_id": "E054",
+    "rating": 3,
+    "evidence_score": 3.89,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 792000,
+    "hike_pct": 6.86,
+    "increase": 54326,
+    "new_ctc": 846326,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.0,
+    "compa_after": 1.069,
+    "adjusted": true
+   },
+   {
+    "emp_id": "E045",
+    "name": "Varsha Patidar",
+    "title": "Mid Data / BI Engineer",
+    "role": "data",
+    "level": "Mid",
+    "office": "Pune",
+    "manager_emp_id": "E054",
+    "rating": 4,
+    "evidence_score": 4.5,
+    "promotion_recommended": true,
+    "retention_risk": "high",
+    "ctc": 1320000,
+    "hike_pct": 21.22,
+    "increase": 280109,
+    "new_ctc": 1600109,
+    "promotion_addon_pct": 10,
+    "compa_before": 0.871,
+    "compa_after": 1.056,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E051",
+    "name": "Vikram Gupta",
+    "title": "Tech Lead / Architect",
+    "role": "lead",
+    "level": "Lead",
+    "office": "Pune",
+    "manager_emp_id": "E002",
+    "rating": 3,
+    "evidence_score": 2.91,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 3108000,
+    "hike_pct": 4.93,
+    "increase": 153086,
+    "new_ctc": 3261086,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.019,
+    "compa_after": 1.07,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E019",
+    "name": "Vivek Porwal",
+    "title": "Senior Backend Developer",
+    "role": "be",
+    "level": "Senior",
+    "office": "Indore",
+    "manager_emp_id": "E051",
+    "rating": 4,
+    "evidence_score": 4.38,
+    "promotion_recommended": false,
+    "retention_risk": "low",
+    "ctc": 2232000,
+    "hike_pct": 6.95,
+    "increase": 155099,
+    "new_ctc": 2387099,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 1.061,
+    "compa_after": 1.135,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E006",
+    "name": "Yash Bhatt",
+    "title": "Senior Business Analyst",
+    "role": "ba",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E003",
+    "rating": 4,
+    "evidence_score": 3.8,
+    "promotion_recommended": false,
+    "retention_risk": "medium",
+    "ctc": 1800000,
+    "hike_pct": 9.54,
+    "increase": 171801,
+    "new_ctc": 1971801,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.943,
+    "compa_after": 1.033,
+    "adjusted": false
+   },
+   {
+    "emp_id": "E008",
+    "name": "Zoya Shukla",
+    "title": "Senior UI/UX Designer",
+    "role": "uiux",
+    "level": "Senior",
+    "office": "Pune",
+    "manager_emp_id": "E001",
+    "rating": 4,
+    "evidence_score": 3.52,
+    "promotion_recommended": false,
+    "retention_risk": "high",
+    "ctc": 1584000,
+    "hike_pct": 12.41,
+    "increase": 196508,
+    "new_ctc": 1780508,
+    "promotion_addon_pct": 0.0,
+    "compa_before": 0.813,
+    "compa_after": 0.914,
+    "adjusted": false
+   }
+  ],
+  "fairness_before": {
+   "gender_gap_within_rating": [
+    {
+     "rating": 2,
+     "women": 2,
+     "men": 3,
+     "avg_hike_women": 3.4,
+     "avg_hike_men": 3.11,
+     "gap_pp_men_minus_women": -0.29
+    },
+    {
+     "rating": 3,
+     "women": 11,
+     "men": 14,
+     "avg_hike_women": 6.48,
+     "avg_hike_men": 7.34,
+     "gap_pp_men_minus_women": 0.86
+    },
+    {
+     "rating": 4,
+     "women": 9,
+     "men": 10,
+     "avg_hike_women": 12.83,
+     "avg_hike_men": 11.41,
+     "gap_pp_men_minus_women": -1.42
+    },
+    {
+     "rating": 5,
+     "women": 3,
+     "men": 2,
+     "avg_hike_women": 14.45,
+     "avg_hike_men": 14.75,
+     "gap_pp_men_minus_women": 0.3
+    }
+   ],
+   "managers": [
+    {
+     "manager_emp_id": "E001",
+     "manager": "Saurabh Bhargava",
+     "team_size": 5,
+     "avg_rating_minus_evidence": 0.42,
+     "women": 3,
+     "men": 2,
+     "women_rating_minus_evidence": 0.23,
+     "men_rating_minus_evidence": 0.71,
+     "gap": 0.48
+    },
+    {
+     "manager_emp_id": "E002",
+     "manager": "Rajat Dubey",
+     "team_size": 7,
+     "avg_rating_minus_evidence": 0.04,
+     "women": 3,
+     "men": 4,
+     "women_rating_minus_evidence": 0.05,
+     "men_rating_minus_evidence": 0.04,
+     "gap": -0.01
+    },
+    {
+     "manager_emp_id": "E003",
+     "manager": "Kriti Bhargava",
+     "team_size": 4,
+     "avg_rating_minus_evidence": 0.83
+    },
+    {
+     "manager_emp_id": "E004",
+     "manager": "Rohan Raghuwanshi",
+     "team_size": 4,
+     "avg_rating_minus_evidence": -0.99
+    },
+    {
+     "manager_emp_id": "E051",
+     "manager": "Vikram Gupta",
+     "team_size": 9,
+     "avg_rating_minus_evidence": 0.19,
+     "women": 2,
+     "men": 7,
+     "women_rating_minus_evidence": 0.43,
+     "men_rating_minus_evidence": 0.12,
+     "gap": -0.31
+    },
+    {
+     "manager_emp_id": "E052",
+     "manager": "Manish Goyal",
+     "team_size": 8,
+     "avg_rating_minus_evidence": 0.09,
+     "women": 4,
+     "men": 4,
+     "women_rating_minus_evidence": 0.29,
+     "men_rating_minus_evidence": -0.11,
+     "gap": -0.4
+    },
+    {
+     "manager_emp_id": "E053",
+     "manager": "Komal Gupta",
+     "team_size": 8,
+     "avg_rating_minus_evidence": -0.03,
+     "women": 4,
+     "men": 4,
+     "women_rating_minus_evidence": 0.32,
+     "men_rating_minus_evidence": -0.38,
+     "gap": -0.7
+    },
+    {
+     "manager_emp_id": "E054",
+     "manager": "Nidhi Raghuwanshi",
+     "team_size": 8,
+     "avg_rating_minus_evidence": -0.43,
+     "women": 5,
+     "men": 3,
+     "women_rating_minus_evidence": -0.73,
+     "men_rating_minus_evidence": 0.08,
+     "gap": 0.81
+    }
+   ],
+   "offices": [
+    {
+     "office": "Bhopal",
+     "people": 9,
+     "avg_compa_before": 0.844,
+     "avg_compa_after": 0.959,
+     "gap_vs_company_before": 0.081,
+     "gap_vs_company_after": 0.049,
+     "avg_hike_pct": 13.92
+    },
+    {
+     "office": "Indore",
+     "people": 27,
+     "avg_compa_before": 0.958,
+     "avg_compa_after": 1.032,
+     "gap_vs_company_before": -0.033,
+     "gap_vs_company_after": -0.024,
+     "avg_hike_pct": 7.9
+    },
+    {
+     "office": "Pune",
+     "people": 18,
+     "avg_compa_before": 0.918,
+     "avg_compa_after": 0.994,
+     "gap_vs_company_before": 0.007,
+     "gap_vs_company_after": 0.014,
+     "avg_hike_pct": 8.55
+    }
+   ],
+   "tenure": [
+    {
+     "rating": 3,
+     "under_2y": 10,
+     "over_2y": 15,
+     "gap_pp_long_minus_short": 0.42
+    },
+    {
+     "rating": 4,
+     "under_2y": 8,
+     "over_2y": 11,
+     "gap_pp_long_minus_short": 2.03
+    },
+    {
+     "rating": 5,
+     "under_2y": 3,
+     "over_2y": 2,
+     "gap_pp_long_minus_short": 1.05
+    }
+   ],
+   "compa_outliers": [
+    {
+     "emp_id": "E011",
+     "name": "Jayesh Chouhan",
+     "office": "Pune",
+     "rating": 3,
+     "compa_after": 0.801
+    },
+    {
+     "emp_id": "E020",
+     "name": "Rahul Parmar",
+     "office": "Indore",
+     "rating": 3,
+     "compa_after": 0.825
+    },
+    {
+     "emp_id": "E029",
+     "name": "Ritika Tiwari",
+     "office": "Pune",
+     "rating": 3,
+     "compa_after": 0.799
+    },
+    {
+     "emp_id": "E048",
+     "name": "Swati Malviya",
+     "office": "Indore",
+     "rating": 4,
+     "compa_after": 0.796
+    }
+   ],
+   "flags": [
+    {
+     "kind": "gender_gap",
+     "group": "rating 4",
+     "value": -1.42,
+     "members": [
+      "E043",
+      "E026",
+      "E052",
+      "E015",
+      "E031",
+      "E044",
+      "E013",
+      "E001",
+      "E019",
+      "E006"
+     ]
+    },
+    {
+     "kind": "manager_pattern",
+     "group": "women on E054's team",
+     "value": 0.81,
+     "members": [
+      "E018",
+      "E030",
+      "E022",
+      "E034",
+      "E045"
+     ]
+    },
+    {
+     "kind": "office_gap",
+     "group": "Bhopal office",
+     "value": 0.049,
+     "before": 0.081,
+     "resolved_by_this_cycle": true,
+     "members": [
+      "E009",
+      "E015",
+      "E014",
+      "E054",
+      "E013",
+      "E025",
+      "E036",
+      "E007",
+      "E022"
+     ]
+    },
+    {
+     "kind": "tenure_gap",
+     "group": "rating 4",
+     "value": 2.03,
+     "members": []
+    },
+    {
+     "kind": "compa_outlier",
+     "group": "4 people outside 0.85-1.2",
+     "value": 4,
+     "members": [
+      "E011",
+      "E020",
+      "E029",
+      "E048"
+     ]
+    }
+   ],
+   "thresholds": {
+    "gender_gap_pp_within_rating": 1.0,
+    "manager_rating_gap_vs_evidence": 0.5,
+    "office_compa_gap": 0.06,
+    "tenure_gap_pp_within_rating": 1.5,
+    "compa_outlier_low": 0.85,
+    "compa_outlier_high": 1.2,
+    "min_group_size": 2
+   }
+  },
+  "reviews": [
+   {
+    "verdict": "escalate",
+    "issues": [
+     {
+      "kind": "manager_pattern",
+      "group": "Women on E054's team",
+      "finding": "The rating-minus-evidence average is -0.73 for women versus +0.08 for men, a 0.81-point gender difference exceeding the 0.5 threshold. Proposal samples show E018, E030 and E034 each rated 3 against evidence scores of 3.89; E022 and E045 are rated 4 against 4.50.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E004's team",
+      "finding": "Ratings average 0.99 points below evidence across all four team members. E037 is rated 2 against evidence 4.78, with high-confidence calibration findings and contradictory manager notes.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E003's team",
+      "finding": "Ratings average 0.83 points above evidence across all four members. E036 is rated 5 against evidence 2.45, with high-confidence calibration findings and contradictory manager notes.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E021",
+      "finding": "Rating 3 is 1.15 points below evidence 4.15; calibration suggests rating 4. The employee already has a promotion recommendation, but the rating still needs review.",
+      "severity": "medium"
+     },
+     {
+      "kind": "tenure_gap",
+      "group": "Rating 4 employees by tenure",
+      "finding": "Employees with over 2 years' tenure average hikes 2.03 percentage points higher than those under 2 years, above the 1.5-point threshold. Available data do not establish whether this is evidence- or market-related.",
+      "severity": "medium"
+     },
+     {
+      "kind": "compa_outlier",
+      "group": "E011, E020, E029 and E048",
+      "finding": "All four remain below the 0.85 compa-ratio floor after the cycle: 0.801, 0.825, 0.799 and 0.796, respectively. Individual evidence differs, so this warrants role/market review rather than uniform correction.",
+      "severity": "medium"
+     }
+    ],
+    "adjustments": [
+     {
+      "emp_id": "E037",
+      "add_pp": 5.0,
+      "reason": "High-confidence evidence supports a materially higher rating than 2; partially correct the associated pay outcome pending rating re-review."
+     },
+     {
+      "emp_id": "E018",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E030",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E034",
+      "add_pp": 1.5,
+      "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+     },
+     {
+      "emp_id": "E021",
+      "add_pp": 1.0,
+      "reason": "High-confidence calibration finding shows rating 3 below evidence 4.15; supplement existing promotion-related pay outcome pending review."
+     },
+     {
+      "emp_id": "E036",
+      "add_pp": -3.0,
+      "reason": "High-confidence evidence is substantially below rating 5; reduce the rating-linked hike component pending rating re-review."
+     },
+     {
+      "emp_id": "E005",
+      "add_pp": -1.5,
+      "reason": "Medium-confidence calibration finding indicates rating 5 exceeds evidence 3.61 and suggests rating 4."
+     },
+     {
+      "emp_id": "E020",
+      "add_pp": 1.0,
+      "reason": "Below-floor compa ratio of 0.825 with evidence score 3.37 supports a modest targeted market-position correction."
+     },
+     {
+      "emp_id": "E048",
+      "add_pp": 1.0,
+      "reason": "Below-floor compa ratio of 0.796 with rating 4 supports a modest targeted market-position correction, subject to role/market validation."
+     }
+    ],
+    "summary": "Recommend HR re-review ratings and manager practices for E003, E004 and especially E054; pay adjustments only partially mitigate the impact and cannot fix inaccurate ratings or contradictory notes. Also validate the rating-4 tenure gap and below-floor compa ratios against role-level market data. The rating-4 gender hike gap is not an adverse gap for women (women average 1.42 points more), and Bhopal's company-relative compa gap narrowed from 0.081 to 0.049, below the 0.06 threshold this cycle."
+   },
+   {
+    "verdict": "escalate",
+    "issues": [
+     {
+      "kind": "manager_pattern",
+      "group": "E054's team, women versus men",
+      "finding": "Women’s mean rating-minus-evidence is -0.73 versus +0.08 for men, a 0.81-point gap; 6 of 8 team ratings are below evidence. Pay changes do not resolve the rating-calibration concern.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E004's team",
+      "finding": "Team ratings average 0.99 points below evidence; E037 is rated 2 against evidence 4.78, with inconsistent manager notes. E037’s current proposed hike is 6.0%.",
+      "severity": "high"
+     },
+     {
+      "kind": "manager_pattern",
+      "group": "E003's team",
+      "finding": "Team ratings average 0.83 points above evidence; E036 is rated 5 against evidence 2.45, with inconsistent manager notes. E036’s current proposed hike is 13.16%.",
+      "severity": "high"
+     },
+     {
+      "kind": "gender_gap",
+      "group": "rating 2",
+      "finding": "Women average 4.89% versus men 3.09%, a 1.80 percentage-point gap favoring women (2 women, 3 men). The gap crosses the audit threshold; the available data do not establish its cause.",
+      "severity": "medium"
+     },
+     {
+      "kind": "gender_gap",
+      "group": "rating 4",
+      "finding": "Women average 12.86% versus men 11.33%, a 1.53 percentage-point gap favoring women (9 women, 10 men). The gap crosses the audit threshold; verify that non-gender factors explain it.",
+      "severity": "medium"
+     },
+     {
+      "kind": "tenure_gap",
+      "group": "rating 4",
+      "finding": "Employees with over 2 years’ tenure average 1.89 percentage points more than those under 2 years, above the 1.5-point threshold; no supplied evidence establishes the reason.",
+      "severity": "medium"
+     },
+     {
+      "kind": "compa_outlier",
+      "group": "four employees below 0.85 compa-ratio after the cycle",
+      "finding": "E011 is at 0.800, E020 at 0.832, E029 at 0.798, and E048 at 0.803, all below the 0.85 threshold. Review role/market positioning; the metric alone does not establish an inequity.",
+      "severity": "medium"
+     }
+    ],
+    "adjustments": [
+     {
+      "emp_id": "E037",
+      "add_pp": 3.0,
+      "reason": "Recommendation only in round 2: strong evidence (4.78) materially exceeds the rating (2), and the proposed hike remains 6.0%; a targeted increase partly mitigates the pay impact pending HR rating re-review."
+     }
+    ],
+    "summary": "The rebalanced proposal has substantially narrowed Bhopal’s market-position gap (0.081 to 0.052, below the 0.06 threshold), so no further office correction is indicated. The remaining priority is a human review of E003, E004 and especially E054’s ratings and inconsistent notes; pay cannot correct a potentially biased or inaccurate rating record. I recommend a further 3-point increase for E037 as a round-2 recommendation, while HR reviews the rating. Check the flagged gender and tenure differentials and the four low compa-ratios against legitimate market, role and promotion factors before approval; none should be justified by protected characteristics."
+   }
+  ],
+  "fairness_after": {
+   "gender_gap_within_rating": [
+    {
+     "rating": 2,
+     "women": 2,
+     "men": 3,
+     "avg_hike_women": 4.89,
+     "avg_hike_men": 3.09,
+     "gap_pp_men_minus_women": -1.8
+    },
+    {
+     "rating": 3,
+     "women": 11,
+     "men": 14,
+     "avg_hike_women": 6.85,
+     "avg_hike_men": 7.44,
+     "gap_pp_men_minus_women": 0.59
+    },
+    {
+     "rating": 4,
+     "women": 9,
+     "men": 10,
+     "avg_hike_women": 12.86,
+     "avg_hike_men": 11.33,
+     "gap_pp_men_minus_women": -1.53
+    },
+    {
+     "rating": 5,
+     "women": 3,
+     "men": 2,
+     "avg_hike_women": 13.37,
+     "avg_hike_men": 13.94,
+     "gap_pp_men_minus_women": 0.57
+    }
+   ],
+   "managers": [
+    {
+     "manager_emp_id": "E001",
+     "manager": "Saurabh Bhargava",
+     "team_size": 5,
+     "avg_rating_minus_evidence": 0.42,
+     "women": 3,
+     "men": 2,
+     "women_rating_minus_evidence": 0.23,
+     "men_rating_minus_evidence": 0.71,
+     "gap": 0.48
+    },
+    {
+     "manager_emp_id": "E002",
+     "manager": "Rajat Dubey",
+     "team_size": 7,
+     "avg_rating_minus_evidence": 0.04,
+     "women": 3,
+     "men": 4,
+     "women_rating_minus_evidence": 0.05,
+     "men_rating_minus_evidence": 0.04,
+     "gap": -0.01
+    },
+    {
+     "manager_emp_id": "E003",
+     "manager": "Kriti Bhargava",
+     "team_size": 4,
+     "avg_rating_minus_evidence": 0.83
+    },
+    {
+     "manager_emp_id": "E004",
+     "manager": "Rohan Raghuwanshi",
+     "team_size": 4,
+     "avg_rating_minus_evidence": -0.99
+    },
+    {
+     "manager_emp_id": "E051",
+     "manager": "Vikram Gupta",
+     "team_size": 9,
+     "avg_rating_minus_evidence": 0.19,
+     "women": 2,
+     "men": 7,
+     "women_rating_minus_evidence": 0.43,
+     "men_rating_minus_evidence": 0.12,
+     "gap": -0.31
+    },
+    {
+     "manager_emp_id": "E052",
+     "manager": "Manish Goyal",
+     "team_size": 8,
+     "avg_rating_minus_evidence": 0.09,
+     "women": 4,
+     "men": 4,
+     "women_rating_minus_evidence": 0.29,
+     "men_rating_minus_evidence": -0.11,
+     "gap": -0.4
+    },
+    {
+     "manager_emp_id": "E053",
+     "manager": "Komal Gupta",
+     "team_size": 8,
+     "avg_rating_minus_evidence": -0.03,
+     "women": 4,
+     "men": 4,
+     "women_rating_minus_evidence": 0.32,
+     "men_rating_minus_evidence": -0.38,
+     "gap": -0.7
+    },
+    {
+     "manager_emp_id": "E054",
+     "manager": "Nidhi Raghuwanshi",
+     "team_size": 8,
+     "avg_rating_minus_evidence": -0.43,
+     "women": 5,
+     "men": 3,
+     "women_rating_minus_evidence": -0.73,
+     "men_rating_minus_evidence": 0.08,
+     "gap": 0.81
+    }
+   ],
+   "offices": [
+    {
+     "office": "Bhopal",
+     "people": 9,
+     "avg_compa_before": 0.844,
+     "avg_compa_after": 0.956,
+     "gap_vs_company_before": 0.081,
+     "gap_vs_company_after": 0.052,
+     "avg_hike_pct": 13.51
+    },
+    {
+     "office": "Indore",
+     "people": 27,
+     "avg_compa_before": 0.958,
+     "avg_compa_after": 1.035,
+     "gap_vs_company_before": -0.033,
+     "gap_vs_company_after": -0.027,
+     "avg_hike_pct": 8.19
+    },
+    {
+     "office": "Pune",
+     "people": 18,
+     "avg_compa_before": 0.918,
+     "avg_compa_after": 0.994,
+     "gap_vs_company_before": 0.007,
+     "gap_vs_company_after": 0.014,
+     "avg_hike_pct": 8.48
+    }
+   ],
+   "tenure": [
+    {
+     "rating": 3,
+     "under_2y": 10,
+     "over_2y": 15,
+     "gap_pp_long_minus_short": 0.35
+    },
+    {
+     "rating": 4,
+     "under_2y": 8,
+     "over_2y": 11,
+     "gap_pp_long_minus_short": 1.89
+    },
+    {
+     "rating": 5,
+     "under_2y": 3,
+     "over_2y": 2,
+     "gap_pp_long_minus_short": -1.08
+    }
+   ],
+   "compa_outliers": [
+    {
+     "emp_id": "E011",
+     "name": "Jayesh Chouhan",
+     "office": "Pune",
+     "rating": 3,
+     "compa_after": 0.8
+    },
+    {
+     "emp_id": "E020",
+     "name": "Rahul Parmar",
+     "office": "Indore",
+     "rating": 3,
+     "compa_after": 0.832
+    },
+    {
+     "emp_id": "E029",
+     "name": "Ritika Tiwari",
+     "office": "Pune",
+     "rating": 3,
+     "compa_after": 0.798
+    },
+    {
+     "emp_id": "E048",
+     "name": "Swati Malviya",
+     "office": "Indore",
+     "rating": 4,
+     "compa_after": 0.803
+    }
+   ],
+   "flags": [
+    {
+     "kind": "gender_gap",
+     "group": "rating 2",
+     "value": -1.8,
+     "members": [
+      "E014",
+      "E042",
+      "E004"
+     ]
+    },
+    {
+     "kind": "gender_gap",
+     "group": "rating 4",
+     "value": -1.53,
+     "members": [
+      "E043",
+      "E026",
+      "E052",
+      "E015",
+      "E031",
+      "E044",
+      "E013",
+      "E001",
+      "E019",
+      "E006"
+     ]
+    },
+    {
+     "kind": "manager_pattern",
+     "group": "women on E054's team",
+     "value": 0.81,
+     "members": [
+      "E018",
+      "E030",
+      "E022",
+      "E034",
+      "E045"
+     ]
+    },
+    {
+     "kind": "office_gap",
+     "group": "Bhopal office",
+     "value": 0.052,
+     "before": 0.081,
+     "resolved_by_this_cycle": true,
+     "members": [
+      "E009",
+      "E015",
+      "E014",
+      "E054",
+      "E013",
+      "E025",
+      "E036",
+      "E007",
+      "E022"
+     ]
+    },
+    {
+     "kind": "tenure_gap",
+     "group": "rating 4",
+     "value": 1.89,
+     "members": []
+    },
+    {
+     "kind": "compa_outlier",
+     "group": "4 people outside 0.85-1.2",
+     "value": 4,
+     "members": [
+      "E011",
+      "E020",
+      "E029",
+      "E048"
+     ]
+    }
+   ],
+   "thresholds": {
+    "gender_gap_pp_within_rating": 1.0,
+    "manager_rating_gap_vs_evidence": 0.5,
+    "office_compa_gap": 0.06,
+    "tenure_gap_pp_within_rating": 1.5,
+    "compa_outlier_low": 0.85,
+    "compa_outlier_high": 1.2,
+    "min_group_size": 2
+   }
+  },
+  "adjustments_applied": [
+   {
+    "emp_id": "E037",
+    "name": "Bhavna Goyal",
+    "requested_pp": 5.0,
+    "hike_before": 2.99,
+    "hike_after": 6.0,
+    "reason": "High-confidence evidence supports a materially higher rating than 2; partially correct the associated pay outcome pending rating re-review."
+   },
+   {
+    "emp_id": "E018",
+    "name": "Pooja Dubey",
+    "requested_pp": 1.5,
+    "hike_before": 6.62,
+    "hike_after": 8.12,
+    "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+   },
+   {
+    "emp_id": "E030",
+    "name": "Prachi Patidar",
+    "requested_pp": 1.5,
+    "hike_before": 4.33,
+    "hike_after": 5.83,
+    "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+   },
+   {
+    "emp_id": "E034",
+    "name": "Vaishali Gupta",
+    "requested_pp": 1.5,
+    "hike_before": 5.36,
+    "hike_after": 6.86,
+    "reason": "Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings."
+   },
+   {
+    "emp_id": "E021",
+    "name": "Tushar Nair",
+    "requested_pp": 1.0,
+    "hike_before": 15.15,
+    "hike_after": 16.15,
+    "reason": "High-confidence calibration finding shows rating 3 below evidence 4.15; supplement existing promotion-related pay outcome pending review."
+   },
+   {
+    "emp_id": "E036",
+    "name": "Priya Solanki",
+    "requested_pp": -3.0,
+    "hike_before": 16.16,
+    "hike_after": 13.16,
+    "reason": "High-confidence evidence is substantially below rating 5; reduce the rating-linked hike component pending rating re-review."
+   },
+   {
+    "emp_id": "E005",
+    "name": "Aditya Deshmukh",
+    "requested_pp": -1.5,
+    "hike_before": 14.24,
+    "hike_after": 12.74,
+    "reason": "Medium-confidence calibration finding indicates rating 5 exceeds evidence 3.61 and suggests rating 4."
+   },
+   {
+    "emp_id": "E020",
+    "name": "Rahul Parmar",
+    "requested_pp": 1.0,
+    "hike_before": 9.48,
+    "hike_after": 10.48,
+    "reason": "Below-floor compa ratio of 0.825 with evidence score 3.37 supports a modest targeted market-position correction."
+   },
+   {
+    "emp_id": "E048",
+    "name": "Swati Malviya",
+    "requested_pp": 1.0,
+    "hike_before": 12.78,
+    "hike_after": 13.78,
+    "reason": "Below-floor compa ratio of 0.796 with rating 4 supports a modest targeted market-position correction, subject to role/market validation."
+   }
+  ],
+  "brief_drafts": {
+   "E001": {
+    "headline": "FY2026–27 manager conversation brief for E001’s team",
+    "team_summary": "The team’s outcomes reflect individual year-end contributions, feedback, skills growth, and role expectations. Keep each conversation focused on the person’s evidence and next steps; the attached HR table contains the outcome details.",
+    "talking_points": [
+     {
+      "emp_id": "E005",
+      "points": [
+       "You took ownership of a particularly challenging module on the language-learning app and helped raise the team’s bar; that contribution is recognized in your outcome.",
+       "Your client feedback and added skills are positive signals. Let’s align on how to sustain that impact and build consistency across the year."
+      ]
+     },
+     {
+      "emp_id": "E035",
+      "points": [
+       "You delivered your assigned work on the Empower AI accelerator, with positive client feedback.",
+       "For the coming year, focus on taking broader ownership and showing initiative beyond assigned tasks."
+      ]
+     },
+     {
+      "emp_id": "E041",
+      "points": [
+       "You were steady and dependable on the language-learning app and met expectations in your role.",
+       "Build on that reliability by developing new skills and looking for opportunities to take on wider responsibility."
+      ]
+     },
+     {
+      "emp_id": "E038",
+      "points": [
+       "You had a solid year, with strong client feedback and readiness for more scope reflected in your contribution and market position.",
+       "Let’s identify a stretch area where you can take the lead and grow your impact."
+      ]
+     },
+     {
+      "emp_id": "E008",
+      "points": [
+       "Your technical depth and ownership of releases on the Support RAG assistant were valuable contributions this year.",
+       "You added skills and delivered reliably; next, look for ways to extend that ownership and influence across the work."
+      ]
+     }
+    ],
+    "reminders": [
+     "The effective date is 2027-04-01; refer to the HR-provided table for each person’s outcome details.",
+     "Keep each conversation and its pay information confidential; discuss only that employee’s details.",
+     "Route questions you cannot resolve to HR."
+    ]
+   },
+   "E002": {
+    "headline": "Manager conversation brief for E002’s team — effective 2027-04-01",
+    "team_summary": "Keep the discussions focused on each person’s documented contribution, feedback, and next steps. Explain outcomes in the context of the year’s evidence and agreed development areas; the attached HR table contains the figures.",
+    "talking_points": [
+     {
+      "emp_id": "E053",
+      "points": [
+       "Recognize strong technical depth and ownership of releases on the Empower AI accelerator.",
+       "Connect the outcome to this year’s contributions, and agree how to broaden impact and strengthen utilization next cycle."
+      ]
+     },
+     {
+      "emp_id": "E003",
+      "points": [
+       "Acknowledge the positive client feedback alongside quality issues in two releases, which kept the year’s assessment lower.",
+       "Review the agreed improvement plan, set clear release-quality checkpoints, and offer support to help sustain progress."
+      ]
+     },
+     {
+      "emp_id": "E052",
+      "points": [
+       "Recognize the solid year, excellent client feedback, and added skill.",
+       "Discuss readiness for broader scope and identify a concrete opportunity to demonstrate it next cycle."
+      ]
+     },
+     {
+      "emp_id": "E054",
+      "points": [
+       "Recognize strong technical depth and ownership of Wallets on the Fly - v3 feature releases, along with excellent client feedback.",
+       "Discuss how to build on this contribution and choose a development goal for the coming cycle."
+      ]
+     },
+     {
+      "emp_id": "E004",
+      "points": [
+       "Be direct about missed sprint commitments on the Patient portal maintenance retainer and the need for closer support.",
+       "Agree on practical planning and delivery checkpoints, and make sure support is in place to improve reliability."
+      ]
+     },
+     {
+      "emp_id": "E001",
+      "points": [
+       "Recognize strong delivery on Language-learning app growth features and reliability under deadline pressure.",
+       "Build on the added skill by discussing a suitable next challenge and continued growth in delivery leadership."
+      ]
+     },
+     {
+      "emp_id": "E051",
+      "points": [
+       "Recognize positive teamwork and the skill added this year.",
+       "Set a focused development goal around estimation and planning, with regular opportunities to practice and review progress."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and rating confidential; discuss only their own outcome.",
+     "The effective date is 2027-04-01; use the HR-provided table for figures.",
+     "Route questions or requested follow-up through HR."
+    ]
+   },
+   "E003": {
+    "headline": "FY2026–27 manager conversation brief for E003’s team",
+    "team_summary": "Use the outcomes in HR’s attached table and connect each conversation to the person’s evidence and next steps. Keep feedback specific, recognize contributions, and agree on a practical growth focus; the effective date is 2027-04-01.",
+    "talking_points": [
+     {
+      "emp_id": "E009",
+      "points": [
+       "Recognize their contribution as a collaborative team player and the year’s positive client feedback.",
+       "Set a focused goal around estimation and planning, with regular check-ins on delivery forecasts."
+      ]
+     },
+     {
+      "emp_id": "E039",
+      "points": [
+       "Recognize the client’s request for them by name and their consistent delivery ahead of plan, alongside strong client feedback.",
+       "Discuss how to build on this impact and identify the next skills or scope to develop."
+      ]
+     },
+     {
+      "emp_id": "E036",
+      "points": [
+       "Acknowledge their strong rating and contribution, and discuss the feedback received as an opportunity to align on client expectations.",
+       "Agree on specific actions to improve client outcomes and check progress together during the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E006",
+      "points": [
+       "Recognize their technical depth and ownership of releases on Sales CRM - phase 2, supported by strong client feedback.",
+       "Choose a relevant skill-development goal, since no new skills were recorded this cycle, and discuss how to extend their release ownership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and outcome confidential; discuss only with that employee.",
+     "The effective date is 2027-04-01; refer to HR’s attached table for compensation figures.",
+     "Route questions or concerns through the appropriate HR channel."
+    ]
+   },
+   "E004": {
+    "headline": "Manager brief for E004’s team — effective 2027-04-01",
+    "team_summary": "Keep the conversations focused on each person’s year, specific strengths, and one practical next step. Outcomes reflect the supplied review evidence and calibration; use the attached HR table for figures, and do not compare individual outcomes.",
+    "talking_points": [
+     {
+      "emp_id": "E037",
+      "points": [
+       "Recognize strong client feedback and high utilization as clear contributions this year.",
+       "Acknowledge that delivery deadlines and the need for closer supervision were growth areas; agree on concrete planning and check-in habits for the next cycle.",
+       "Frame the outcome neutrally as aligned with contribution and market position, and discuss how to build on strengths while improving predictability."
+      ]
+     },
+     {
+      "emp_id": "E010",
+      "points": [
+       "Recognize dependable delivery on the Language-learning app growth features and the three skills added this year.",
+       "Discuss how to take on a broader or more visible design contribution next cycle.",
+       "Agree on a development goal that supports growth while sustaining reliable delivery."
+      ]
+     },
+     {
+      "emp_id": "E007",
+      "points": [
+       "Recognize positive client feedback and contribution as a team player.",
+       "Connect the outcome to the year’s work, and reinforce estimation and planning as the next growth area.",
+       "Set a practical goal for improving estimates and surfacing delivery risks earlier."
+      ]
+     },
+     {
+      "emp_id": "E040",
+      "points": [
+       "Recognize strong utilization and positive contribution as a team player.",
+       "Discuss estimation and planning as the main growth area, with an emphasis on more predictable delivery.",
+       "Agree on a concrete goal to improve estimation and planning in the next cycle."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay and review details confidential; use only the individual’s HR table when discussing figures.",
+     "The effective date is 2027-04-01.",
+     "Route questions through HR; do not promise changes outside the approved process."
+    ]
+   },
+   "E051": {
+    "headline": "Manager conversation brief for FY2026–27; effective 1 April 2027",
+    "team_summary": "Keep the conversations focused on each person’s evidence, outcome, and next steps. Recognize strong delivery and expanded scope, and make development expectations specific and actionable.",
+    "talking_points": [
+     {
+      "emp_id": "E050",
+      "points": [
+       "Recognize their collaborative contribution and two skills added this year.",
+       "Set a clear next step on estimation and planning, with regular check-ins to build consistency."
+      ]
+     },
+     {
+      "emp_id": "E027",
+      "points": [
+       "Acknowledge their teamwork and the skill they added this year.",
+       "Discuss the client feedback and agree on concrete actions to strengthen delivery and planning."
+      ]
+     },
+     {
+      "emp_id": "E011",
+      "points": [
+       "Recognize steady, dependable delivery on Fleet tracking - Arabic + iPad.",
+       "Talk through client feedback and identify specific ways to improve the client experience next cycle."
+      ]
+     },
+     {
+      "emp_id": "E015",
+      "points": [
+       "Congratulate them on the promotion and recognize positive client feedback and a solid year.",
+       "Discuss the broader scope they are ready to take on and agree on priorities for succeeding at the next level."
+      ]
+     },
+     {
+      "emp_id": "E031",
+      "points": [
+       "Recognize their technical depth and ownership of releases on Language-learning app - growth features.",
+       "Build on strong client feedback by identifying opportunities to broaden ownership and deepen expertise."
+      ]
+     },
+     {
+      "emp_id": "E042",
+      "points": [
+       "Acknowledge the two skills added and review progress against the agreed improvement plan.",
+       "Focus next on preventing release-quality issues through clear checks and regular progress reviews."
+      ]
+     },
+     {
+      "emp_id": "E023",
+      "points": [
+       "Recognize that the client requested them by name and that they consistently delivered ahead of plan.",
+       "Discuss how to sustain this impact and broaden their influence through knowledge sharing or mentoring."
+      ]
+     },
+     {
+      "emp_id": "E046",
+      "points": [
+       "Recognize steady, dependable delivery on Wallets on the Fly - v3 features and the skills added this year.",
+       "Discuss ways to build on the current contribution, including development goals and opportunities for broader project ownership."
+      ]
+     },
+     {
+      "emp_id": "E019",
+      "points": [
+       "Recognize reliable delivery on Smart-meter analytics - phase 2, especially under deadline pressure, and the skills added.",
+       "Discuss how to sustain this performance and identify a concrete next step toward broader scope or leadership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each person’s pay details and conversation confidential; use the HR-provided table for outcome figures.",
+     "The effective date is 1 April 2027.",
+     "Route questions or concerns through HR for review; do not promise changes during the conversation."
+    ]
+   },
+   "E052": {
+    "headline": "Team hike conversation brief — effective 1 April 2027",
+    "team_summary": "Use the points below to connect each outcome to the person’s contributions and next steps. Keep the conversation focused on their own work, growth, and goals for the coming cycle.",
+    "talking_points": [
+     {
+      "emp_id": "E043",
+      "points": [
+       "Your delivery on Fleet tracking, including the Arabic and iPad work, was strong, and you stayed reliable under deadline pressure.",
+       "Build on that foundation by deepening your cloud and DevOps skills and taking on a broader slice of delivery ownership."
+      ]
+     },
+     {
+      "emp_id": "E047",
+      "points": [
+       "You met expectations on Smart-meter analytics phase 2, with steady delivery and positive client feedback.",
+       "For the next cycle, look for opportunities to apply your BI skills more broadly and add a new capability to your toolkit."
+      ]
+     },
+     {
+      "emp_id": "E028",
+      "points": [
+       "You delivered the assigned work on the Patient portal maintenance retainer and received positive client feedback.",
+       "A key next step is to take more ownership—surface risks early, propose solutions, and lead a defined piece of work."
+      ]
+     },
+     {
+      "emp_id": "E012",
+      "points": [
+       "Your work on Support RAG assistant v2 consistently stayed ahead of plan, and the client specifically asked for you by name.",
+       "Keep building on that impact by sharing your approach with the team and taking on progressively broader responsibilities."
+      ]
+     },
+     {
+      "emp_id": "E016",
+      "points": [
+       "You had a solid year, earned positive client feedback, and added two skills.",
+       "You’re ready to take on more scope; agree on a stretch assignment and clear ownership goals for the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E024",
+      "points": [
+       "You met expectations on Sales CRM phase 2 and provided steady, dependable delivery.",
+       "Focus next on strengthening client outcomes and taking initiative on a discrete feature or improvement."
+      ]
+     },
+     {
+      "emp_id": "E020",
+      "points": [
+       "Your contribution and market position are reflected in this outcome; you delivered assigned Wallets on the Fly v3 features and added two skills.",
+       "For the next cycle, increase your ownership by leading a defined feature and communicating progress and risks proactively."
+      ]
+     },
+     {
+      "emp_id": "E032",
+      "points": [
+       "You contributed positively as a team player and delivered on your work this year.",
+       "Estimation and planning are useful growth areas; practice breaking work into smaller milestones and flagging schedule risks early."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation confidential and discuss only that employee’s outcome.",
+     "The effective date is 1 April 2027.",
+     "Direct questions about the figures or process to HR."
+    ]
+   },
+   "E053": {
+    "headline": "Team conversation brief for the 2027-04-01 effective date",
+    "team_summary": "Discuss outcomes in the context of each person’s contribution, feedback, and next steps. For promoted employees, clarify the broader scope expected in the new role; keep the conversation focused on individual growth and avoid comparing outcomes across the team.",
+    "talking_points": [
+     {
+      "emp_id": "E044",
+      "points": [
+       "Recognize the technical depth and ownership shown on Wallets on the Fly v3 releases.",
+       "Agree on a development goal to build on the new skill and identify opportunities for broader release ownership."
+      ]
+     },
+     {
+      "emp_id": "E013",
+      "points": [
+       "Congratulate Omkar on the promotion, reflecting positive client feedback and readiness for greater scope.",
+       "Set clear expectations for the expanded role and agree on a milestone to review progress."
+      ]
+     },
+     {
+      "emp_id": "E025",
+      "points": [
+       "Congratulate Pooja on the promotion and recognize her technical depth, release ownership on Claims portal stabilisation, and skills growth.",
+       "Discuss how she can apply that experience across broader responsibilities in the new role."
+      ]
+     },
+     {
+      "emp_id": "E017",
+      "points": [
+       "Recognize dependable delivery on Fleet tracking’s Arabic and iPad work and the skills developed this year.",
+       "Choose a next goal focused on extending ownership or impact beyond assigned work."
+      ]
+     },
+     {
+      "emp_id": "E029",
+      "points": [
+       "Acknowledge delivery on Sales CRM phase 2 and discuss ways to take more ownership.",
+       "Agree on a practical opportunity to build confidence and demonstrate broader contribution in the next cycle."
+      ]
+     },
+     {
+      "emp_id": "E048",
+      "points": [
+       "Recognize technical depth and ownership of Wallets on the Fly v3 releases; the outcome is aligned with contribution and market position.",
+       "Agree on a relevant skill-development goal and an opportunity to demonstrate it in upcoming work."
+      ]
+     },
+     {
+      "emp_id": "E033",
+      "points": [
+       "Recognize steady, dependable delivery on Fleet tracking’s Arabic and iPad work, along with skills growth.",
+       "Discuss a next step that builds on those skills and increases ownership of a feature or deliverable."
+      ]
+     },
+     {
+      "emp_id": "E021",
+      "points": [
+       "Congratulate Tushar on the promotion and recognize strong utilization, skills growth, and client feedback as evidence of contribution.",
+       "Align on expectations for the broader role and set a specific early-cycle goal to sustain delivery and ownership."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation and the attached pay information confidential; do not compare individual outcomes.",
+     "The effective date is 2027-04-01.",
+     "Direct questions about the outcome or process to HR."
+    ]
+   },
+   "E054": {
+    "headline": "Manager conversation brief for the team effective 1 April 2027",
+    "team_summary": "Keep conversations grounded in each person’s year: recognize specific delivery and feedback, then connect the outcome to a practical next step. Use the attached HR table for hike figures and discuss each person’s information privately.",
+    "talking_points": [
+     {
+      "emp_id": "E026",
+      "points": [
+       "Recognize the technical depth and ownership shown in releases for Wallets on the Fly - v3; the rating and outcome reflect a strong year.",
+       "For the next cycle, look for opportunities to broaden ownership and maintain dependable delivery across releases."
+      ]
+     },
+     {
+      "emp_id": "E049",
+      "points": [
+       "Acknowledge steady, dependable work that met expectations on Smart-meter analytics - phase 2.",
+       "Client feedback was lower this year; discuss specific ways to improve stakeholder communication and the quality of delivery."
+      ]
+     },
+     {
+      "emp_id": "E014",
+      "points": [
+       "Be clear that several sprint commitments were missed on Headless storefront - retainer, and that closer support is needed.",
+       "Agree on near-term commitments, regular check-ins, and a plan to improve delivery consistency."
+      ]
+     },
+     {
+      "emp_id": "E018",
+      "points": [
+       "Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; next, build on the new skill and take on a well-scoped stretch task."
+      ]
+     },
+     {
+      "emp_id": "E030",
+      "points": [
+       "Recognize delivery of assigned work on Fleet tracking - Arabic + iPad, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; focus next on taking more ownership from planning through completion."
+      ]
+     },
+     {
+      "emp_id": "E022",
+      "points": [
+       "Highlight strong delivery on Smart-meter analytics - phase 2, reliability under deadline pressure, excellent client feedback, and two skills added.",
+       "The strong rating and outcome recognize this contribution; next, build on that momentum by sharing approaches that help the wider project team."
+      ]
+     },
+     {
+      "emp_id": "E034",
+      "points": [
+       "Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.",
+       "The outcome is aligned with contribution and market position; continue developing the new skill and take on a progressively broader task."
+      ]
+     },
+     {
+      "emp_id": "E045",
+      "points": [
+       "Recognize strong delivery on Fleet tracking - Arabic + iPad, reliability under deadline pressure, excellent client feedback, and two skills added.",
+       "The promotion and outcome recognize this strong contribution; discuss expectations in the new role and agree on priorities for the next cycle."
+      ]
+     }
+    ],
+    "reminders": [
+     "Keep each conversation and the attached compensation table confidential; share only with the individual concerned.",
+     "The effective date is 1 April 2027.",
+     "Route questions or requests for review through HR; do not promise changes during the conversation."
+    ]
+   }
+  },
+  "briefs": {
+   "E001": "# FY2026–27 manager conversation brief for E001’s team\n\n**Manager:** Saurabh Bhargava (E001) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nThe team’s outcomes reflect individual year-end contributions, feedback, skills growth, and role expectations. Keep each conversation focused on the person’s evidence and next steps; the attached HR table contains the outcome details.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Aditya Deshmukh | Mid Business Analyst | 5 | 12.7% | ₹1,46,807 | ₹12,98,807 | |\n| Bhavna Verma | Mid QA Engineer | 3 | 5.1% | ₹66,484 | ₹13,62,484 | |\n| Mohit Bhonsle | Mid QA Engineer | 3 | 5.2% | ₹68,254 | ₹13,88,254 | |\n| Ritika Solanki | Senior QA Engineer | 4 | 7.0% | ₹1,50,930 | ₹23,22,930 | |\n| Zoya Shukla | Senior UI/UX Designer | 4 | 12.4% | ₹1,96,508 | ₹17,80,508 | |\n\n## Talking points\n\n**Aditya Deshmukh**\n\n- You took ownership of a particularly challenging module on the language-learning app and helped raise the team’s bar; that contribution is recognized in your outcome.\n- Your client feedback and added skills are positive signals. Let’s align on how to sustain that impact and build consistency across the year.\n\n**Bhavna Verma**\n\n- You delivered your assigned work on the Empower AI accelerator, with positive client feedback.\n- For the coming year, focus on taking broader ownership and showing initiative beyond assigned tasks.\n\n**Mohit Bhonsle**\n\n- You were steady and dependable on the language-learning app and met expectations in your role.\n- Build on that reliability by developing new skills and looking for opportunities to take on wider responsibility.\n\n**Ritika Solanki**\n\n- You had a solid year, with strong client feedback and readiness for more scope reflected in your contribution and market position.\n- Let’s identify a stretch area where you can take the lead and grow your impact.\n\n**Zoya Shukla**\n\n- Your technical depth and ownership of releases on the Support RAG assistant were valuable contributions this year.\n- You added skills and delivered reliably; next, look for ways to extend that ownership and influence across the work.\n\n## Reminders\n\n- The effective date is 2027-04-01; refer to the HR-provided table for each person’s outcome details.\n- Keep each conversation and its pay information confidential; discuss only that employee’s details.\n- Route questions you cannot resolve to HR.",
+   "E002": "# Manager conversation brief for E002’s team — effective 2027-04-01\n\n**Manager:** Rajat Dubey (E002) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nKeep the discussions focused on each person’s documented contribution, feedback, and next steps. Explain outcomes in the context of the year’s evidence and agreed development areas; the attached HR table contains the figures.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Komal Gupta | Tech Lead / Architect | 4 | 8.0% | ₹2,41,312 | ₹32,53,312 | |\n| Kriti Bhargava | Senior Project Manager | 2 | 3.8% | ₹68,512 | ₹18,80,512 | |\n| Manish Goyal | Tech Lead / Architect | 4 | 10.1% | ₹2,76,795 | ₹30,12,795 | |\n| Nidhi Raghuwanshi | Tech Lead / Architect | 4 | 12.7% | ₹3,45,172 | ₹30,69,172 | |\n| Rohan Raghuwanshi | Senior Project Manager | 2 | 1.0% | ₹21,391 | ₹21,57,391 | |\n| Saurabh Bhargava | Senior Project Manager | 4 | 9.5% | ₹1,90,127 | ₹21,82,127 | |\n| Vikram Gupta | Tech Lead / Architect | 3 | 4.9% | ₹1,53,086 | ₹32,61,086 | |\n\n## Talking points\n\n**Komal Gupta**\n\n- Recognize strong technical depth and ownership of releases on the Empower AI accelerator.\n- Connect the outcome to this year’s contributions, and agree how to broaden impact and strengthen utilization next cycle.\n\n**Kriti Bhargava**\n\n- Acknowledge the positive client feedback alongside quality issues in two releases, which kept the year’s assessment lower.\n- Review the agreed improvement plan, set clear release-quality checkpoints, and offer support to help sustain progress.\n\n**Manish Goyal**\n\n- Recognize the solid year, excellent client feedback, and added skill.\n- Discuss readiness for broader scope and identify a concrete opportunity to demonstrate it next cycle.\n\n**Nidhi Raghuwanshi**\n\n- Recognize strong technical depth and ownership of Wallets on the Fly - v3 feature releases, along with excellent client feedback.\n- Discuss how to build on this contribution and choose a development goal for the coming cycle.\n\n**Rohan Raghuwanshi**\n\n- Be direct about missed sprint commitments on the Patient portal maintenance retainer and the need for closer support.\n- Agree on practical planning and delivery checkpoints, and make sure support is in place to improve reliability.\n\n**Saurabh Bhargava**\n\n- Recognize strong delivery on Language-learning app growth features and reliability under deadline pressure.\n- Build on the added skill by discussing a suitable next challenge and continued growth in delivery leadership.\n\n**Vikram Gupta**\n\n- Recognize positive teamwork and the skill added this year.\n- Set a focused development goal around estimation and planning, with regular opportunities to practice and review progress.\n\n## Reminders\n\n- Keep each person’s pay and rating confidential; discuss only their own outcome.\n- The effective date is 2027-04-01; use the HR-provided table for figures.\n- Route questions or requested follow-up through HR.",
+   "E003": "# FY2026–27 manager conversation brief for E003’s team\n\n**Manager:** Kriti Bhargava (E003) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nUse the outcomes in HR’s attached table and connect each conversation to the person’s evidence and next steps. Keep feedback specific, recognize contributions, and agree on a practical growth focus; the effective date is 2027-04-01.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Chirag Deshmukh | Junior UI/UX Designer | 3 | 8.7% | ₹51,994 | ₹6,51,994 | |\n| Gaurav Shinde | Mid QA Engineer | 5 | 15.1% | ₹1,74,465 | ₹13,26,465 | |\n| Priya Solanki | Senior QA Engineer | 5 | 13.2% | ₹2,57,423 | ₹22,13,423 | |\n| Yash Bhatt | Senior Business Analyst | 4 | 9.5% | ₹1,71,801 | ₹19,71,801 | |\n\n## Talking points\n\n**Chirag Deshmukh**\n\n- Recognize their contribution as a collaborative team player and the year’s positive client feedback.\n- Set a focused goal around estimation and planning, with regular check-ins on delivery forecasts.\n\n**Gaurav Shinde**\n\n- Recognize the client’s request for them by name and their consistent delivery ahead of plan, alongside strong client feedback.\n- Discuss how to build on this impact and identify the next skills or scope to develop.\n\n**Priya Solanki**\n\n- Acknowledge their strong rating and contribution, and discuss the feedback received as an opportunity to align on client expectations.\n- Agree on specific actions to improve client outcomes and check progress together during the next cycle.\n\n**Yash Bhatt**\n\n- Recognize their technical depth and ownership of releases on Sales CRM - phase 2, supported by strong client feedback.\n- Choose a relevant skill-development goal, since no new skills were recorded this cycle, and discuss how to extend their release ownership.\n\n## Reminders\n\n- Keep each person’s pay and outcome confidential; discuss only with that employee.\n- The effective date is 2027-04-01; refer to HR’s attached table for compensation figures.\n- Route questions or concerns through the appropriate HR channel.",
+   "E004": "# Manager brief for E004’s team — effective 2027-04-01\n\n**Manager:** Rohan Raghuwanshi (E004) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nKeep the conversations focused on each person’s year, specific strengths, and one practical next step. Outcomes reflect the supplied review evidence and calibration; use the attached HR table for figures, and do not compare individual outcomes.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Bhavna Goyal | Mid QA Engineer | 2 | 6.0% | ₹70,560 | ₹12,46,560 | |\n| Pooja Patidar | Senior UI/UX Designer | 3 | 4.1% | ₹85,349 | ₹21,73,349 | |\n| Swati Solanki | Mid Business Analyst | 3 | 8.1% | ₹1,01,977 | ₹13,61,977 | |\n| Tarun Khandelwal | Senior QA Engineer | 3 | 6.5% | ₹1,26,726 | ₹20,82,726 | |\n\n## Talking points\n\n**Bhavna Goyal**\n\n- Recognize strong client feedback and high utilization as clear contributions this year.\n- Acknowledge that delivery deadlines and the need for closer supervision were growth areas; agree on concrete planning and check-in habits for the next cycle.\n- Frame the outcome neutrally as aligned with contribution and market position, and discuss how to build on strengths while improving predictability.\n\n**Pooja Patidar**\n\n- Recognize dependable delivery on the Language-learning app growth features and the three skills added this year.\n- Discuss how to take on a broader or more visible design contribution next cycle.\n- Agree on a development goal that supports growth while sustaining reliable delivery.\n\n**Swati Solanki**\n\n- Recognize positive client feedback and contribution as a team player.\n- Connect the outcome to the year’s work, and reinforce estimation and planning as the next growth area.\n- Set a practical goal for improving estimates and surfacing delivery risks earlier.\n\n**Tarun Khandelwal**\n\n- Recognize strong utilization and positive contribution as a team player.\n- Discuss estimation and planning as the main growth area, with an emphasis on more predictable delivery.\n- Agree on a concrete goal to improve estimation and planning in the next cycle.\n\n## Reminders\n\n- Keep each person’s pay and review details confidential; use only the individual’s HR table when discussing figures.\n- The effective date is 2027-04-01.\n- Route questions through HR; do not promise changes outside the approved process.",
+   "E051": "# Manager conversation brief for FY2026–27; effective 1 April 2027\n\n**Manager:** Vikram Gupta (E051) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nKeep the conversations focused on each person’s evidence, outcome, and next steps. Recognize strong delivery and expanded scope, and make development expectations specific and actionable.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Abhishek Kulkarni | Mid AI / ML Engineer | 3 | 4.9% | ₹69,456 | ₹14,85,456 | |\n| Aditya Patil | Mid Backend Developer | 3 | 4.1% | ₹56,899 | ₹14,48,899 | |\n| Jayesh Chouhan | Mid Frontend Developer | 3 | 9.4% | ₹95,895 | ₹11,15,895 | |\n| Mohit Kaur | Senior Frontend Developer | 4 | 19.7% | ₹4,07,195 | ₹24,71,195 | promotion |\n| Naveen Iyer | Mid Mobile Developer | 4 | 7.0% | ₹97,562 | ₹15,01,562 | |\n| Nikhil Parmar | Junior DevOps / Cloud Engineer | 2 | 4.2% | ₹27,017 | ₹6,75,017 | |\n| Pooja Dixit | Senior Backend Developer | 5 | 13.8% | ₹2,71,095 | ₹22,39,095 | |\n| Pooja Kothari | Mid Data / BI Engineer | 3 | 6.1% | ₹86,972 | ₹15,14,972 | |\n| Vivek Porwal | Senior Backend Developer | 4 | 7.0% | ₹1,55,099 | ₹23,87,099 | |\n\n## Talking points\n\n**Abhishek Kulkarni**\n\n- Recognize their collaborative contribution and two skills added this year.\n- Set a clear next step on estimation and planning, with regular check-ins to build consistency.\n\n**Aditya Patil**\n\n- Acknowledge their teamwork and the skill they added this year.\n- Discuss the client feedback and agree on concrete actions to strengthen delivery and planning.\n\n**Jayesh Chouhan**\n\n- Recognize steady, dependable delivery on Fleet tracking - Arabic + iPad.\n- Talk through client feedback and identify specific ways to improve the client experience next cycle.\n\n**Mohit Kaur**\n\n- Congratulate them on the promotion and recognize positive client feedback and a solid year.\n- Discuss the broader scope they are ready to take on and agree on priorities for succeeding at the next level.\n\n**Naveen Iyer**\n\n- Recognize their technical depth and ownership of releases on Language-learning app - growth features.\n- Build on strong client feedback by identifying opportunities to broaden ownership and deepen expertise.\n\n**Nikhil Parmar**\n\n- Acknowledge the two skills added and review progress against the agreed improvement plan.\n- Focus next on preventing release-quality issues through clear checks and regular progress reviews.\n\n**Pooja Dixit**\n\n- Recognize that the client requested them by name and that they consistently delivered ahead of plan.\n- Discuss how to sustain this impact and broaden their influence through knowledge sharing or mentoring.\n\n**Pooja Kothari**\n\n- Recognize steady, dependable delivery on Wallets on the Fly - v3 features and the skills added this year.\n- Discuss ways to build on the current contribution, including development goals and opportunities for broader project ownership.\n\n**Vivek Porwal**\n\n- Recognize reliable delivery on Smart-meter analytics - phase 2, especially under deadline pressure, and the skills added.\n- Discuss how to sustain this performance and identify a concrete next step toward broader scope or leadership.\n\n## Reminders\n\n- Keep each person’s pay details and conversation confidential; use the HR-provided table for outcome figures.\n- The effective date is 1 April 2027.\n- Route questions or concerns through HR for review; do not promise changes during the conversation.",
+   "E052": "# Team hike conversation brief — effective 1 April 2027\n\n**Manager:** Manish Goyal (E052) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nUse the points below to connect each outcome to the person’s contributions and next steps. Keep the conversation focused on their own work, growth, and goals for the coming cycle.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Aarav Soni | Junior DevOps / Cloud Engineer | 4 | 7.2% | ₹55,796 | ₹8,35,796 | |\n| Ankit Patidar | Mid Data / BI Engineer | 3 | 6.1% | ₹86,972 | ₹15,14,972 | |\n| Karan Rao | Senior Backend Developer | 3 | 6.9% | ₹1,37,617 | ₹21,41,617 | |\n| Komal Sinha | Junior Frontend Developer | 5 | 13.2% | ₹1,02,823 | ₹8,82,823 | |\n| Nidhi Parmar | Mid Frontend Developer | 4 | 8.2% | ₹1,11,557 | ₹14,79,557 | |\n| Pooja Sharma | Senior Backend Developer | 3 | 6.3% | ₹1,28,832 | ₹21,68,832 | |\n| Rahul Parmar | Senior Backend Developer | 3 | 10.5% | ₹1,66,035 | ₹17,50,035 | |\n| Ritika Rao | Junior Mobile Developer | 3 | 7.1% | ₹51,764 | ₹7,83,764 | |\n\n## Talking points\n\n**Aarav Soni**\n\n- Your delivery on Fleet tracking, including the Arabic and iPad work, was strong, and you stayed reliable under deadline pressure.\n- Build on that foundation by deepening your cloud and DevOps skills and taking on a broader slice of delivery ownership.\n\n**Ankit Patidar**\n\n- You met expectations on Smart-meter analytics phase 2, with steady delivery and positive client feedback.\n- For the next cycle, look for opportunities to apply your BI skills more broadly and add a new capability to your toolkit.\n\n**Karan Rao**\n\n- You delivered the assigned work on the Patient portal maintenance retainer and received positive client feedback.\n- A key next step is to take more ownership—surface risks early, propose solutions, and lead a defined piece of work.\n\n**Komal Sinha**\n\n- Your work on Support RAG assistant v2 consistently stayed ahead of plan, and the client specifically asked for you by name.\n- Keep building on that impact by sharing your approach with the team and taking on progressively broader responsibilities.\n\n**Nidhi Parmar**\n\n- You had a solid year, earned positive client feedback, and added two skills.\n- You’re ready to take on more scope; agree on a stretch assignment and clear ownership goals for the next cycle.\n\n**Pooja Sharma**\n\n- You met expectations on Sales CRM phase 2 and provided steady, dependable delivery.\n- Focus next on strengthening client outcomes and taking initiative on a discrete feature or improvement.\n\n**Rahul Parmar**\n\n- Your contribution and market position are reflected in this outcome; you delivered assigned Wallets on the Fly v3 features and added two skills.\n- For the next cycle, increase your ownership by leading a defined feature and communicating progress and risks proactively.\n\n**Ritika Rao**\n\n- You contributed positively as a team player and delivered on your work this year.\n- Estimation and planning are useful growth areas; practice breaking work into smaller milestones and flagging schedule risks early.\n\n## Reminders\n\n- Keep each conversation confidential and discuss only that employee’s outcome.\n- The effective date is 1 April 2027.\n- Direct questions about the figures or process to HR.",
+   "E053": "# Team conversation brief for the 2027-04-01 effective date\n\n**Manager:** Komal Gupta (E053) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nDiscuss outcomes in the context of each person’s contribution, feedback, and next steps. For promoted employees, clarify the broader scope expected in the new role; keep the conversation focused on individual growth and avoid comparing outcomes across the team.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Naveen Rajput | Senior DevOps / Cloud Engineer | 4 | 9.2% | ₹1,91,608 | ₹22,79,608 | |\n| Omkar Goyal | Mid Frontend Developer | 4 | 22.6% | ₹2,85,146 | ₹15,45,146 | promotion |\n| Pooja Tiwari | Mid Backend Developer | 4 | 22.7% | ₹2,39,411 | ₹12,95,411 | promotion |\n| Rakesh Gupta | Senior Frontend Developer | 3 | 8.7% | ₹1,42,424 | ₹17,74,424 | |\n| Ritika Tiwari | Mid Mobile Developer | 3 | 9.6% | ₹92,216 | ₹10,52,216 | |\n| Swati Malviya | Mid AI / ML Engineer | 4 | 13.8% | ₹1,32,289 | ₹10,92,289 | |\n| Swati Sethi | Mid Mobile Developer | 3 | 8.1% | ₹91,524 | ₹12,19,524 | |\n| Tushar Nair | Senior Backend Developer | 3 | 16.1% | ₹3,43,096 | ₹24,67,096 | promotion |\n\n## Talking points\n\n**Naveen Rajput**\n\n- Recognize the technical depth and ownership shown on Wallets on the Fly v3 releases.\n- Agree on a development goal to build on the new skill and identify opportunities for broader release ownership.\n\n**Omkar Goyal**\n\n- Congratulate Omkar on the promotion, reflecting positive client feedback and readiness for greater scope.\n- Set clear expectations for the expanded role and agree on a milestone to review progress.\n\n**Pooja Tiwari**\n\n- Congratulate Pooja on the promotion and recognize her technical depth, release ownership on Claims portal stabilisation, and skills growth.\n- Discuss how she can apply that experience across broader responsibilities in the new role.\n\n**Rakesh Gupta**\n\n- Recognize dependable delivery on Fleet tracking’s Arabic and iPad work and the skills developed this year.\n- Choose a next goal focused on extending ownership or impact beyond assigned work.\n\n**Ritika Tiwari**\n\n- Acknowledge delivery on Sales CRM phase 2 and discuss ways to take more ownership.\n- Agree on a practical opportunity to build confidence and demonstrate broader contribution in the next cycle.\n\n**Swati Malviya**\n\n- Recognize technical depth and ownership of Wallets on the Fly v3 releases; the outcome is aligned with contribution and market position.\n- Agree on a relevant skill-development goal and an opportunity to demonstrate it in upcoming work.\n\n**Swati Sethi**\n\n- Recognize steady, dependable delivery on Fleet tracking’s Arabic and iPad work, along with skills growth.\n- Discuss a next step that builds on those skills and increases ownership of a feature or deliverable.\n\n**Tushar Nair**\n\n- Congratulate Tushar on the promotion and recognize strong utilization, skills growth, and client feedback as evidence of contribution.\n- Align on expectations for the broader role and set a specific early-cycle goal to sustain delivery and ownership.\n\n## Reminders\n\n- Keep each conversation and the attached pay information confidential; do not compare individual outcomes.\n- The effective date is 2027-04-01.\n- Direct questions about the outcome or process to HR.",
+   "E054": "# Manager conversation brief for the team effective 1 April 2027\n\n**Manager:** Nidhi Raghuwanshi (E054) · **Cycle:** FY2026-27 · **Effective:** 2027-04-01 · Confidential\n\nKeep conversations grounded in each person’s year: recognize specific delivery and feedback, then connect the outcome to a practical next step. Use the attached HR table for hike figures and discuss each person’s information privately.\n\n| Person | Title | Rating | Hike | Increase | New annual CTC | |\n|---|---|---|---|---|---|---|\n| Akash Rajput | Mid Backend Developer | 4 | 11.5% | ₹1,25,428 | ₹12,17,428 | |\n| Manish Choudhary | Mid AI / ML Engineer | 3 | 6.1% | ₹79,664 | ₹13,87,664 | |\n| Mohit Shukla | Mid Frontend Developer | 2 | 4.1% | ₹55,918 | ₹14,23,918 | |\n| Pooja Dubey | Junior Frontend Developer | 3 | 8.1% | ₹60,389 | ₹8,04,389 | |\n| Prachi Patidar | Mid Mobile Developer | 3 | 5.8% | ₹79,038 | ₹14,35,038 | |\n| Tanvi Solanki | Mid Backend Developer | 4 | 9.9% | ₹1,34,135 | ₹14,90,135 | |\n| Vaishali Gupta | Junior Mobile Developer | 3 | 6.9% | ₹54,326 | ₹8,46,326 | |\n| Varsha Patidar | Mid Data / BI Engineer | 4 | 21.2% | ₹2,80,109 | ₹16,00,109 | promotion |\n\n## Talking points\n\n**Akash Rajput**\n\n- Recognize the technical depth and ownership shown in releases for Wallets on the Fly - v3; the rating and outcome reflect a strong year.\n- For the next cycle, look for opportunities to broaden ownership and maintain dependable delivery across releases.\n\n**Manish Choudhary**\n\n- Acknowledge steady, dependable work that met expectations on Smart-meter analytics - phase 2.\n- Client feedback was lower this year; discuss specific ways to improve stakeholder communication and the quality of delivery.\n\n**Mohit Shukla**\n\n- Be clear that several sprint commitments were missed on Headless storefront - retainer, and that closer support is needed.\n- Agree on near-term commitments, regular check-ins, and a plan to improve delivery consistency.\n\n**Pooja Dubey**\n\n- Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.\n- The outcome is aligned with contribution and market position; next, build on the new skill and take on a well-scoped stretch task.\n\n**Prachi Patidar**\n\n- Recognize delivery of assigned work on Fleet tracking - Arabic + iPad, positive client feedback, and the skill added this year.\n- The outcome is aligned with contribution and market position; focus next on taking more ownership from planning through completion.\n\n**Tanvi Solanki**\n\n- Highlight strong delivery on Smart-meter analytics - phase 2, reliability under deadline pressure, excellent client feedback, and two skills added.\n- The strong rating and outcome recognize this contribution; next, build on that momentum by sharing approaches that help the wider project team.\n\n**Vaishali Gupta**\n\n- Recognize steady work meeting expectations on Patient portal - maintenance retainer, positive client feedback, and the skill added this year.\n- The outcome is aligned with contribution and market position; continue developing the new skill and take on a progressively broader task.\n\n**Varsha Patidar**\n\n- Recognize strong delivery on Fleet tracking - Arabic + iPad, reliability under deadline pressure, excellent client feedback, and two skills added.\n- The promotion and outcome recognize this strong contribution; discuss expectations in the new role and agree on priorities for the next cycle.\n\n## Reminders\n\n- Keep each conversation and the attached compensation table confidential; share only with the individual concerned.\n- The effective date is 1 April 2027.\n- Route questions or requests for review through HR; do not promise changes during the conversation."
+  },
+  "privacy_findings": [],
+  "memo_markdown": "# HR director memo: FY2026-27 hike cycle\n\n**Fairness verdict:** ESCALATE · **Pool:** ₹76,56,120 (9% of payroll) · **Allocated:** ₹76,56,120 · **Average hike:** 9.0%\n\nThe rebalanced proposal has substantially narrowed Bhopal’s market-position gap (0.081 to 0.052, below the 0.06 threshold), so no further office correction is indicated. The remaining priority is a human review of E003, E004 and especially E054’s ratings and inconsistent notes; pay cannot correct a potentially biased or inaccurate rating record. I recommend a further 3-point increase for E037 as a round-2 recommendation, while HR reviews the rating. Check the flagged gender and tenure differentials and the four low compa-ratios against legitimate market, role and promotion factors before approval; none should be justified by protected characteristics.\n\n## Strategy\n\nPerformance 0.6 · market 0.3 · retention 0.1 · promotion share 12.0% of the pool (5 promotions).\n\n- The pool is 9% of payroll (₹7,656,120) for 54 employees; there are five recommended promotions and 11 calibration flags. Resolve the flagged calibration and promotion cases through review rather than treating flags as evidence for individual pay decisions.\n- Selected strategy spends the pool exactly and gives clearly differentiated averages by rating: rating 5 14.57%, rating 4 12.08%, rating 3 6.96%, and rating 2 3.23%.\n- Under the selected strategy, average compa-ratio after the cycle is Bhopal 0.959, Indore 1.032, and Pune 0.994; three high-retention-risk employees remain below 0.9, with no one at the cap.\n- Compared with the higher-weight alternative (0.8 performance / 0.5 market / 0.3 retention; 20% promotion share), the selected balance leaves one more high-risk employee below 0.9, while producing similarly differentiated rating averages and no employees at the cap. Bhopal starts furthest below market (0.844 average compa-ratio; seven below 0.88), so market correction remains a meaningful component.\n- Do not use the Bhopal retention note to influence ratings or promotion decisions; assess calibration concerns, including the noted cases, and promotion eligibility on evidence and role expectations.\n\n## Hikes by rating\n\n| Rating | People | Average | Range |\n|---|---|---|---|\n| 5 | 5 | 13.6% | 12.74–15.14% |\n| 4 | 19 | 12.05% | 6.95–22.67% |\n| 3 | 25 | 7.18% | 4.09–16.15% |\n| 2 | 5 | 3.81% | 1.0–6.0% |\n\n## Market position by office (compa-ratio)\n\n| Office | Before | After | Avg hike |\n|---|---|---|---|\n| Bhopal | 0.844 | 0.956 | 13.51% |\n| Indore | 0.958 | 1.035 | 8.19% |\n| Pune | 0.918 | 0.994 | 8.48% |\n\n## Fairness issues (final review)\n\n| Severity | Kind | Group | Finding |\n|---|---|---|---|\n| HIGH | manager_pattern | E054's team, women versus men | Women’s mean rating-minus-evidence is -0.73 versus +0.08 for men, a 0.81-point gap; 6 of 8 team ratings are below evidence. Pay changes do not resolve the rating-calibration concern. |\n| HIGH | manager_pattern | E004's team | Team ratings average 0.99 points below evidence; E037 is rated 2 against evidence 4.78, with inconsistent manager notes. E037’s current proposed hike is 6.0%. |\n| HIGH | manager_pattern | E003's team | Team ratings average 0.83 points above evidence; E036 is rated 5 against evidence 2.45, with inconsistent manager notes. E036’s current proposed hike is 13.16%. |\n| MEDIUM | gender_gap | rating 2 | Women average 4.89% versus men 3.09%, a 1.80 percentage-point gap favoring women (2 women, 3 men). The gap crosses the audit threshold; the available data do not establish its cause. |\n| MEDIUM | gender_gap | rating 4 | Women average 12.86% versus men 11.33%, a 1.53 percentage-point gap favoring women (9 women, 10 men). The gap crosses the audit threshold; verify that non-gender factors explain it. |\n| MEDIUM | tenure_gap | rating 4 | Employees with over 2 years’ tenure average 1.89 percentage points more than those under 2 years, above the 1.5-point threshold; no supplied evidence establishes the reason. |\n| MEDIUM | compa_outlier | four employees below 0.85 compa-ratio after the cycle | E011 is at 0.800, E020 at 0.832, E029 at 0.798, and E048 at 0.803, all below the 0.85 threshold. Review role/market positioning; the metric alone does not establish an inequity. |\n\n## Adjustments applied by the Fairness Auditor\n\n| Person | Before | After | Reason |\n|---|---|---|---|\n| Bhavna Goyal (E037) | 2.99% | 6.0% | High-confidence evidence supports a materially higher rating than 2; partially correct the associated pay outcome pending rating re-review. |\n| Pooja Dubey (E018) | 6.62% | 8.12% | Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings. |\n| Prachi Patidar (E030) | 4.33% | 5.83% | Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings. |\n| Vaishali Gupta (E034) | 5.36% | 6.86% | Rated below the 3.89 evidence score on E054's team; targeted correction pending review of the team's ratings. |\n| Tushar Nair (E021) | 15.15% | 16.15% | High-confidence calibration finding shows rating 3 below evidence 4.15; supplement existing promotion-related pay outcome pending review. |\n| Priya Solanki (E036) | 16.16% | 13.16% | High-confidence evidence is substantially below rating 5; reduce the rating-linked hike component pending rating re-review. |\n| Aditya Deshmukh (E005) | 14.24% | 12.74% | Medium-confidence calibration finding indicates rating 5 exceeds evidence 3.61 and suggests rating 4. |\n| Rahul Parmar (E020) | 9.48% | 10.48% | Below-floor compa ratio of 0.825 with evidence score 3.37 supports a modest targeted market-position correction. |\n| Swati Malviya (E048) | 12.78% | 13.78% | Below-floor compa ratio of 0.796 with rating 4 supports a modest targeted market-position correction, subject to role/market validation. |\n\n## Calibration flags (ratings are the managers' call; HR decides)\n\n- **E037** rating below evidence (rating 2 → suggest 5): Rating 2 is 2.78 points below evidence_score 4.78; client feedback is 5, utilisation 93.0%, and 2 skills were added.\n- **E037** notes inconsistent (rating 2): Manager notes say deadlines were missed and closer supervision was needed, while the data show client feedback 5, utilisation 93.0%, and evidence_score 4.78.\n- **E036** rating above evidence (rating 5): Rating 5 is 2.55 points above evidence_score 2.45; client feedback is 2 and utilisation is 61.0%.\n- **E036** notes inconsistent (rating 5): Notes describe an outstanding year with the client loving every delivery, while client feedback is 2 and evidence_score is 2.45.\n- **E005** rating above evidence (rating 5 → suggest 4): Rating 5 is 1.39 points above evidence_score 3.61; client feedback is 4, utilisation 57.9%, and 3 skills were added.\n- **E021** rating below evidence (rating 3 → suggest 4): Rating 3 is 1.15 points below evidence_score 4.15; client feedback is 4, utilisation 85.9%, and 2 skills were added.\n- **E021** notes inconsistent (rating 3): Notes call this an average year with nothing special, despite evidence_score 4.15, utilisation 85.9%, and 2 skills added.\n- **E019** promotion ready (rating 4): No promotion is recommended despite evidence_score 4.38, utilisation 96.1%, client feedback 4, and 2 skills added.\n- **E023** promotion ready (rating 5): No promotion is recommended despite evidence_score 4.53, utilisation 89.8%, client feedback 5, and a client request by name noted.\n- **E039** promotion ready (rating 5): No promotion is recommended despite evidence_score 4.46, utilisation 80.4%, client feedback 5, and notes that the client requested them by name.\n- **E012** promotion ready (rating 5): No promotion is recommended despite evidence_score 4.21, utilisation 76.9%, client feedback 5, and notes that the client requested them by name.\n"
+ },
+ "decision": null,
+ "error": null,
+ "usage": {
+  "input_tokens": 48615,
+  "cached_tokens": 10874,
+  "output_tokens": 14414,
+  "reasoning_tokens": 7413,
+  "requests": 21,
+  "tool_calls": 25,
+  "cost_usd": 0.01109,
+  "cache_hit_pct": 22.4
+ }
+}

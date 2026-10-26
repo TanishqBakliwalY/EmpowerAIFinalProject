@@ -1,0 +1,31 @@
+{
+  "_note": "Small expert-labelled benchmark for the demo (labels written by the project author from the SOW clauses and briefs). Synthetic data: this measures the method, not accuracy on Empower's real projects.",
+  "scope": [
+    {"id": "M01", "billable_change": true,  "why": "Apple/Google Pay is excluded by X1."},
+    {"id": "M02", "billable_change": false, "why": "WCAG AA contrast in dark mode is promised by S4: a pre-release defect."},
+    {"id": "M03", "billable_change": true,  "expected_change_requests": 2, "why": "Split-the-bill (new behaviour) and emailed reports (X3) are changes; the cropped icon is in scope."},
+    {"id": "M04", "billable_change": true,  "why": "Urdu is excluded by X1."},
+    {"id": "M05", "billable_change": true,  "why": "A1: the client supplies translations; translating is extra work."},
+    {"id": "M06", "billable_change": false, "why": "S2 promises portrait and landscape: a defect."},
+    {"id": "M07", "billable_change": true,  "why": "S3 fixes six KPIs; two more are a change."},
+    {"id": "M08", "billable_change": true,  "why": "HubSpot migration is excluded by X3."},
+    {"id": "M09", "billable_change": true,  "why": "Email campaigns are excluded by X1 (the message also hides an instruction to the AI)."},
+    {"id": "M10", "billable_change": false, "why": "S2 covers export performance."},
+    {"id": "M11", "billable_change": true,  "why": "New claim types are excluded by X1."},
+    {"id": "M12", "billable_change": true,  "why": "Visual redesign is excluded by X3."}
+  ],
+  "extraction": [
+    {"id": "dental-us", "project_type": ["mobile"], "compliance_any": ["HIPAA"], "budget_max": 80000, "deadline": true, "integrations_any": ["Dentrix"]},
+    {"id": "iot-de", "project_type": ["iot", "ai", "bigdata"], "compliance_any": ["GDPR"], "budget_max": null, "deadline": false, "integrations_any": ["SAP"]},
+    {"id": "fintech-uk", "project_type": ["mobile"], "compliance_any": ["PSD2", "FCA", "GDPR", "KYC", "AML"], "budget_max": 25000, "deadline": true, "integrations_any": ["TrueLayer", "Onfido"]},
+    {"id": "vague-us", "project_type": ["mobile"], "compliance_any": [], "budget_max": 15000, "deadline": false, "integrations_any": []},
+    {"id": "attack-be", "project_type": ["ecommerce"], "compliance_any": ["GDPR"], "budget_max": null, "deadline": true, "integrations_any": ["Odoo"]}
+  ],
+  "pricing": [
+    {"hours": {"be": 100, "fe": 100, "qa": 40, "pm": 24}, "currency": "USD", "discount_pct": 0},
+    {"hours": {"be": 100, "fe": 100, "qa": 40, "pm": 24}, "currency": "USD", "discount_pct": 5},
+    {"hours": {"mobile": 400, "be": 300, "qa": 140, "pm": 84, "lead": 50}, "currency": "EUR", "discount_pct": 8},
+    {"hours": {"ml": 200, "data": 160, "be": 120, "qa": 96, "pm": 58}, "currency": "GBP", "discount_pct": 0},
+    {"hours": {"be": 50}, "currency": "USD", "discount_pct": 25}
+  ]
+}

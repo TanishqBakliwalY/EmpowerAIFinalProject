@@ -1,0 +1,55 @@
+emp_id,review_cycle,manager_emp_id,rating,manager_notes,promotion_recommended,client_feedback_score,utilization_12m_pct,certifications_or_skills_added,current_annual_ctc_inr,gender,tenure_years,last_hike_pct,months_since_last_hike
+E001,FY2026-27,E002,4,Strong delivery on Language-learning app - growth features; reliable under deadline pressure.,0,4,56.3,1,1992000,M,1.0,15.5,18
+E002,FY2026-27,,3,Good team player; growth area is estimation and planning.,0,5,53.8,0,3204000,M,11.5,4.8,12
+E003,FY2026-27,E002,2,Quality issues in two releases; improvement plan agreed.,0,4,64.5,0,1812000,F,2.1,8.1,14
+E004,FY2026-27,E002,2,Missed several sprint commitments on Patient portal - maintenance retainer; needs closer support.,0,3,62.9,1,2136000,M,2.5,11.1,18
+E005,FY2026-27,E001,5,Owned the hardest module on Language-learning app - growth features and raised the team's bar.,0,4,57.9,3,1152000,M,3.9,9.9,12
+E006,FY2026-27,E003,4,Good technical depth; took ownership of releases on Sales CRM - phase 2.,0,5,67.5,0,1800000,M,8.3,8.8,24
+E007,FY2026-27,E004,3,Good team player; growth area is estimation and planning.,0,4,75.1,1,1260000,F,4.2,11.2,18
+E008,FY2026-27,E001,4,Good technical depth; took ownership of releases on Support RAG assistant - v2.,0,4,54.7,3,1584000,F,4.7,11.0,12
+E009,FY2026-27,E003,3,Good team player; growth area is estimation and planning.,0,4,46.2,1,600000,M,1.7,8.7,12
+E010,FY2026-27,E004,3,Met expectations on Language-learning app - growth features; steady and dependable.,0,3,54.9,3,2088000,F,0.6,7.1,12
+E011,FY2026-27,E051,3,Met expectations on Fleet tracking - Arabic + iPad; steady and dependable.,0,2,55.4,1,1020000,M,1.1,8.4,12
+E012,FY2026-27,E052,5,Client asked for them by name on Support RAG assistant - v2; consistently ahead of plan.,0,5,76.9,1,780000,F,0.6,10.0,12
+E013,FY2026-27,E053,4,"Solid year, positive client feedback, ready for more scope.",1,5,70.5,2,1260000,M,1.8,9.3,14
+E014,FY2026-27,E054,2,Missed several sprint commitments on Headless storefront - retainer; needs closer support.,0,2,50.9,0,1368000,M,3.5,7.3,24
+E015,FY2026-27,E051,4,"Solid year, positive client feedback, ready for more scope.",1,4,57.4,2,2064000,M,3.2,9.6,24
+E016,FY2026-27,E052,4,"Solid year, positive client feedback, ready for more scope.",0,4,72.5,2,1368000,F,0.8,9.5,14
+E017,FY2026-27,E053,3,Met expectations on Fleet tracking - Arabic + iPad; steady and dependable.,0,3,86.8,2,1632000,M,7.8,11.0,12
+E018,FY2026-27,E054,3,Met expectations on Patient portal - maintenance retainer; steady and dependable.,0,4,82.0,1,744000,F,1.7,6.5,10
+E019,FY2026-27,E051,4,Strong delivery on Smart-meter analytics - phase 2; reliable under deadline pressure.,0,4,96.1,2,2232000,M,0.8,8.4,12
+E020,FY2026-27,E052,3,Delivered assigned work on Wallets on the Fly - v3 features; should push for more ownership.,0,3,72.7,2,1584000,M,8.8,7.5,14
+E021,FY2026-27,E053,3,Average year; nothing special to report.,1,4,85.9,2,2124000,M,5.0,10.2,12
+E022,FY2026-27,E054,4,Strong delivery on Smart-meter analytics - phase 2; reliable under deadline pressure.,0,5,82.0,2,1356000,F,2.1,11.5,24
+E023,FY2026-27,E051,5,Client asked for them by name on Support RAG assistant - v2; consistently ahead of plan.,0,5,89.8,1,1968000,F,1.0,11.4,12
+E024,FY2026-27,E052,3,Met expectations on Sales CRM - phase 2; steady and dependable.,0,3,59.8,0,2040000,F,8.4,10.5,18
+E025,FY2026-27,E053,4,Good technical depth; took ownership of releases on Claims portal - stabilisation.,1,4,62.9,3,1056000,F,4.6,10.5,18
+E026,FY2026-27,E054,4,Good technical depth; took ownership of releases on Wallets on the Fly - v3 features.,0,4,78.0,0,1092000,M,1.8,10.2,18
+E027,FY2026-27,E051,3,Good team player; growth area is estimation and planning.,0,2,68.0,1,1392000,M,2.6,10.0,18
+E028,FY2026-27,E052,3,Delivered assigned work on Patient portal - maintenance retainer; should push for more ownership.,0,4,70.9,0,2004000,M,3.3,6.8,18
+E029,FY2026-27,E053,3,Delivered assigned work on Sales CRM - phase 2; should push for more ownership.,0,3,42.6,1,960000,F,2.8,11.3,24
+E030,FY2026-27,E054,3,Delivered assigned work on Fleet tracking - Arabic + iPad; should push for more ownership.,0,4,82.0,1,1356000,F,5.7,10.7,18
+E031,FY2026-27,E051,4,Good technical depth; took ownership of releases on Language-learning app - growth features.,0,4,78.7,1,1404000,M,3.9,15.6,24
+E032,FY2026-27,E052,3,Good team player; growth area is estimation and planning.,0,3,69.9,1,732000,F,1.6,7.0,18
+E033,FY2026-27,E053,3,Met expectations on Fleet tracking - Arabic + iPad; steady and dependable.,0,3,71.6,2,1128000,F,0.9,7.6,24
+E034,FY2026-27,E054,3,Met expectations on Patient portal - maintenance retainer; steady and dependable.,0,4,82.0,1,792000,F,0.7,5.8,24
+E035,FY2026-27,E001,3,Delivered assigned work on Internal: Empower AI accelerator; should push for more ownership.,0,4,56.2,1,1296000,F,2.4,7.2,18
+E036,FY2026-27,E003,5,"Outstanding year, client loved every delivery.",0,2,61.0,1,1956000,F,4.4,6.6,24
+E037,FY2026-27,E004,2,Struggled with deadlines and needs closer supervision.,0,5,93.0,2,1176000,F,2.3,11.7,10
+E038,FY2026-27,E001,4,"Solid year, positive client feedback, ready for more scope.",0,5,57.5,0,2172000,F,2.0,7.6,14
+E039,FY2026-27,E003,5,Client asked for them by name on Support RAG assistant - v2; consistently ahead of plan.,0,5,80.4,2,1152000,M,0.6,16.3,10
+E040,FY2026-27,E004,3,Good team player; growth area is estimation and planning.,0,3,85.8,0,1956000,M,5.7,8.7,12
+E041,FY2026-27,E001,3,Met expectations on Language-learning app - growth features; steady and dependable.,0,3,70.3,0,1320000,M,1.1,11.7,12
+E042,FY2026-27,E051,2,Quality issues in two releases; improvement plan agreed.,0,2,52.4,2,648000,M,0.7,8.6,12
+E043,FY2026-27,E052,4,Strong delivery on Fleet tracking - Arabic + iPad; reliable under deadline pressure.,0,4,52.2,2,780000,M,0.9,9.7,18
+E044,FY2026-27,E053,4,Good technical depth; took ownership of releases on Wallets on the Fly - v3 features.,0,4,63.7,1,2088000,M,2.5,7.7,14
+E045,FY2026-27,E054,4,Strong delivery on Fleet tracking - Arabic + iPad; reliable under deadline pressure.,1,5,82.0,2,1320000,F,5.8,11.1,10
+E046,FY2026-27,E051,3,Met expectations on Wallets on the Fly - v3 features; steady and dependable.,0,3,42.5,2,1428000,F,4.2,11.5,12
+E047,FY2026-27,E052,3,Met expectations on Smart-meter analytics - phase 2; steady and dependable.,0,4,60.7,1,1428000,M,1.5,8.5,12
+E048,FY2026-27,E053,4,Good technical depth; took ownership of releases on Wallets on the Fly - v3 features.,0,3,79.3,0,960000,F,0.8,7.0,24
+E049,FY2026-27,E054,3,Met expectations on Smart-meter analytics - phase 2; steady and dependable.,0,2,92.9,0,1308000,M,0.6,8.9,18
+E050,FY2026-27,E051,3,Good team player; growth area is estimation and planning.,0,4,49.1,2,1416000,M,5.6,11.9,12
+E051,FY2026-27,E002,3,Good team player; growth area is estimation and planning.,0,3,61.4,1,3108000,M,9.6,11.5,12
+E052,FY2026-27,E002,4,"Solid year, positive client feedback, ready for more scope.",0,5,59.3,1,2736000,M,9.7,13.3,14
+E053,FY2026-27,E002,4,Good technical depth; took ownership of releases on Internal: Empower AI accelerator.,0,4,54.9,1,3012000,F,0.7,9.2,24
+E054,FY2026-27,E002,4,Good technical depth; took ownership of releases on Wallets on the Fly - v3 features.,0,5,51.1,0,2724000,F,2.7,12.5,12

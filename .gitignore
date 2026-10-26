@@ -1,0 +1,28 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# private company data, the course brief, drafts
+_private/
+pilot/results/
+
+# local runtime state (SQLite db, run logs)
+data/runtime/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node (frontend/dist IS committed so the app runs with Python only)
+frontend/node_modules/
+frontend/node_modules/.tmp/
+
+# editors / tools
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
