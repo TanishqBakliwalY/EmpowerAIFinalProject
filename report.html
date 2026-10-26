@@ -270,7 +270,7 @@
 <!-- =============================================================== 7. IMPACT -->
 <h2>7. Impact</h2>
 <h3>Faster turnaround</h3>
-<p>From a client's email to a priced, staffed, reviewed proposal draft takes <b>about 2 minutes</b> (104–138 s over 7 measured runs) and <b>$0.014</b>. Today, at Empower, the same work means a director, a sales lead and a tech lead going back and forth for <span class="tag amber">[[CONFIRM: typical days per quote at Empower]]</span>. The app does not remove that review; it gives the reviewers a complete first draft with every number traceable.</p>
+<p>From a client's email to a priced, staffed, reviewed proposal draft takes <b>about 2 minutes</b> (104–138 s over 7 measured runs) and <b>$0.014</b>. Today, at Empower, the same work means a director, a sales lead and a tech lead going back and forth over email and spreadsheets. I have not yet timed how long that takes; measuring it is the first thing the pilot below does. The app does not remove that review; it gives the reviewers a complete first draft with every number traceable.</p>
 <h3>Better estimates, in the right direction</h3>
 <p>I backtested the estimator on 6 past projects: each project was removed from the history, its original brief was run through the agents, and the estimate was compared with the hours the project actually took and with the estimate Empower made at the time.</p>
 <table>
@@ -302,7 +302,7 @@
   <li><b>Negotiation practice:</b> a rehearsed pricing call in under a minute for under a cent, with the client's likely objections and a concession path, before a deal worth tens of thousands is discussed.</li>
 </ul>
 <h3>Pilot with Empower</h3>
-<div class="callout amber"><b>[[FILL IN after the pilot]]</b> Who tried it (role), on which real request, how long the same quote took by hand vs with the app, and what they said (one quote). The app records this itself: when a person approves a deal they can enter "hours this would have taken by hand" and a 1–5 quality score, and the Usage page totals hours saved.</div>
+<div class="callout amber"><b>Planned, not yet run.</b> No one at Empower has used the app yet, so there are no user results. The kit is ready (<code>pilot/</code>): someone who quotes deals at Empower prices the same request by hand and then with the app, timed, and both drafts are scored on one checklist. My own dry run of it found two bugs (sections 5 and 6), not evidence about users.</div>
 
 <!-- =============================================================== 8. LIMITS + NEXT -->
 <h2>8. Limits and next steps</h2>
@@ -312,13 +312,13 @@
   <li><b>The benchmarks are small</b> (6 past projects, 5 briefs, 12 client messages) and the estimator over-shoots on unusual project types (IoT +58%). The delivery data and its problems are synthetic too.</li>
   <li><b>The Orchestrator is rules, not a model.</b> That makes it predictable and testable, but it only knows the conflicts I wrote (capacity, deadline, budget), and it re-routes only once.</li>
   <li><b>Injection defense is layered, not perfect.</b> The screen is pattern-based; a cleverly paraphrased instruction can get past it. What limits the damage is that agents cannot set prices, cannot see salaries, and a person approves everything.</li>
-  <li><b>No integrations.</b> It does not read the inbox, the timesheet system or the CRM, and it sends nothing. That is safe, but someone has to copy the proposal out.</li>
+  <li><b>No integrations.</b> It reads no inbox, timesheets or CRM and sends nothing: safe, but proposals are copied out by hand.</li>
   <li><b>Runs locally, one company.</b> SQLite, a single server and one shared daily budget.</li>
 </ul>
 <h3>What I would build next, with another month</h3>
 <ol>
-  <li><b>Pilot on real data</b> with Empower's director: last year's projects as the backtest, then 10 live requests timed against the manual process.</li>
-  <li><b>Learn from outcomes:</b> feed won/lost results and final actual hours back in, so the estimator, pricing and the Deal Room's simulated clients calibrate themselves to how Empower's real clients negotiate.</li>
+  <li><b>Run the pilot, then real data:</b> last year's projects as the backtest, then 10 live requests timed by hand vs the app.</li>
+  <li><b>Learn from outcomes:</b> feed won/lost results and actual hours back so estimates, prices and the Deal Room's clients calibrate.</li>
   <li><b>Connect the inbox and timesheets</b> so Scope Guard checks client emails automatically and the availability board is always current.</li>
   <li><b>Export and host it:</b> a branded Word/PDF proposal and SOW from the approved deal, and per-firm data separation so other 50–200 person services firms can use it.</li>
 </ol>
