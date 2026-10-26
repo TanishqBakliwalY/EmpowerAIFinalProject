@@ -274,8 +274,16 @@
 
 <!-- =============================================================== 7. IMPACT -->
 <h2>7. Impact</h2>
-<h3>Faster turnaround</h3>
-<p>From a client's email to a priced, staffed, reviewed proposal draft takes <b>about 2 minutes</b> (104–138 s over 7 measured runs) and <b>$0.014</b>. Today, at Empower, the same work means a director, a sales lead and a tech lead going back and forth over email and spreadsheets. I have not yet timed how long that takes; measuring it is the first thing the pilot below does. The app does not remove that review; it gives the reviewers a complete first draft with every number traceable.</p>
+<h3>Against public benchmarks</h3>
+<p>No one at Empower has tried the app yet (see the pilot below), so here is what the app measurably does beside published industry figures. The effects are estimates with their assumptions stated.</p>
+<table class="small">
+  <tr><th style="width:30%">Today (public benchmark)</th><th style="width:28%">With the app (measured)</th><th>Estimated effect for a firm like Empower</th></tr>
+  <tr><td><b>Quoting.</b> Small companies spend <b>20 writing hours</b> per proposal and send 68 a year; 9 people contribute; 64% of teams need up to 10 business days (Loopio 2025, 1,544 respondents).</td><td>A priced, staffed, reviewed first draft in <b>about 2 minutes</b> (median 136 s over 11 runs) for $0.014.</td><td>If review and edits still take half the writing time: ≈ 10 senior hours saved per quote, ≈ <b>680 hours a year</b> at 68 quotes, ≈ ₹6.2 lakh (≈ <b>USD 7,000</b>) at the average Indian IT project manager's base pay of ₹18.1 lakh (Payscale, Sep 2026). And a first answer the same day.</td></tr>
+  <tr><td><b>Estimates.</b> Large IT projects run <b>45% over budget</b> (McKinsey &amp; Oxford, 5,400 projects); in our history, estimates came in 17% low.</td><td>Backtest: bias from −17% to +13%; closer than the original on 4 of 6.</td><td>On a fixed-price deal with USD 71k of delivery cost, not under-estimating by 17% protects ≈ <b>USD 12,000 of margin per deal</b>.</td></tr>
+  <tr><td><b>Scope creep.</b> <b>52% of projects</b> experience it (PMI Pulse of the Profession, 2018).</td><td>Scope Guard found USD 4,410 + GBP 2,730 of billable change requests in 3 sample emails, at $0.001 per check.</td><td>Illustrative: if the 52% of Empower's 11 active projects that creep each bill one change request the size of the smallest found (≈ USD 2,060): ≈ <b>USD 11,800 a year</b>.</td></tr>
+  <tr><td><b>Bench.</b> Indian IT firms keep <b>8–12%</b> of staff on the bench (TeamLease Digital, Xpheno, 2026).</td><td>The bench plan matched INR 5.2 lakh (≈ USD 5,900) of idle cost to billable or internal work over 12 weeks (figure 15).</td><td>For 54 people, that is 4–6 people idle at any time; every week of work found is cost recovered.</td></tr>
+</table>
+<p>The quoting and scope rows alone come to roughly <b>USD 19,000 a year</b>, plus the margin protected on each fixed-price deal, against about <b>USD 50 a year</b> of model cost (section 5). These are estimates from public averages and synthetic data; the pilot will confirm or correct them. The review stays: reviewers get a complete first draft with every number traceable.</p>
 <h3>Better estimates, in the right direction</h3>
 <p>I backtested the estimator on 6 past projects: each project was removed from the history, its original brief was run through the agents, and the estimate was compared with the hours the project actually took and with the estimate Empower made at the time.</p>
 <table>
@@ -287,36 +295,30 @@
   <tr><td>P121 Claims processing portal</td><td class="num">1,560</td><td class="num">1,380 (−12%)</td><td class="num">1,526 (−2%)</td><td>app</td></tr>
   <tr><td>P127 Language-learning app</td><td class="num">1,946</td><td class="num">1,616 (−17%)</td><td class="num">1,752 (−10%)</td><td>app</td></tr>
 </table>
-<p>The app was closer on <b>4 of 6</b> projects and its median error was <b>10% vs 16%</b>. More important for a fixed-price business: the original estimates were <i>always</i> low (mean −17%), and every hour under-estimated comes out of margin. The app's errors point the other way (mean +13%), which is the safer side. But it over-estimated the IoT project by 58%, so the mean absolute error is about the same (19.6% vs 16.8%). On the BrightSmile deal (internal delivery cost USD 71k), a 17% under-estimate on a fixed price would cost about USD 12k of margin. These are synthetic projects modelled on how services estimates behave, so this checks the method, not Empower's real numbers yet.</p>
+<p>The app was closer on <b>4 of 6</b> projects (median error 10% vs 16%). The original estimates were <i>always</i> low (mean −17%); the app errs high (mean +13%), the safer side on a fixed price. It over-shot the IoT project by 58%, so mean absolute error is about the same (19.6% vs 16.8%). These are synthetic projects, so this checks the method, not Empower's real numbers.</p>
 <h3>Evaluation against a labelled benchmark</h3>
 <p><code>scripts/evaluate.py --live</code> scores each part of the system and saves the result, so a change that makes things worse shows up as a lower number on the app's Evaluation page. Results for version 2.0 (115 s, $0.017 in model calls):</p>
 <table class="small">
   <tr><th style="width:26%">What</th><th class="num" style="width:12%">Score</th><th>How it is measured</th></tr>
   <tr><td>Requirement extraction</td><td class="num">30 / 30</td><td>Type, compliance, budget, deadline, integrations and questions on 5 labelled briefs (model run).</td></tr>
-  <tr><td>Scope decisions</td><td class="num">12 / 12</td><td>"Billable change or not" on 12 labelled client messages (model run). One run hit a gateway error and was retried; errors are reported, not counted as wrong.</td></tr>
-  <tr><td>Estimate error</td><td class="num">19.6%</td><td>Mean absolute error on 6 past projects, vs 16.8% for Empower's original estimates, but biased high (+13%) instead of always low (−17%). The first estimator version scored 93%.</td></tr>
+  <tr><td>Scope decisions</td><td class="num">12 / 12</td><td>"Billable change or not" on 12 labelled client messages (model run; one gateway error was retried, not counted as wrong).</td></tr>
+  <tr><td>Estimate error</td><td class="num">19.6%</td><td>Mean absolute error on 6 past projects (original estimates 16.8%, but always low). The first estimator version scored 93%.</td></tr>
   <tr><td>Pricing, staffing</td><td class="num">5 / 5, 11 / 11</td><td>Calculator vs an independent re-implementation of the policy; every proposed person exists, is free and every role is covered.</td></tr>
   <tr><td>Delivery risk detection</td><td class="num">P 1.0, R 1.0</td><td>All 6 planted problems flagged, no false alarms. The problems were planted by my own script, so this checks the logic, not real accuracy.</td></tr>
   <tr><td>Proposal completeness</td><td class="num">91.9%</td><td>9 required sections; proposals made after the risks section was added score 100%.</td></tr>
   <tr><td>Operations (Deal Desk)</td><td class="num">11 / 11</td><td>Runs completed; median 136 s, mean $0.014.</td></tr>
 </table>
-<h3>Money that is currently invisible</h3>
-<ul>
-  <li><b>Scope creep:</b> the three sample client emails contained <b>USD 4,410 and GBP 2,730</b> of billable change requests that are easy to absorb as "small extras". Each check costs about a tenth of a cent.</li>
-  <li><b>Bench:</b> the plan in figure 15 turns INR 5.2 lakh of expected idle cost into billable work over 12 weeks. With industry bench ratios of 8–12% (TeamLease Digital, 2026), each idle week matters.</li>
-  <li><b>Negotiation practice:</b> a rehearsed pricing call in under a minute for under a cent, with the client's likely objections and a concession path, before a deal worth tens of thousands is discussed.</li>
-</ul>
 <h3>Pilot with Empower</h3>
-<div class="callout amber"><b>Planned, not yet run.</b> No one at Empower has used the app yet, so there are no user results. The kit is ready (<code>pilot/</code>): someone who quotes deals at Empower prices the same request by hand and then with the app, timed, and both drafts are scored on one checklist. My own dry run of it found two bugs (sections 5 and 6), not evidence about users.</div>
+<div class="callout amber"><b>Planned, not yet run.</b> No one at Empower has used the app yet. The kit is ready (<code>pilot/</code>): someone who quotes at Empower prices the same request by hand and then with the app, timed and scored on one checklist. My own dry run found two bugs (sections 5–6), not user evidence.</div>
 
 <!-- =============================================================== 8. LIMITS + NEXT -->
 <h2>8. Limits and next steps</h2>
 <h3>What does not work yet</h3>
 <ul>
-  <li><b>The data is synthetic.</b> People, projects and rates are generated to look like Empower's. The app reads everything from one folder, so switching to real exports (<code>EMPOWER_DATA_DIR</code>) is a configuration change, but accuracy on real data is not measured yet.</li>
+  <li><b>The data is synthetic.</b> Switching to Empower's real exports is a configuration change (<code>EMPOWER_DATA_DIR</code>), but accuracy on real data is not measured yet, and the impact figures above are estimates.</li>
   <li><b>The benchmarks are small</b> (6 past projects, 5 briefs, 12 client messages) and the estimator over-shoots on unusual project types (IoT +58%). The delivery data and its problems are synthetic too.</li>
   <li><b>The Orchestrator is rules, not a model.</b> That makes it predictable and testable, but it only knows the conflicts I wrote (capacity, deadline, budget), and it re-routes only once.</li>
-  <li><b>Injection defense is layered, not perfect.</b> The screen is pattern-based; a cleverly paraphrased instruction can get past it. What limits the damage is that agents cannot set prices, cannot see salaries, and a person approves everything.</li>
+  <li><b>Injection defense is layered, not perfect.</b> The screen is pattern-based and a clever paraphrase can pass it; the damage is limited because agents cannot set prices or see salaries, and a person approves everything.</li>
   <li><b>No integrations.</b> It reads no inbox, timesheets or CRM and sends nothing: safe, but proposals are copied out by hand.</li>
   <li><b>Runs locally, one company.</b> SQLite, a single server and one shared daily budget.</li>
 </ul>
@@ -324,7 +326,7 @@
 <ol>
   <li><b>Run the pilot, then real data:</b> last year's projects as the backtest, then 10 live requests timed by hand vs the app.</li>
   <li><b>Learn from outcomes:</b> feed won/lost results and actual hours back so estimates, prices and the Deal Room's clients calibrate.</li>
-  <li><b>Connect the inbox and timesheets</b> so Scope Guard checks client emails automatically and the availability board is always current.</li>
+  <li><b>Connect the inbox and timesheets</b> so scope checks and availability are always current.</li>
   <li><b>Export and host it:</b> a branded Word/PDF proposal and SOW from the approved deal, and per-firm data separation so other 50–200 person services firms can use it.</li>
 </ol>
 
@@ -334,8 +336,7 @@
   <li>Code, README and every script named here: <a href="{{REPO_URL}}">{{REPO_URL}}</a>{{REPO_NOTE}}</li>
   <li>Token counts and costs: the app's <b>Usage &amp; safety</b> page and each deal's <b>Tokens &amp; cost</b> tab; ledger in <code>data/runtime/app.db</code>. Prices: eesel.ai, anotherwrapper.com and felo.ai gpt-6-luna pricing pages (Oct 2026).</li>
   <li>Red team: <code>python scripts/redteam.py</code> → <code>docs/redteam_results.md</code>. Backtest: <code>python scripts/backtest.py --effort low</code>. Evaluation: <code>python scripts/evaluate.py --live</code>. Tests: <code>pytest</code> (84 tests).</li>
-  <li>Competitors: Capterra, SiftHub, AutoRFP and Inventive AI comparisons (Loopio, Responsive); Rocketlane and Acumatica PSA comparisons (Kantata, Float, Scoro, Accelo); WorldatWork, People Managing People and the SHRM vendor directory (Pave, Aeqium, HyperEquity).</li>
-  <li>Industry: McKinsey &amp; University of Oxford (2012), large IT projects run 45% over budget on average; TeamLease Digital and Xpheno (2026) via letsdatascience.com, Indian IT bench ratio 8–12% and utilisation about 85%.</li>
+  <li>Benchmarks: Loopio <i>RFP Trends &amp; Benchmarks 2025</i> (1,544 respondents); PMI <i>Pulse of the Profession</i> 2018; Payscale, Project Manager IT, India (847 profiles, Sep 2026); McKinsey &amp; Oxford (2012), 5,400 IT projects; TeamLease Digital, Xpheno (2026).</li>
 </ul>
 
 </main>
