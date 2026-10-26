@@ -39,6 +39,9 @@ More modules cover the rest of the work around a deal, on the same data, guardra
 
 ## Run it (about 5 minutes)
 
+Tested from a fresh clone on 26 Oct 2026 (Windows, Python 3.14, `.env` one folder up): install about 90 s, app up and
+answering in under 2 minutes.
+
 **You need:** Python **3.11 or newer** and a `PORTKEY_API_KEY` (the app uses `gpt-6-luna` through Portkey). The look follows
 Empower's brand colours (navy, the blue gradient from empower-solutions.com, green accents) without copying their site or logo.
 Node.js is **not** needed: the web UI is already built into `frontend/dist`.
@@ -50,7 +53,7 @@ The app looks for a `.env` file in **this repo's folder first, then in the folde
 ```
 submissions/
 ├── .env                 <- PORTKEY_API_KEY=...   (works here)
-└── empower-deal-desk/   <- this repo
+└── EmpowerAIFinalProject/   <- this repo
     ├── .env             <- ...or here
     └── .env.example
 ```
@@ -62,7 +65,8 @@ If you don't have a `.env` yet: copy `.env.example` to `.env` and paste your key
 **Windows (PowerShell or cmd)**
 
 ```bash
-cd empower-deal-desk
+git clone https://github.com/TanishqBakliwalY/EmpowerAIFinalProject.git
+cd EmpowerAIFinalProject
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
@@ -72,7 +76,8 @@ python run.py
 **macOS / Linux**
 
 ```bash
-cd empower-deal-desk
+git clone https://github.com/TanishqBakliwalY/EmpowerAIFinalProject.git
+cd EmpowerAIFinalProject
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

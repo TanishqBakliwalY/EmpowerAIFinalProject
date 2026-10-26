@@ -62,9 +62,9 @@
 <!-- 2. PROBLEM -->
 <section>
   <div class="kicker">The problem</div>
-  <h2>Every quote is days of senior people's time, and the estimate is usually low</h2>
+  <h2>Each quote ties up three senior people, and past estimates came in 17% low</h2>
   <div class="grid3" style="margin-top:26px">
-    <div class="card"><b style="font-size:1.25em">Slow</b><br>A client emails an RFP. A director, a sales lead and a tech lead trade spreadsheets for days to answer: can we build it, how many hours, who is free, what price? US and EU clients compare vendors; the slow answer loses.</div>
+    <div class="card"><b style="font-size:1.25em">Slow</b><br>A client emails an RFP. A director, a sales lead and a tech lead trade spreadsheets and emails to answer: can we build it, how many hours, who is free, what price? US and EU clients compare vendors; the slow answer loses.</div>
     <div class="card"><b style="font-size:1.25em">Under-estimated</b><br>Past estimates came in <b>17% under</b> the hours actually worked (mobile and AI worst). On a fixed price, every missing hour comes out of margin. Large IT projects run <b>45% over budget</b> on average (McKinsey &amp; Oxford).</div>
     <div class="card"><b style="font-size:1.25em">Staffed from memory</b><br>Who is free in which week lives in people's heads. A start date the team can't meet, or people idle on the bench (8–12% in Indian IT), both cost money.</div>
   </div>
@@ -74,7 +74,7 @@
 <!-- 3. WHAT IS NEW -->
 <section>
   <div class="kicker">What is new</div>
-  <h2>The firm's own data and policy in the loop; the model kept away from the arithmetic</h2>
+  <h2>Unlike RFP tools or ChatGPT, it quotes from Empower's own history, free people and policy</h2>
   <table style="margin-top:10px">
     <tr><th>Existing tool</th><th>Does</th><th>Doesn't</th></tr>
     <tr><td><b>Loopio, Responsive</b></td><td>Fills RFP questionnaires from past answers</td><td>Estimate effort, check who is free, price to a margin</td></tr>
@@ -92,7 +92,7 @@
 <!-- 4. HOW THE AGENTS WORK -->
 <section>
   <div class="kicker">How the agents work</div>
-  <h2 style="margin-bottom:8px">Seven agents; an orchestrator and a critic send work back once</h2>
+  <h2 style="margin-bottom:8px">Seven agents draft the quote; code counts and sends conflicts back</h2>
   <img class="flat" src="diagrams/deal_desk.svg" alt="Deal Desk diagram" style="width:100%; max-height:560px; object-fit:contain">
   <p class="tiny">The Orchestrator is code: it checks go-live and price against the client's date and budget and posts each conflict with evidence. Plus the Deal Room (client ⇄ negotiator + coach), Emi (21 tools; delegates to specialist agents), Project Health (Delivery Risk Agent), Scope-Creep Guard, Bench Optimizer and Appraisals &amp; hikes on the same core: 25 agents. gpt-6-luna; low reasoning effort except the Critic.</p>
 </section>
@@ -100,7 +100,7 @@
 <!-- 5. ONE REAL RUN -->
 <section>
   <div class="kicker">One real run</div>
-  <h2 style="margin-bottom:12px">14-clinic dental group, booking app, "around $60–80k", "before April"</h2>
+  <h2 style="margin-bottom:12px">A real dental-group RFP in 136 s for $0.016: the agents found the $80k budget can't fit, and escalated</h2>
   <div class="grid2" style="grid-template-columns: 1.45fr 1fr; gap:22px">
     <img src="shots/deal_overview.jpg" alt="Deal overview" style="width:100%">
     <ul class="small" style="margin:0">
@@ -118,7 +118,7 @@
 <!-- 6. COPILOT + MODULES -->
 <section>
   <div class="kicker">Demo</div>
-  <h2 style="margin-bottom:12px">The director's day, agents that coordinate, a rehearsed call</h2>
+  <h2 style="margin-bottom:12px">Demo: today's decisions on one screen, agents fixing a conflict, a rehearsed pricing call</h2>
   <div class="grid3" style="gap:16px">
     <div><img src="shots/home.jpg" alt="Home" style="width:100%; height:470px; object-fit:cover; object-position:left top"><p class="tiny"><b>Home:</b> what needs a decision today across deals, projects, scope and people. Each action shows its evidence and how confident it is, in words; accept/dismiss is audited.</p></div>
     <div><img src="shots/collab.jpg" alt="Collaboration" style="width:100%; height:470px; object-fit:cover; object-position:left top"><p class="tiny"><b>Collaboration:</b> the Orchestrator found go-live 59 days late and a price 220% over the cap, and sent the scope back; "×2" marks what re-ran.</p></div>
@@ -168,21 +168,27 @@
 <!-- 9. IMPACT -->
 <section>
   <div class="kicker">Impact</div>
-  <h2>A full draft in two minutes, and estimates that stop eating the margin</h2>
+  <h2>So far: a full draft in two minutes and estimates that err on the safe side; a user pilot is next</h2>
   <div class="kpis">
     <div class="kpi"><div class="v">~2 min</div><div class="l">email → priced, staffed, reviewed draft (manual time: the pilot will measure it)</div></div>
     <div class="kpi"><div class="v">4 of 6</div><div class="l">past projects estimated closer than Empower's own estimate</div></div>
     <div class="kpi"><div class="v">−17% → +13%</div><div class="l">estimate bias: from always low to the safe side</div></div>
     <div class="kpi"><div class="v">$4,410 + £2,730</div><div class="l">change requests found in 3 client emails</div></div>
   </div>
-  <div class="card" style="margin-top:22px; border-color:#f0d49a; background:#fffaf0"><b>Pilot at Empower: planned, not yet run.</b> The kit is ready (<code>pilot/</code>): someone who quotes at Empower prices the same request by hand and with the app, timed and scored on one checklist. No user results yet.</div>
-  <p class="tiny" style="margin-top:14px">Backtest: 6 past projects removed from history and re-estimated from their original briefs. Median error 10% vs 16%; it over-shot one IoT project by 58%. Benchmark (<code>scripts/evaluate.py</code>): requirement fields 30/30, scope decisions 12/12, prices 5/5, teams 11/11, planted delivery risks 6/6. All data is synthetic, modelled on Empower.</p>
+  <div class="kpis" style="margin-top:14px">
+    <div class="kpi"><div class="v">30 / 30</div><div class="l">requirement fields extracted correctly (5 labelled briefs)</div></div>
+    <div class="kpi"><div class="v">12 / 12</div><div class="l">client asks correctly judged billable or not</div></div>
+    <div class="kpi"><div class="v">6 / 6</div><div class="l">planted delivery risks flagged, no false alarms</div></div>
+    <div class="kpi"><div class="v">5 / 5 · 11 / 11</div><div class="l">prices match policy · proposed teams real and free</div></div>
+  </div>
+  <div class="card" style="margin-top:18px; border-color:#f0d49a; background:#fffaf0"><b>Pilot at Empower: planned, not yet run.</b> The kit is ready (<code>pilot/</code>): someone who quotes at Empower prices the same request by hand and with the app, timed and scored on one checklist. No user results yet.</div>
+  <p class="tiny" style="margin-top:14px">Backtest: 6 past projects removed from history and re-estimated from their original briefs. Median error 10% vs 16%; it over-shot one IoT project by 58%. Second row: <code>scripts/evaluate.py --live</code> (v2.0, $0.017). All data is synthetic, modelled on Empower, so these check the method, not real-world accuracy.</p>
 </section>
 
 <!-- 10. NEXT -->
 <section>
   <div class="kicker">Limits and what's next</div>
-  <h2>Next: real data, then learning from outcomes</h2>
+  <h2>Next: run the Empower pilot on real data, then learn from won and lost deals</h2>
   <div class="grid2">
     <div class="card"><b>Doesn't work yet</b><br>• Synthetic data; accuracy on Empower's real projects not yet measured<br>• Small benchmarks; over-shoots unusual work (IoT)<br>• The orchestrator is rules: it only knows the conflicts I coded<br>• Injection screen is pattern-based; damage is limited because agents can't set prices or see pay<br>• No inbox/CRM integration; runs locally for one company</div>
     <div class="card"><b>With another month</b><br>• Pilot on Empower's real exports and 10 live requests, timed<br>• Feed won/lost and final hours back to calibrate estimates and prices<br>• Read the inbox so Scope Guard checks client emails automatically<br>• Branded proposal/SOW export<br>• Host it, multi-firm</div>
